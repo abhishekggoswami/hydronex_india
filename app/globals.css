@@ -1,0 +1,1004 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Hydronex brand palette */
+  --brand: #e05a2e;        /* orange-red primary */
+  --brand-hover: #c94d24;  /* darker orange for hover */
+  --dark: #141414;         /* near-black for dark sections */
+  --dark-section: #1a1a1a; /* dark background */
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.11 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.11 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.11 0 0);
+  --primary: oklch(0.59 0.19 38);      /* brand orange ~#e05a2e */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.96 0 0);
+  --secondary-foreground: oklch(0.11 0 0);
+  --muted: oklch(0.96 0 0);
+  --muted-foreground: oklch(0.5 0 0);
+  --accent: oklch(0.96 0 0);
+  --accent-foreground: oklch(0.11 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.91 0 0);
+  --input: oklch(0.91 0 0);
+  --ring: oklch(0.59 0.19 38);
+  --radius: 0rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.59 0.19 38);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --font-sans: var(--font-sans, 'Inter', sans-serif);
+  --font-heading: var(--font-heading, 'Barlow', sans-serif);
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading, 'Barlow', sans-serif);
+  }
+}
+
+/* ── Product card & section background animations ────────────────────────────
+   All GPU-composited — only background-position changes, no layout/paint.
+────────────────────────────────────────────────────────────────────────────── */
+
+/* ── CARD IMAGE ZONE — blueprint grid scrolls diagonally on dark navy ──── */
+@keyframes blueprint-scroll {
+  0%   { background-position: 0 0, 0 0, 0 0; }
+  100% { background-position: 48px 48px, 48px 48px, 48px 48px; }
+}
+.bg-anim-blueprint {
+  position: relative;
+}
+.bg-anim-blueprint::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px);
+  background-size: 48px 48px, 48px 48px, 12px 12px;
+  animation: blueprint-scroll 20s linear infinite;
+  will-change: background-position;
+  pointer-events: none;
+}
+/* Soft radial vignette — makes centre brighter, edges darker */
+.bg-anim-blueprint::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: radial-gradient(ellipse at 50% 45%, transparent 25%, rgba(5,12,28,0.50) 100%);
+  pointer-events: none;
+}
+
+/* ── GLASSMORPHISM SHIMMER — sweeps a bright diagonal band across the image ─ */
+@keyframes glass-sweep {
+  0%   { transform: translateX(-110%) skewX(-18deg); opacity: 0; }
+  12%  { opacity: 1; }
+  88%  { opacity: 1; }
+  100% { transform: translateX(210%) skewX(-18deg); opacity: 0; }
+}
+.card-glass-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255,255,255,0.04) 45%,
+    rgba(255,255,255,0.13) 50%,
+    rgba(255,255,255,0.04) 55%,
+    transparent 70%
+  );
+  animation: glass-sweep 5s ease-in-out infinite;
+  animation-delay: var(--shimmer-delay, 0s);
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Shared product-detail hero: mirrors the blueprint image panels used in every
+   catalogue card while keeping the technical content calm and easy to scan. */
+.catalogue-detail-hero {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(90deg, rgba(4,15,33,.96) 0%, rgba(9,29,54,.91) 52%, rgba(4,15,33,.72) 100%), url("/images/bsp-hero-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  border-bottom: 1px solid rgba(224,90,46,.38);
+}
+.catalogue-detail-hero > div > div > div:first-child {
+  position: relative;
+  overflow: hidden;
+  background-color: #193952 !important;
+  background-image:
+    linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px),
+    radial-gradient(circle at 50% 45%, rgba(77,130,165,.35), transparent 62%);
+  background-size: 42px 42px, 42px 42px, auto;
+  border: 1px solid rgba(224,90,46,.55);
+  border-radius: 6px;
+  box-shadow: 0 16px 36px rgba(15,43,70,.16);
+}
+.catalogue-detail-hero > div > div > div:first-child::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 38%, rgba(255,255,255,.08) 50%, transparent 62%);
+}
+.catalogue-detail-hero > div > div > div:first-child img {
+  position: relative;
+  z-index: 1;
+}
+.catalogue-detail-hero > div > div > div:nth-child(2) > h1 {
+  color: #fff !important;
+}
+.catalogue-detail-hero > div > div > div:nth-child(2) > p:not(.text-\[\#e05a2e\]),
+.catalogue-detail-hero > div > div > div:nth-child(2) li {
+  color: #c9d8e9 !important;
+}
+.catalogue-detail-hero > div > div > div:nth-child(2) > a:not(.bg-\[\#e05a2e\]) {
+  border-color: rgba(222,235,248,.56) !important;
+  color: #fff !important;
+}
+
+/* Transitional category pages use this class while retaining their existing
+   content markup. It gives every product group the same visual rhythm. */
+.catalogue-card {
+  display: flex;
+  min-height: 390px;
+  flex-direction: column;
+  border-color: #c9d8e6 !important;
+  border-radius: 6px;
+  box-shadow: 0 3px 18px rgba(13,35,60,.11);
+}
+.catalogue-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 2px #e05a2e, 0 20px 42px rgba(13,35,60,.20);
+}
+.catalogue-card > div:first-child {
+  height: 230px !important;
+  flex-shrink: 0;
+  background-color: #1d3d57 !important;
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px),
+    radial-gradient(circle at 50% 45%, rgba(76,130,165,.34), transparent 64%);
+  background-size: 46px 46px, 46px 46px, auto;
+}
+.catalogue-card > div:first-child::before {
+  content: "HYDRONEX  /  PRODUCT SERIES";
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  z-index: 2;
+  color: #f06a3b;
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+.catalogue-card > div:first-child > span { display: none; }
+.catalogue-card > div:first-child img { z-index: 1; }
+.catalogue-card > div:nth-child(2) {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 16px !important;
+  border-top: 0 !important;
+}
+.catalogue-card > div:nth-child(2) > p:first-child {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 10px !important;
+  border: 1px solid #274a6c;
+  border-radius: 3px;
+  padding: 3px 7px;
+  color: #274a6c !important;
+  font-size: 9px !important;
+}
+
+.category-landing-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -5;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(5,14,30,.28), transparent 60%);
+}
+.category-landing-product {
+  z-index: 3;
+  filter: drop-shadow(0 20px 24px rgba(0,0,0,.42));
+  animation: category-product-float 5s ease-in-out infinite;
+}
+@keyframes category-product-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* CSS containment helper — cuts repaint cost on large card grids */
+.contain-layout { contain: layout style; }
+
+/* ── CTA animated orange-yellow gradient background ─────────────────────── */
+@keyframes cta-gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.bg-anim-cta-gradient {
+  background: linear-gradient(
+    130deg,
+    #c84000,
+    #e05a2e,
+    #f07d1a,
+    #f5a020,
+    #e86b10,
+    #e05a2e,
+    #c84000
+  );
+  background-size: 300% 300%;
+  animation: cta-gradient-shift 6s ease infinite;
+}
+
+/* ── CTA text — always visible, subtle lift on load ────────────────────── */
+@keyframes cta-text-reveal {
+  0%   { opacity: 0.4; transform: translateY(10px); }
+  100% { opacity: 1;   transform: translateY(0); }
+}
+.cta-heading-animate {
+  opacity: 1;
+  animation: cta-text-reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.cta-sub-animate {
+  opacity: 1;
+  animation: cta-text-reveal 0.8s 0.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.cta-btn-animate {
+  opacity: 1;
+  animation: cta-text-reveal 0.8s 0.28s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes cta-cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── BSP Hero product image — float + glow pulse ───────────────────────── */
+@keyframes bsp-hero-float {
+  0%, 100% { transform: translateY(0px) scale(1);    }
+  50%       { transform: translateY(-12px) scale(1.025); }
+}
+@keyframes bsp-hero-glow-pulse {
+  0%, 100% { opacity: 0.65; transform: scale(1);    }
+  50%       { opacity: 1;    transform: scale(1.08); }
+}
+@keyframes bsp-hero-img-entrance {
+  0%   { opacity: 0; transform: translateX(40px) scale(0.92); }
+  100% { opacity: 1; transform: translateX(0)    scale(1);    }
+}
+.bsp-hero-img {
+  animation:
+    bsp-hero-img-entrance 0.9s 0.2s cubic-bezier(0.22, 1, 0.36, 1) both,
+    bsp-hero-float 5s 1.1s ease-in-out infinite;
+}
+.bsp-hero-glow {
+  animation: bsp-hero-glow-pulse 5s 1.1s ease-in-out infinite;
+}
+
+/* Hover state — pauses the float and surges the glow */
+.bsp-hero-img-hover {
+  transition:
+    filter 0.35s ease,
+    transform 0.35s ease;
+}
+.bsp-hero-product:hover .bsp-hero-img-hover {
+  animation-play-state: paused;
+  transform: scale(1.13) !important;
+  filter:
+    drop-shadow(0 0 42px rgba(255,230,160,0.85))
+    drop-shadow(0 0 16px rgba(255,255,255,0.55))
+    drop-shadow(0 8px 24px rgba(0,0,0,0.65)) !important;
+}
+
+/* ── BSP detail page Call Now button ────────────────────────────────────── */
+.bsp-call-btn {
+  border: 1.5px solid rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.88);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.bsp-call-btn:hover {
+  border-color: #e05a2e;
+  background: rgba(224,90,46,0.22);
+  color: #fff;
+}
+
+/* ── BSP SPEC TABLE ROW HOVER ────────────────────────────────────────────── */
+.bsp-table-row {
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
+}
+.bsp-table-row:hover {
+  background: #fff4ef !important;
+  box-shadow: inset 3px 0 0 #e05a2e;
+}
+
+/* ── BSP PRODUCT DETAIL PAGE ────────────────────────────────────────────── */
+
+/* Heading word stagger-in */
+@keyframes bsp-word-in {
+  0%   { opacity: 0; transform: translateY(18px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.bsp-word-in {
+  opacity: 0;
+  animation: bsp-word-in 0.5s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+/* Heading shimmer sweep — background-position shift */
+@keyframes bsp-heading-shimmer {
+  0%   { background-position: 200% center; }
+  50%  { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Hydronex logo glow on hover */
+.bsp-hydronex-logo {
+  transition: opacity 0.4s ease, filter 0.5s ease;
+}
+.group:hover .bsp-hydronex-logo {
+  opacity: 0.95 !important;
+  filter: drop-shadow(0 0 6px rgba(224,90,46,0.85)) drop-shadow(0 0 14px rgba(224,90,46,0.5)) brightness(1.2);
+}
+
+/* Key Features section — animated dark-blue to light-blue moving gradient */
+@keyframes bsp-features-move {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.bsp-features-gradient {
+  background: linear-gradient(
+    130deg,
+    #030c1e,
+    #061428,
+    #0a2a52,
+    #0d4080,
+    #1a5fa0,
+    #0d4080,
+    #0a2a52,
+    #061428,
+    #030c1e
+  );
+  background-size: 400% 400%;
+  animation: bsp-features-move 7s ease infinite;
+}
+
+/* Applications section — animated black-to-orange moving gradient */
+@keyframes bsp-apps-move {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.bsp-apps-gradient {
+  background: linear-gradient(
+    130deg,
+    #0a0603,
+    #150a04,
+    #2a1208,
+    #3d1a0a,
+    #6b2d10,
+    #8c3a12,
+    #6b2d10,
+    #3d1a0a,
+    #150a04,
+    #0a0603
+  );
+  background-size: 400% 400%;
+  animation: bsp-apps-move 8s ease infinite;
+}
+
+/* Fade-up for description / specs / cta rows */
+@keyframes bsp-fade-up {
+  0%   { opacity: 0; transform: translateY(14px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.bsp-fade-up {
+  opacity: 0;
+  animation: bsp-fade-up 0.55s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+/* Glassmorphism specs card */
+.bsp-glass-card {
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(14px) saturate(1.6);
+  -webkit-backdrop-filter: blur(14px) saturate(1.6);
+  border: 1px solid rgba(224,90,46,0.18);
+  box-shadow: 0 4px 20px rgba(224,90,46,0.07), 0 1px 4px rgba(0,0,0,0.05);
+}
+
+/* Moving arcade border — conic-gradient that rotates */
+@keyframes bsp-border-spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.bsp-moving-border-wrap {
+  padding: 3px;
+  border-radius: 10px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+.bsp-moving-border-track {
+  position: absolute;
+  inset: -100%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg 280deg,
+    #e05a2e 280deg 300deg,
+    #f59e42 300deg 320deg,
+    #e05a2e 320deg 340deg,
+    transparent 340deg 360deg
+  );
+  animation: bsp-border-spin 3.5s linear infinite;
+  border-radius: 10px;
+}
+.bsp-moving-border-inner {
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0e1c35;
+}
+
+/* Ringing phone animation */
+@keyframes bsp-phone-ring {
+  0%, 100% { transform: rotate(0deg); }
+  10%       { transform: rotate(-18deg); }
+  20%       { transform: rotate(18deg); }
+  30%       { transform: rotate(-14deg); }
+  40%       { transform: rotate(14deg); }
+  50%       { transform: rotate(-8deg); }
+  60%       { transform: rotate(8deg); }
+  70%       { transform: rotate(0deg); }
+}
+.bsp-ring-phone {
+  animation: bsp-phone-ring 1.8s ease-in-out infinite;
+  transform-origin: 50% 90%;
+}
+
+/* Industry carousel — continuous leftward loop */
+@keyframes bsp-carousel-loop {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.bsp-carousel-track {
+  animation: bsp-carousel-loop 36s linear infinite;
+  width: max-content;
+}
+.bsp-carousel-outer:hover .bsp-carousel-track {
+  animation-play-state: paused;
+}
+
+/* Quick Release specialised technical content — use the same BSP detail
+   treatment while retaining the original KTM and KNV diagrams and tables. */
+@keyframes quick-release-section-in {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.quick-release-special-detail {
+  background: linear-gradient(135deg, #fdf6f0 0%, #f8fafc 46%, #f5f8ff 100%);
+}
+.quick-release-special-detail > main,
+.quick-release-special-detail > section {
+  max-width: 80rem;
+  margin-inline: auto;
+}
+.quick-release-special-detail section,
+.quick-release-special-detail main > section {
+  position: relative;
+  overflow: hidden;
+  border: 0 !important;
+  padding: 3.5rem 1rem !important;
+  animation: quick-release-section-in .65s cubic-bezier(.22,1,.36,1) both;
+}
+.quick-release-special-detail section::before,
+.quick-release-special-detail main > section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgba(224,90,46,.10) 1px, transparent 1px);
+  background-size: 26px 26px;
+  opacity: .38;
+}
+.quick-release-special-detail section > *,
+.quick-release-special-detail main > section > * {
+  position: relative;
+  z-index: 1;
+}
+.quick-release-special-detail section:nth-child(even),
+.quick-release-special-detail main > section:nth-child(even) {
+  background: linear-gradient(130deg, #061428, #0a2a52, #0d4080, #061428);
+  background-size: 300% 300%;
+  animation: quick-release-section-in .65s cubic-bezier(.22,1,.36,1) both, bsp-features-move 8s ease infinite;
+}
+.quick-release-special-detail h2 {
+  color: #0e1c35 !important;
+  font-weight: 800 !important;
+  letter-spacing: -.025em;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+.quick-release-special-detail h2::before {
+  content: "";
+  inline-size: 4px;
+  block-size: 1.8rem;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: #e05a2e;
+}
+.quick-release-special-detail section:nth-child(even) h2,
+.quick-release-special-detail section:nth-child(even) .text-foreground,
+.quick-release-special-detail section:nth-child(even) .text-muted-foreground,
+.quick-release-special-detail main > section:nth-child(even) h2,
+.quick-release-special-detail main > section:nth-child(even) .text-foreground,
+.quick-release-special-detail main > section:nth-child(even) .text-muted-foreground {
+  color: rgba(255,255,255,.92) !important;
+}
+.quick-release-special-detail section:nth-child(even) .text-muted-foreground,
+.quick-release-special-detail main > section:nth-child(even) .text-muted-foreground {
+  color: rgba(203,220,248,.86) !important;
+}
+.quick-release-special-detail tbody .text-foreground,
+.quick-release-special-detail tbody .text-muted-foreground,
+.quick-release-special-detail tbody td {
+  color: #334155 !important;
+  font-weight: 500;
+}
+.quick-release-special-detail tbody td.font-medium {
+  color: #0e1c35 !important;
+  font-weight: 700;
+}
+.quick-release-special-detail section:nth-child(even) h2::before,
+.quick-release-special-detail main > section:nth-child(even) h2::before { background: #fb923c; }
+.quick-release-special-detail li,
+.quick-release-special-detail [class*="gap-3"] > span:not(.rounded-full) {
+  transition: transform .24s ease, color .24s ease;
+}
+.quick-release-special-detail li:hover {
+  transform: translateX(5px);
+}
+.quick-release-special-detail .rounded-lg.border,
+.quick-release-special-detail .rounded-lg[class*="bg-"] {
+  border-color: rgba(224,90,46,.20) !important;
+  box-shadow: 0 8px 28px rgba(14,28,53,.10);
+}
+.quick-release-special-detail table {
+  background: rgba(255,255,255,.93);
+}
+.quick-release-special-detail thead,
+.quick-release-special-detail thead.bg-sky-500,
+.quick-release-special-detail thead .bg-sky-400,
+.quick-release-special-detail thead tr.bg-muted,
+.quick-release-special-detail thead tr.bg-blue-500,
+.quick-release-special-detail thead tr.bg-blue-400 {
+  background: linear-gradient(100deg, #c84000, #e05a2e, #f07d1a) !important;
+  color: #fff !important;
+}
+.quick-release-special-detail thead th {
+  color: #fff !important;
+  font-size: .7rem !important;
+  letter-spacing: .035em;
+}
+.quick-release-special-detail tbody tr {
+  transition: background .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.quick-release-special-detail tbody tr:hover {
+  background: #fff4ef !important;
+  box-shadow: inset 3px 0 #e05a2e;
+}
+.quick-release-special-detail tbody tr:hover td {
+  color: #0e1c35 !important;
+}
+.quick-release-special-detail img {
+  transition: transform .5s cubic-bezier(.22,1,.36,1), filter .35s ease;
+}
+.quick-release-special-detail section:hover img {
+  transform: scale(1.035);
+  filter: drop-shadow(0 10px 18px rgba(224,90,46,.18));
+}
+@media (prefers-reduced-motion: reduce) {
+  .quick-release-special-detail section,
+  .quick-release-special-detail img,
+  .quick-release-special-detail tbody tr { animation: none !important; transition: none !important; }
+}
+
+/* ── NPT PRODUCT DETAIL PAGE (IDENTICAL TO BSP) ──────────────────────────── */
+
+/* Heading word stagger-in */
+@keyframes npt-word-in {
+  0%   { opacity: 0; transform: translateY(18px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.npt-word-in {
+  opacity: 0;
+  animation: npt-word-in 0.5s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+/* Heading shimmer sweep — background-position shift (uses bsp-heading-shimmer) */
+
+/* Hydronex logo glow on hover */
+.npt-hydronex-logo {
+  transition: opacity 0.4s ease, filter 0.5s ease;
+}
+.group:hover .npt-hydronex-logo {
+  opacity: 0.95 !important;
+  filter: drop-shadow(0 0 6px rgba(224,90,46,0.85)) drop-shadow(0 0 14px rgba(224,90,46,0.5)) brightness(1.2);
+}
+
+/* Fade-up for description / specs / cta rows */
+@keyframes npt-fade-up {
+  0%   { opacity: 0; transform: translateY(14px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.npt-fade-up {
+  opacity: 0;
+  animation: npt-fade-up 0.55s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+/* Moving arcade border — conic-gradient that rotates (identical to BSP) */
+@keyframes npt-border-spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.npt-moving-border-wrap {
+  padding: 3px;
+  border-radius: 10px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+.npt-moving-border-track {
+  position: absolute;
+  inset: -100%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg 280deg,
+    #e05a2e 280deg 300deg,
+    #f59e42 300deg 320deg,
+    #e05a2e 320deg 340deg,
+    transparent 340deg 360deg
+  );
+  animation: npt-border-spin 3.5s linear infinite;
+  border-radius: 10px;
+}
+.npt-moving-border-inner {
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0e1c35;
+}
+
+/* ── JIC PRODUCT DETAIL PAGE (IDENTICAL TO NPT AND BSP) ──────────────────────────── */
+
+/* Heading word stagger-in */
+@keyframes jic-word-in {
+  0%   { opacity: 0; transform: translateY(18px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.jic-word-in {
+  opacity: 0;
+  animation: jic-word-in 0.5s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+/* Hydronex logo glow on hover */
+.jic-hydronex-logo {
+  transition: opacity 0.4s ease, filter 0.5s ease;
+}
+.group:hover .jic-hydronex-logo {
+  opacity: 0.95 !important;
+  filter: drop-shadow(0 0 6px rgba(224,90,46,0.85)) drop-shadow(0 0 14px rgba(224,90,46,0.5)) brightness(1.2);
+}
+
+/* Fade-up for description / specs / cta rows */
+@keyframes jic-fade-up {
+  0%   { opacity: 0; transform: translateY(14px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.jic-fade-up {
+  opacity: 0;
+  animation: jic-fade-up 0.55s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+/* Moving arcade border — conic-gradient that rotates (identical to BSP and NPT) */
+@keyframes jic-border-spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.jic-moving-border-wrap {
+  padding: 3px;
+  border-radius: 10px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+.jic-moving-border-track {
+  position: absolute;
+  inset: -100%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg 280deg,
+    #e05a2e 280deg 300deg,
+    #f59e42 300deg 320deg,
+    #e05a2e 320deg 340deg,
+    transparent 340deg 360deg
+  );
+  animation: jic-border-spin 3.5s linear infinite;
+  border-radius: 10px;
+}
+.jic-moving-border-inner {
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0e1c35;
+}
+
+/* JIS Product Detail Animations */
+@keyframes jis-word-in {
+  0%   { opacity: 0; transform: translateY(18px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.jis-word-in {
+  opacity: 0;
+  animation: jis-word-in 0.5s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+/* Hydronex logo glow on hover */
+.jis-hydronex-logo {
+  transition: opacity 0.4s ease, filter 0.5s ease;
+}
+.group:hover .jis-hydronex-logo {
+  opacity: 0.95 !important;
+  filter: drop-shadow(0 0 6px rgba(224,90,46,0.85)) drop-shadow(0 0 14px rgba(224,90,46,0.5)) brightness(1.2);
+}
+
+/* Fade-up for description / specs / cta rows */
+@keyframes jis-fade-up {
+  0%   { opacity: 0; transform: translateY(14px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes jis-heading-shimmer {
+  0%, 100% { backgroundPosition: -1000% 0; }
+  50% { backgroundPosition: 1000% 0; }
+}
+.jis-fade-up {
+  opacity: 0;
+  animation: jis-fade-up 0.55s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+/* Moving arcade border — conic-gradient that rotates */
+@keyframes jis-border-spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.jis-moving-border-wrap {
+  padding: 3px;
+  border-radius: 10px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+.jis-moving-border-track {
+  position: absolute;
+  inset: -100%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg 280deg,
+    #e05a2e 280deg 300deg,
+    #f59e42 300deg 320deg,
+    #e05a2e 320deg 340deg,
+    transparent 340deg 360deg
+  );
+  animation: jis-border-spin 3.5s linear infinite;
+  border-radius: 10px;
+}
+.jis-moving-border-inner {
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0e1c35;
+}
+
+/* Quick-coupler detail pages inherit the BSP detail interactions while keeping
+   their own product tables and engineering diagrams intact. */
+.iso-bsp-product-detail > section:not(:first-of-type) {
+  isolation: isolate;
+}
+
+.iso-bsp-product-detail > section:not(:first-of-type) > div:not(.absolute) {
+  position: relative;
+}
+
+.iso-bsp-product-detail .overflow-x-auto {
+  position: relative;
+  border-color: rgba(178, 196, 220, 0.78) !important;
+  box-shadow: 0 10px 24px rgba(14, 28, 53, 0.06);
+  transition: border-color 260ms ease, box-shadow 260ms ease, transform 260ms ease;
+}
+
+.iso-bsp-product-detail .overflow-x-auto:hover {
+  border-color: rgba(224, 90, 46, 0.72) !important;
+  box-shadow: 0 18px 42px rgba(14, 28, 53, 0.15), 0 0 0 1px rgba(224, 90, 46, 0.16);
+  transform: translateY(-2px);
+}
+
+.iso-bsp-product-detail table tbody tr {
+  transition: background-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+.iso-bsp-product-detail table tbody tr:hover {
+  background: rgba(224, 90, 46, 0.075) !important;
+  box-shadow: inset 3px 0 0 #e05a2e;
+}
+
+.iso-bsp-product-detail section .max-w-2xl {
+  overflow: hidden;
+  transition: border-color 260ms ease, box-shadow 260ms ease, transform 260ms ease;
+}
+
+.iso-bsp-product-detail section .max-w-2xl:hover {
+  border-color: rgba(224, 90, 46, 0.65) !important;
+  box-shadow: 0 16px 34px rgba(14, 28, 53, 0.13);
+  transform: translateY(-2px);
+}
+
+.iso-bsp-product-detail section .max-w-2xl img {
+  transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1), filter 450ms ease;
+}
+
+.iso-bsp-product-detail section .max-w-2xl:hover img {
+  transform: scale(1.035);
+  filter: drop-shadow(0 8px 12px rgba(14, 28, 53, 0.12));
+}
+
+/* Keep the supporting ISO-B engineering panels on the same interaction system
+   as the BSP detail view. These are deliberately scoped to the shared detail
+   shell so product copy, diagrams and table data remain untouched. */
+.iso-bsp-product-detail section ul > li.bg-white {
+  border-color: rgba(178, 196, 220, 0.74);
+  box-shadow: 0 5px 16px rgba(14, 28, 53, 0.035);
+  transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease,
+    background-color 240ms ease;
+}
+
+.iso-bsp-product-detail section ul > li.bg-white:hover {
+  transform: translateX(4px);
+  border-color: rgba(224, 90, 46, 0.64);
+  background-color: #fffaf7;
+  box-shadow: 0 12px 28px rgba(14, 28, 53, 0.11), inset 3px 0 0 #e05a2e;
+}
+
+.iso-bsp-product-detail .bsp-carousel-track > div {
+  transition: transform 360ms cubic-bezier(0.22, 1, 0.36, 1), filter 360ms ease;
+}
+
+.iso-bsp-product-detail .bsp-carousel-track > div:hover {
+  transform: translateY(-5px) scale(1.018);
+  filter: brightness(1.08) saturate(1.05);
+  z-index: 2;
+}
+
+.iso-bsp-product-detail section .grid > .bg-white.rounded-lg.border {
+  transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
+}
+
+.iso-bsp-product-detail section .grid > .bg-white.rounded-lg.border:hover {
+  transform: translateY(-2px);
+  border-color: rgba(224, 90, 46, 0.62);
+  box-shadow: 0 14px 30px rgba(14, 28, 53, 0.12);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .iso-bsp-product-detail > section:not(:first-of-type) {
+    animation: iso-bsp-section-in 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@keyframes iso-bsp-section-in {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}

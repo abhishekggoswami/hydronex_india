@@ -1,0 +1,1984 @@
+⚠ `images.domains` is deprecated in favor of `images.remotePatterns`. Please update next.config.mjs to protect your application from malicious users.
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\hi\Desktop\pnpm-lock.yaml as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\pnpm-lock.yaml
+
+[browser] Image with src "http://localhost:3000/images/hydronex-logo-white.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+⚠ Found a change in next.config.mjs. Restarting the server to apply the changes...
+⚠ `images.domains` is deprecated in favor of `images.remotePatterns`. Please update next.config.mjs to protect your application from malicious users.
+Error: Can't resolve 'tailwindcss' in 'C:\Users\hi\Desktop'
+    [2m[at finishWithoutResolve (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:586:18)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:678:14)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m
+    [2m[at eval (eval at create (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\tapable@2.3.0\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m
+    [2m[at eval (eval at create (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\tapable@2.3.0\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:27:1)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\DescriptionFilePlugin.js:89:43)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m
+    [2m[at eval (eval at create (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\tapable@2.3.0\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m {
+  details: "resolve 'tailwindcss' in 'C:\\Users\\hi\\Desktop'\n" +
+    '  Parsed request is a module\n' +
+    '  using description file: C:\\Users\\hi\\Desktop\\package.json (relative path: .)\n' +
+    '    resolve as module\n' +
+    "      C:\\Users\\hi\\Desktop\\node_modules doesn't exist or is not a directory\n" +
+    "      C:\\Users\\hi\\node_modules doesn't exist or is not a directory\n" +
+    "      C:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "      C:\\node_modules doesn't exist or is not a directory\n" +
+    '      looking for modules in C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\n' +
+    '        single file module\n' +
+    '          using description file: C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\package.json (relative path: ./dist/bin/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/dist/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/node_modules/tailwindcss)\n' +
+    '            no extension\n' +
+    "              C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\\tailwindcss doesn't exist\n" +
+    '            .css\n' +
+    "              C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\\tailwindcss.css doesn't exist\n" +
+    "        C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\\tailwindcss doesn't exist"
+}
+Error: Can't resolve 'tailwindcss' in 'C:\Users\hi\Desktop'
+    [2m[at finishWithoutResolve (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:586:18)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:678:14)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m
+    [2m[at eval (eval at create (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\tapable@2.3.0\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m
+    [2m[at eval (eval at create (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\tapable@2.3.0\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:27:1)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\DescriptionFilePlugin.js:89:43)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m
+    [2m[at eval (eval at create (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\tapable@2.3.0\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m {
+  details: "resolve 'tailwindcss' in 'C:\\Users\\hi\\Desktop'\n" +
+    '  Parsed request is a module\n' +
+    '  using description file: C:\\Users\\hi\\Desktop\\package.json (relative path: .)\n' +
+    '    resolve as module\n' +
+    "      C:\\Users\\hi\\Desktop\\node_modules doesn't exist or is not a directory\n" +
+    "      C:\\Users\\hi\\node_modules doesn't exist or is not a directory\n" +
+    "      C:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "      C:\\node_modules doesn't exist or is not a directory\n" +
+    '      looking for modules in C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\n' +
+    '        single file module\n' +
+    '          using description file: C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\package.json (relative path: ./dist/bin/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/dist/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/node_modules/tailwindcss)\n' +
+    '            no extension\n' +
+    "              C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\\tailwindcss doesn't exist\n" +
+    '            .css\n' +
+    "              C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\\tailwindcss.css doesn't exist\n" +
+    "        C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\\tailwindcss doesn't exist"
+}
+Error: Can't resolve 'tailwindcss' in 'C:\Users\hi\Desktop'
+    [2m[at finishWithoutResolve (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:586:18)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:678:14)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m
+    [2m[at eval (eval at create (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\tapable@2.3.0\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m
+    [2m[at eval (eval at create (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\tapable@2.3.0\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:27:1)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\DescriptionFilePlugin.js:89:43)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m
+    [2m[at eval (eval at create (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\tapable@2.3.0\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m {
+  details: "resolve 'tailwindcss' in 'C:\\Users\\hi\\Desktop'\n" +
+    '  Parsed request is a module\n' +
+    '  using description file: C:\\Users\\hi\\Desktop\\package.json (relative path: .)\n' +
+    '    resolve as module\n' +
+    "      C:\\Users\\hi\\Desktop\\node_modules doesn't exist or is not a directory\n" +
+    "      C:\\Users\\hi\\node_modules doesn't exist or is not a directory\n" +
+    "      C:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "      C:\\node_modules doesn't exist or is not a directory\n" +
+    '      looking for modules in C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\n' +
+    '        single file module\n' +
+    '          using description file: C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\package.json (relative path: ./dist/bin/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/dist/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/node_modules/tailwindcss)\n' +
+    '            no extension\n' +
+    "              C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\\tailwindcss doesn't exist\n" +
+    '            .css\n' +
+    "              C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\\tailwindcss.css doesn't exist\n" +
+    "        C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\\tailwindcss doesn't exist"
+}
+
+<--- Last few GCs --->
+
+
+
+
+<--- JS stacktrace --->
+#
+
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+#
+
+----- Native stack trace -----
+
+Error: Can't resolve 'tailwindcss' in 'C:\Users\hi\Desktop'
+    [2m[at finishWithoutResolve (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:586:18)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:678:14)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m
+    [2m[at eval (eval at create (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\tapable@2.3.0\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m
+    [2m[at eval (eval at create (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\tapable@2.3.0\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:27:1)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\DescriptionFilePlugin.js:89:43)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m
+    [2m[at eval (eval at create (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\tapable@2.3.0\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m {
+  details: "resolve 'tailwindcss' in 'C:\\Users\\hi\\Desktop'\n" +
+    '  Parsed request is a module\n' +
+    '  using description file: C:\\Users\\hi\\Desktop\\package.json (relative path: .)\n' +
+    '    resolve as module\n' +
+    "      C:\\Users\\hi\\Desktop\\node_modules doesn't exist or is not a directory\n" +
+    "      C:\\Users\\hi\\node_modules doesn't exist or is not a directory\n" +
+    "      C:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "      C:\\node_modules doesn't exist or is not a directory\n" +
+    '      looking for modules in C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\n' +
+    '        single file module\n' +
+    '          using description file: C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\package.json (relative path: ./dist/bin/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/dist/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/node_modules/tailwindcss)\n' +
+    '            no extension\n' +
+    "              C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\\tailwindcss doesn't exist\n" +
+    '            .css\n' +
+    "              C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\\tailwindcss.css doesn't exist\n" +
+    "        C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\\tailwindcss doesn't exist"
+}
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 2: 00007FF609CD4568 v8::base::CPU::num_virtual_address_bits+103336
+ 3: 00007FF60A8453B1 v8::Isolate::ReportExternalAllocationLimitReached+65
+ 4: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 5: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+ 6: 00007FF60A6464CD v8::FixedArray::Length+130749
+ 7: 00007FF60A697AB3 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+71347
+ 8: 00007FF60A68793D v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+5437
+ 9: 00007FF60A6834F5 v8::internal::ThreadIsolation::JitPageReference::Size+190613
+10: 00007FF60A00CF5D BIO_ssl_shutdown+189
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+ 9: 00007FF60A655BB6 v8::internal::ThreadIsolation::JitPageReference::Size+3926
+10: 00007FF60A64569B v8::FixedArray::Length+127115
+11: 00007FF60A644CCA v8::FixedArray::Length+124602
+12: 00007FF60A69C6B0 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+90800
+13: 00007FF60A7005B3 v8::base::CPU::has_sse41+73859
+14: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+15: 00007FF60A83B061 v8::Isolate::Initialize+433
+16: 00007FF609DB04AD node::NewContext+397
+17: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+18: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+19: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+20: 00007FF609DD1393 uv_poll_stop+371
+21: 00007FF60B5BFA5B inflateValidate+172219
+22: 00007FF81502CCB7 BaseThreadInitThunk+23
+23: 00007FF8159EAD6C RtlUserThreadStart+44
+
+<--- Last few GCs --->
+
+
+
+
+
+#
+
+<--- JS stacktrace --->
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+#
+
+# Fatal process out of memory: Re-embedded builtins: set permissions
+
+#
+
+----- Native stack trace -----
+#
+#
+
+----- Native stack trace -----
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+ 1: 00007FF609D70CD7 
+
+#
+ 2: 00007FF609C464FF 
+ 1: 00007FF609D70CD7 
+----- Native stack trace -----
+ 3: 00007FF60AEAAAA6 
+ 2: 00007FF609C464FF 
+
+ 4: 00007FF60A845403 
+ 3: 00007FF60AEAAAA6 
+ 5: 00007FF60A831F36 
+ 4: 00007FF60A845403 
+ 6: 00007FF60A68E870 
+ 5: 00007FF60A831F36 
+ 7: 00007FF60A655891 
+ 6: 00007FF60A6DB52A 
+ 8: 00007FF60A655EB0 
+ 7: 00007FF60A70259A 
+ 9: 00007FF60A655BB6 
+
+ 8: 00007FF60A70057F 
+
+10: 00007FF60A64569B 
+ 9: 00007FF60A3338C3 
+#
+11: 00007FF60A644CCA 
+10: 00007FF60A83B061 
+
+# Fatal process out of memory: Failed to reserve virtual memory for CodeRange
+11: 00007FF609DB04AD 
+12: 00007FF60A69C6B0 
+<--- Last few GCs --->
+13: 00007FF60A7005B3 
+12: 00007FF609B958F5 
+
+#
+14: 00007FF60A3338C3 
+
+13: 00007FF609B9A9E3 
+----- Native stack trace -----
+14: 00007FF609B8FAE5 
+15: 00007FF60A83B061 
+<--- JS stacktrace --->
+15: 00007FF609DD1393 
+16: 00007FF609DB04AD 
+
+
+17: 00007FF609B958F5 
+16: 00007FF60B5BFA5B 
+
+18: 00007FF609B9A9E3 
+17: 00007FF81502CCB7 
+
+19: 00007FF609B8FAE5 
+18: 00007FF8159EAD6C 
+#
+20: 00007FF609DD1393 
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+21: 00007FF60B5BFA5B 
+#
+22: 00007FF81502CCB7 
+----- Native stack trace -----
+23: 00007FF8159EAD6C 
+
+
+<--- Last few GCs --->
+
+[45060:000001E44A271000]     6365 ms: Scavenge 6.4 (7.0) -> 6.4 (10.5) MB, pooled: 0 MB, 22.87 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+
+
+<--- JS stacktrace --->
+
+FATAL ERROR: AlignedAlloc Allocation failed - process out of memory
+----- Native stack trace -----
+
+ 1: 00007FF609D70CD7 
+
+<--- Last few GCs --->
+
+[47196:000001EC3C731000]     2250 ms: Scavenge 6.4 (8.0) -> 6.3 (10.8) MB, pooled: 0 MB, 1.80 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+ 2: 00007FF609C464FF 
+[47196:000001EC3C731000]     4732 ms: Scavenge 9.1 (11.3) -> 8.2 (11.8) MB, pooled: 0 MB, 1007.13 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+ 3: 00007FF60AEAAAA6 
+
+ 4: 00007FF60A845403 
+
+ 5: 00007FF60A831F36 
+<--- JS stacktrace --->
+ 6: 00007FF60A68E870 
+
+ 7: 00007FF60A655891 
+FATAL ERROR: NewSpace::EnsureCurrentCapacity Allocation failed - JavaScript heap out of memory
+ 8: 00007FF60A655EB0 
+----- Native stack trace -----
+ 9: 00007FF60A655932 
+
+10: 00007FF60A67E3AB 
+ 1: 00007FF609D70CD7 
+11: 00007FF60A67E615 
+ 2: 00007FF609CD4568 
+12: 00007FF60A67E766 
+ 3: 00007FF60A8453B1 
+13: 00007FF60A6A0AF2 
+ 4: 00007FF60A831F36 
+14: 00007FF60A34E416 
+ 5: 00007FF60A68E870 
+15: 00007FF60A34FD42 
+ 6: 00007FF60A66B5F0 
+16: 00007FF60A34B835 
+ 7: 00007FF60A69550B 
+17: 00007FF60A3503DF 
+ 8: 00007FF60A697B1E 
+18: 00007FF60A694878 
+ 9: 00007FF60A68793D 
+19: 00007FF60A32B9E0 
+10: 00007FF60A6834F5 
+20: 00007FF60A700A05 
+11: 00007FF60A00CF5D 
+21: 00007FF60A3338C3 
+12: 7FF8000000000000 
+22: 00007FF60A83B061 
+23: 00007FF609DB04AD 
+24: 00007FF609B958F5 
+25: 00007FF609B9A9E3 
+26: 00007FF609B8FAE5 
+27: 00007FF609DD1393 
+28: 00007FF60B5BFA5B 
+29: 00007FF81502CCB7 
+30: 00007FF8159EAD6C 
+ 1: 00007FF609D70CD7 
+ 2: 00007FF609CD4568 
+ 3: 00007FF60A8453B1 
+ 4: 00007FF60A831F36 
+ 5: 00007FF60A317D0F 
+ 6: 00007FF60A44A39C 
+ 7: 00007FF60A449E1A 
+ 8: 00007FF60A448020 
+ 9: 00007FF60A6BC499 
+10: 00007FF60A820587 
+11: 00007FF60A40B7D3 
+12: 00007FF60A41FD77 
+13: 00007FF60A40B0BE 
+14: 00007FF60A7ABA2E 
+15: 00007FF60A7AB45A 
+16: 00007FF60A3885D7 
+17: 000001E46A22D4BA 
+ 1: 00007FF609D70CD7 
+ 2: 00007FF609C464FF 
+ 3: 00007FF60AEAAAA6 
+ 4: 00007FF60A845403 
+ 5: 00007FF60A831F36 
+ 6: 00007FF60A68E870 
+ 7: 00007FF60A655891 
+ 8: 00007FF60A655EB0 
+ 9: 00007FF60A655BB6 
+10: 00007FF60A63B7FC 
+11: 00007FF60A67C3A6 
+12: 00007FF60A67C030 
+13: 00007FF60A67B718 
+14: 00007FF60A67AE91 
+15: 00007FF60A34E452 
+16: 00007FF60A34FD42 
+17: 00007FF60A34A909 
+18: 00007FF60A34F61C 
+19: 00007FF60A34FE52 
+20: 00007FF60A34A909 
+21: 00007FF60A34F61C 
+22: 00007FF60A34FE52 
+23: 00007FF60A34A909 
+24: 00007FF60A34F61C 
+25: 00007FF60A34FE52 
+26: 00007FF60A34A909 
+27: 00007FF60A34F61C 
+28: 00007FF60A34FE52 
+29: 00007FF60A34A909 
+30: 00007FF60A34F61C 
+31: 00007FF60A34FE52 
+32: 00007FF60A34A909 
+33: 00007FF60A34F61C 
+34: 00007FF60A34FE52 
+35: 00007FF60A34A909 
+36: 00007FF60A34F61C 
+37: 00007FF60A34FE52 
+38: 00007FF60A34B835 
+39: 00007FF60A3503DF 
+40: 00007FF60A694878 
+41: 00007FF60A32B9E0 
+42: 00007FF60A700A05 
+43: 00007FF60A3338C3 
+44: 00007FF60A83B061 
+45: 00007FF609DB04AD 
+46: 00007FF609B958F5 
+47: 00007FF609B9A9E3 
+48: 00007FF609B8FAE5 
+49: 00007FF609DD1393 
+50: 00007FF60B5BFA5B 
+51: 00007FF81502CCB7 
+52: 00007FF8159EAD6C 
+ 1: 00007FF609D70CD7 
+ 2: 00007FF609C464FF 
+ 3: 00007FF60AEAAAA6 
+ 4: 00007FF60A845403 
+ 5: 00007FF60A831F36 
+ 6: 00007FF60A69C614 
+ 7: 00007FF60A7004C6 
+ 8: 00007FF60A3338C3 
+ 9: 00007FF60A83B061 
+10: 00007FF609DB04AD 
+11: 00007FF609B958F5 
+12: 00007FF609B9A9E3 
+13: 00007FF609B8FAE5 
+14: 00007FF609DD1393 
+15: 00007FF60B5BFA5B 
+16: 00007FF81502CCB7 
+17: 00007FF8159EAD6C RtlUserThreadStart+44
+
+
+
+#
+<--- Last few GCs --->
+# Fatal process out of memory: Re-embedded builtins: set permissions
+
+#
+----- Native stack trace -----
+
+
+
+<--- JS stacktrace --->
+
+
+<--- Last few GCs --->
+
+
+
+#
+[55052:000001CB99F91000]    10922 ms: Scavenge 6.4 (7.0) -> 5.6 (7.7) MB, pooled: 0 MB, 1.58 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+
+# Fatal process out of memory: Re-embedded builtins: set permissions
+[55052:000001CB99F91000]    14188 ms: Scavenge 6.3 (7.7) -> 6.0 (7.2) MB, pooled: 1 MB, 0.65 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+#
+
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+
+#
+#
+<--- JS stacktrace --->
+----- Native stack trace -----
+----- Native stack trace -----
+
+
+
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 00007FF609D70CD7 
+ 2: 00007FF609CD4568 
+ 3: 00007FF60A8453B1 
+ 4: 00007FF60A831F36 
+ 5: 00007FF60A68E870 
+ 6: 00007FF60A6464CD 
+ 7: 00007FF60A697AB3 
+ 8: 00007FF60A68793D 
+ 9: 00007FF60A6834F5 
+10: 00007FF60A00CF5D 
+11: 7FF8000000000000 
+
+<--- Last few GCs --->
+ 1: 00007FF609D70CD7 
+
+[73996:0000017E78331000]     5387 ms: Scavenge 6.4 (7.0) -> 6.3 (10.8) MB, pooled: 0 MB, 1.34 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+ 2: 00007FF609C464FF 
+
+ 3: 00007FF60AEAAAA6 
+ 4: 00007FF60A845403 
+ 5: 00007FF60A831F36 
+
+ 6: 00007FF60A6DB52A 
+<--- JS stacktrace --->
+ 7: 00007FF60A70259A 
+
+ 8: 00007FF60A70057F 
+FATAL ERROR: Zone Allocation failed - process out of memory
+ 9: 00007FF60A3338C3 
+----- Native stack trace -----
+10: 00007FF60A83B061 
+
+11: 00007FF609DB04AD 
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+12: 00007FF609B958F5 
+ 2: 00007FF609CD4568 v8::base::CPU::num_virtual_address_bits+103336
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+13: 00007FF609B9A9E3 
+ 3: 00007FF60A8453B1 v8::Isolate::ReportExternalAllocationLimitReached+65
+14: 00007FF609B8FAE5 
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+ 4: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+15: 00007FF609DD1393 
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+ 5: 00007FF60A314B7B v8::SnapshotCreator::GetIsolate+50059
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+16: 00007FF60B5BFA5B 
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+ 6: 00007FF60A0B58F6 v8::internal::Version::IsCandidate+76630
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+17: 00007FF81502CCB7 
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 7: 00007FF60A3C0259 v8::base::CPU::has_idiva+21001
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+18: 00007FF8159EAD6C 
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+ 8: 00007FF60A3B01DA v8::base::CPU::family+46026
+ 6: 00007FF60A6DB52A v8::CppHeap::wrapper_descriptor+55594
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+ 9: 00007FF60A3B14CB v8::base::CPU::family+50875
+ 7: 00007FF60A70259A v8::base::CPU::has_sse41+82026
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+10: 00007FF60A3ABF24 v8::base::CPU::family+28948
+ 8: 00007FF60A70057F v8::base::CPU::has_sse41+73807
+ 9: 00007FF60A655BB6 v8::internal::ThreadIsolation::JitPageReference::Size+3926
+11: 00007FF60A3AD182 v8::base::CPU::family+33650
+ 9: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+10: 00007FF60A63B7FC v8::FixedArray::Length+86508
+12: 00007FF60A3AE109 v8::base::CPU::family+37625
+10: 00007FF60A83B061 v8::Isolate::Initialize+433
+11: 00007FF60A67C3A6 v8::internal::ThreadIsolation::JitPageReference::Size+161606
+13: 00007FF60A3ACADA v8::base::CPU::family+31946
+11: 00007FF609DB04AD node::NewContext+397
+14: 00007FF60A3ABFD9 v8::base::CPU::family+29129
+12: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+12: 00007FF60A67C030 v8::internal::ThreadIsolation::JitPageReference::Size+160720
+13: 00007FF60A67B718 v8::internal::ThreadIsolation::JitPageReference::Size+158392
+15: 00007FF60A3ABFD9 v8::base::CPU::family+29129
+13: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+14: 00007FF60A67AE91 v8::internal::ThreadIsolation::JitPageReference::Size+156209
+16: 00007FF60A3AD182 v8::base::CPU::family+33650
+14: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+15: 00007FF60A34E452 v8::base::AddressSpaceReservation::AddressSpaceReservation+121506
+17: 00007FF60A3AE109 v8::base::CPU::family+37625
+15: 00007FF609DD1393 uv_poll_stop+371
+18: 00007FF60A3ACADA v8::base::CPU::family+31946
+16: 00007FF60A34FD42 v8::base::AddressSpaceReservation::AddressSpaceReservation+127890
+16: 00007FF60B5BFA5B inflateValidate+172219
+17: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+19: 00007FF60A3ABFD9 v8::base::CPU::family+29129
+17: 00007FF81502CCB7 BaseThreadInitThunk+23
+18: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+20: 00007FF60A3ABFD9 v8::base::CPU::family+29129
+18: 00007FF8159EAD6C RtlUserThreadStart+44
+19: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+21: 00007FF60A3AD182 v8::base::CPU::family+33650
+20: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+22: 00007FF60A3AE109 v8::base::CPU::family+37625
+21: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+23: 00007FF60A3ACADA v8::base::CPU::family+31946
+22: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+24: 00007FF60A3ABFD9 v8::base::CPU::family+29129
+23: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+25: 00007FF60A3ABFD9 v8::base::CPU::family+29129
+24: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+26: 00007FF60A3AD182 v8::base::CPU::family+33650
+25: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+27: 00007FF60A3AD9E1 v8::base::CPU::family+35793
+26: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+28: 00007FF60A3ACA06 v8::base::CPU::family+31734
+27: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+29: 00007FF60A3ABFD9 v8::base::CPU::family+29129
+28: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+30: 00007FF60A3AD9E1 v8::base::CPU::family+35793
+29: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+31: 00007FF60A3ACA06 v8::base::CPU::family+31734
+30: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+32: 00007FF60A3ABFD9 v8::base::CPU::family+29129
+31: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+33: 00007FF60A3AC158 v8::base::CPU::family+29512
+32: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+34: 00007FF60A3AD9E1 v8::base::CPU::family+35793
+33: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+35: 00007FF60A3ACA06 v8::base::CPU::family+31734
+34: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+36: 00007FF60A3B013A v8::base::CPU::family+45866
+35: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+37: 00007FF60A3AC0D1 v8::base::CPU::family+29377
+36: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+38: 00007FF60A3ABFD9 v8::base::CPU::family+29129
+37: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+39: 00007FF60A3AC612 v8::base::CPU::family+30722
+38: 00007FF60A34B835 v8::base::AddressSpaceReservation::AddressSpaceReservation+110213
+40: 00007FF60A3AD9E1 v8::base::CPU::family+35793
+39: 00007FF60A3503DF v8::base::AddressSpaceReservation::AddressSpaceReservation+129583
+41: 00007FF60A3ACA06 v8::base::CPU::family+31734
+40: 00007FF60A694878 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+58488
+42: 00007FF60A3ABFD9 v8::base::CPU::family+29129
+41: 00007FF60A32B9E0 v8::internal::Version::GetString+92944
+43: 00007FF60A3ABFD9 v8::base::CPU::family+29129
+42: 00007FF60A700A05 v8::base::CPU::has_sse41+74965
+44: 00007FF60A3AD9E1 v8::base::CPU::family+35793
+43: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+45: 00007FF60A3ACA06 v8::base::CPU::family+31734
+44: 00007FF60A83B061 v8::Isolate::Initialize+433
+46: 00007FF60A3AA8E4 v8::base::CPU::family+23252
+45: 00007FF609DB04AD node::NewContext+397
+47: 00007FF60A390E5D v8::PropertyDescriptor::value+6237
+46: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+48: 00007FF60A3912C1 v8::PropertyDescriptor::value+7361
+47: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+49: 00007FF60A39193A v8::PropertyDescriptor::value+9018
+48: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+50: 00007FF60A3929EE v8::PropertyDescriptor::value+13294
+49: 00007FF609DD1393 uv_poll_stop+371
+51: 00007FF60A392501 v8::PropertyDescriptor::value+12033
+50: 00007FF60B5BFA5B inflateValidate+172219
+52: 00007FF60A391E16 v8::PropertyDescriptor::value+10262
+51: 00007FF81502CCB7 BaseThreadInitThunk+23
+53: 00007FF60A36F7D2 v8::base::AddressSpaceReservation::AddressSpaceReservation+257570
+52: 00007FF8159EAD6C RtlUserThreadStart+44
+54: 00007FF60A90086E v8::PropertyDescriptor::writable+726206
+55: 00007FF60A98980E v8::PropertyDescriptor::writable+1287262
+56: 00007FF60A8610D2 v8::PropertyDescriptor::writable+72994
+57: 00007FF60A8610D2 v8::PropertyDescriptor::writable+72994
+58: 00007FF60A8610D2 v8::PropertyDescriptor::writable+72994
+59: 00007FF60A8610D2 v8::PropertyDescriptor::writable+72994
+60: 00007FF60A8610D2 v8::PropertyDescriptor::writable+72994
+61: 00007FF60A8610D2 v8::PropertyDescriptor::writable+72994
+62: 00007FF60A8610D2 v8::PropertyDescriptor::writable+72994
+63: 00007FF58AA95D1E 
+
+
+
+
+
+#
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+# Fatal process out of memory: Re-embedded builtins: set permissions
+
+
+
+
+
+
+#
+
+<--- Last few GCs --->
+
+<--- Last few GCs --->
+[58704:000002870FA01000]     6476 ms: Scavenge 6.4 (7.0) -> 6.3 (8.8) MB, pooled: 0 MB, 1.10 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+----- Native stack trace -----
+#
+
+
+[58704:000002870FA01000]    12195 ms: Scavenge 7.1 (8.8) -> 6.8 (9.0) MB, pooled: 0 MB, 35.96 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+
+<--- JS stacktrace --->
+
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+[76752:00000198FFA21000]     2819 ms: Scavenge 6.4 (8.0) -> 5.6 (10.0) MB, pooled: 0 MB, 1.58 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[75872:000001D48DCD1000]    12930 ms: Scavenge 6.4 (7.0) -> 6.3 (8.8) MB, pooled: 0 MB, 1.12 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+<--- JS stacktrace --->
+ 1: 00007FF609D70CD7 
+
+[58704:000002870FA01000]    13368 ms: Scavenge 8.4 (9.8) -> 8.0 (9.1) MB, pooled: 1 MB, 0.79 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+
+#
+
+
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+
+ 2: 00007FF609C464FF 
+
+
+----- Native stack trace -----
+----- Native stack trace -----
+
+ 3: 00007FF60AEAAAA6 
+<--- JS stacktrace --->
+
+<--- JS stacktrace --->
+
+
+
+ 4: 00007FF60A845403 
+
+ 1: 00007FF609D70CD7 
+
+<--- JS stacktrace --->
+ 5: 00007FF60A831F36 
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+FATAL ERROR: Zone Allocation failed - process out of memory
+ 2: 00007FF609C464FF 
+#
+FATAL ERROR: AlignedAlloc Allocation failed - process out of memory
+
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+ 2: 00007FF609CD4568 v8::base::CPU::num_virtual_address_bits+103336
+ 6: 00007FF60A6DB52A 
+----- Native stack trace -----
+ 3: 00007FF60AEAAAA6 
+----- Native stack trace -----
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+#
+ 3: 00007FF60A8453B1 v8::Isolate::ReportExternalAllocationLimitReached+65
+ 7: 00007FF60A70259A 
+
+ 4: 00007FF60A845403 
+
+----- Native stack trace -----
+----- Native stack trace -----
+ 4: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 8: 00007FF60A70057F 
+ 5: 00007FF60A831F36 
+
+
+ 5: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+
+ 9: 00007FF60A3338C3 
+ 6: 00007FF60A68E870 
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 1: 00007FF609D70CD7 
+ 6: 00007FF60A6464CD v8::FixedArray::Length+130749
+<--- Last few GCs --->
+10: 00007FF60A83B061 
+ 7: 00007FF60A655891 
+ 2: 00007FF609CD4568 
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+ 7: 00007FF60A697AB3 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+71347
+
+11: 00007FF609DB04AD 
+
+ 8: 00007FF60A655EB0 
+ 3: 00007FF60A8453B1 
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+ 8: 00007FF60A68793D v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+5437
+[76936:000002F456D61000]    16857 ms: Scavenge 6.4 (7.0) -> 5.6 (8.0) MB, pooled: 0 MB, 1.37 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+12: 00007FF609B958F5 
+<--- Last few GCs --->
+ 4: 00007FF60A831F36 
+ 9: 00007FF60A655BB6 
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+ 9: 00007FF60A6834F5 v8::internal::ThreadIsolation::JitPageReference::Size+190613
+
+13: 00007FF609B9A9E3 
+
+10: 00007FF60A64569B 
+ 5: 00007FF60A68E870 
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+10: 00007FF60A00CF5D BIO_ssl_shutdown+189
+14: 00007FF609B8FAE5 
+
+[75920:0000017C2AD61000]     5940 ms: Scavenge 6.4 (7.0) -> 5.6 (10.2) MB, pooled: 0 MB, 1.55 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+11: 00007FF60A644CCA 
+ 6: 00007FF60A6464CD 
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+<--- JS stacktrace --->
+15: 00007FF609DD1393 
+
+12: 00007FF60A69C6B0 
+ 7: 00007FF60A697AB3 
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+
+13: 00007FF60A7005B3 
+
+ 8: 00007FF60A68793D 
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+16: 00007FF60B5BFA5B 
+17: 00007FF81502CCB7 
+FATAL ERROR: Zone Allocation failed - process out of memory
+14: 00007FF60A3338C3 
+----- Native stack trace -----
+<--- JS stacktrace --->
+ 9: 00007FF60A6834F5 
+ 9: 00007FF60A655BB6 v8::internal::ThreadIsolation::JitPageReference::Size+3926
+18: 00007FF8159EAD6C 
+15: 00007FF60A83B061 
+
+10: 00007FF60A00CF5D 
+10: 00007FF60A63B7FC v8::FixedArray::Length+86508
+
+16: 00007FF609DB04AD 
+FATAL ERROR: Zone Allocation failed - process out of memory
+11: 7FF8000000000000 
+11: 00007FF60A67C3A6 v8::internal::ThreadIsolation::JitPageReference::Size+161606
+17: 00007FF609B958F5 
+----- Native stack trace -----
+18: 00007FF609B9A9E3 
+12: 00007FF60A67C030 v8::internal::ThreadIsolation::JitPageReference::Size+160720
+
+13: 00007FF60A67B718 v8::internal::ThreadIsolation::JitPageReference::Size+158392
+19: 00007FF609B8FAE5 
+14: 00007FF60A67AE91 v8::internal::ThreadIsolation::JitPageReference::Size+156209
+20: 00007FF609DD1393 
+15: 00007FF60A34E452 v8::base::AddressSpaceReservation::AddressSpaceReservation+121506
+21: 00007FF60B5BFA5B 
+16: 00007FF60A34FD42 v8::base::AddressSpaceReservation::AddressSpaceReservation+127890
+22: 00007FF81502CCB7 
+17: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+23: 00007FF8159EAD6C 
+18: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+19: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+20: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+21: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+22: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+23: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+24: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+25: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+26: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+27: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+28: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+29: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+30: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+31: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+32: 00007FF60A34B835 v8::base::AddressSpaceReservation::AddressSpaceReservation+110213
+33: 00007FF60A3503DF v8::base::AddressSpaceReservation::AddressSpaceReservation+129583
+34: 00007FF60A694878 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+58488
+35: 00007FF60A32B9E0 v8::internal::Version::GetString+92944
+36: 00007FF60A700A05 v8::base::CPU::has_sse41+74965
+37: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+38: 00007FF60A83B061 v8::Isolate::Initialize+433
+39: 00007FF609DB04AD node::NewContext+397
+40: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+41: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+42: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+43: 00007FF609DD1393 uv_poll_stop+371
+44: 00007FF60B5BFA5B inflateValidate+172219
+45: 00007FF81502CCB7 BaseThreadInitThunk+23
+46: 00007FF8159EAD6C RtlUserThreadStart+44
+ 1: 00007FF609D70CD7 
+ 2: 00007FF609CD4568 
+ 3: 00007FF60A8453B1 
+ 4: 00007FF60A831F36 
+ 5: 00007FF60A314B7B 
+ 6: 00007FF60A414ABA 
+ 7: 00007FF60A418DAB 
+ 8: 00007FF60A427DDA 
+ 9: 00007FF60A42160E 
+10: 00007FF60A427DFB 
+11: 00007FF60A42163F 
+12: 00007FF60A427DFB 
+13: 00007FF60A42163F 
+14: 00007FF60A427DFB 
+15: 00007FF60A42163F 
+16: 00007FF60A427DFB 
+17: 00007FF60A42163F 
+18: 00007FF60A427DFB 
+19: 00007FF60A420428 
+20: 00007FF60A41731D 
+21: 00007FF60A417891 
+22: 00007FF60A417721 
+23: 00007FF60A417BDE 
+24: 00007FF60A417721 
+25: 00007FF60A41CC9E 
+26: 00007FF60A41D14E 
+27: 00007FF60A428EDF 
+28: 00007FF60A420428 
+29: 00007FF60A41731D 
+30: 00007FF60A411A06 
+31: 00007FF60A41FC7C 
+32: 00007FF60A40B0BE 
+33: 00007FF60A7ABA2E 
+34: 00007FF60A7AB45A 
+35: 00007FF60A3885D7 
+36: 00007FF60A90086E 
+37: 00007FF60A8629CF 
+38: 00007FF5A0C9916A 
+
+<--- Last few GCs --->
+
+[17880:0000026D7B541000]     8835 ms: Scavenge 6.4 (7.0) -> 6.4 (8.8) MB, pooled: 0 MB, 1.27 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[17880:0000026D7B541000]    11937 ms: Scavenge 7.1 (8.8) -> 6.8 (9.0) MB, pooled: 0 MB, 1.64 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[17880:0000026D7B541000]    16200 ms: Scavenge 8.4 (9.8) -> 8.0 (9.1) MB, pooled: 1 MB, 0.94 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 1: 00007FF609D70CD7 
+ 2: 00007FF609CD4568 
+ 3: 00007FF60A8453B1 
+ 4: 00007FF60A831F36 
+ 5: 00007FF60A314B7B 
+ 6: 00007FF60A0B58F6 
+ 7: 00007FF60A77AE3D 
+ 8: 00007FF60A77AC43 
+ 9: 00007FF60A5DBE7C 
+10: 00007FF60A5E9717 
+11: 00007FF60A5CABA2 
+12: 00007FF60A5D4C2A 
+13: 00007FF60A5CD887 
+14: 00007FF60A5D0D76 
+15: 00007FF60A5CCE1F 
+16: 00007FF60A5D4528 
+17: 00007FF60A5CD887 
+18: 00007FF60A5D0E2D 
+19: 00007FF60A5D3E57 
+ 1: 00007FF609D70CD7 
+ 2: 00007FF609CD4568 v8::base::CPU::num_virtual_address_bits+103336
+20: 00007FF60A5CD887 
+ 2: 00007FF609CD4568 
+21: 00007FF60A5D6E15 
+ 3: 00007FF60A8453B1 v8::Isolate::ReportExternalAllocationLimitReached+65
+ 3: 00007FF60A8453B1 
+ 4: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+22: 00007FF60A5CBB04 
+ 4: 00007FF60A831F36 
+23: 00007FF60A5CB6F0 
+ 5: 00007FF60A317D0F 
+ 5: 00007FF60A314B7B v8::SnapshotCreator::GetIsolate+50059
+ 6: 00007FF60A815BDC v8::SharedValueConveyor::SharedValueConveyor+451036
+24: 00007FF60A5BB08B 
+ 6: 00007FF60A44A39C 
+ 7: 00007FF60A81536A v8::SharedValueConveyor::SharedValueConveyor+448874
+25: 00007FF60A7AF108 
+ 7: 00007FF60A449E1A 
+ 8: 00007FF60A4145C2 v8::base::Thread::StartSynchronously+172306
+26: 00007FF60A7A85B2 
+ 8: 00007FF60A448020 
+ 9: 00007FF60A420D4D v8::base::Thread::StartSynchronously+223389
+27: 00007FF60A7ABADB 
+ 9: 00007FF60A6BC499 
+28: 00007FF60A7AB45A 
+10: 00007FF60A41A8B0 v8::base::Thread::StartSynchronously+197632
+10: 00007FF60A820587 
+11: 00007FF60A41A051 v8::base::Thread::StartSynchronously+195489
+11: 00007FF60A40B7D3 
+12: 00007FF60A419D70 v8::base::Thread::StartSynchronously+194752
+29: 00007FF60A3885D7 
+30: 000001989FEAD4BA 
+12: 00007FF60A41FD77 
+13: 00007FF60A4194BE v8::base::Thread::StartSynchronously+192526
+13: 00007FF60A40B0BE 
+14: 00007FF60A420428 v8::base::Thread::StartSynchronously+221048
+14: 00007FF60A7ABA2E 
+15: 00007FF60A41731D v8::base::Thread::StartSynchronously+183917
+15: 00007FF60A7AB45A 
+16: 00007FF60A411A06 v8::base::Thread::StartSynchronously+161110
+16: 00007FF60A3885D7 
+17: 00007FF60A41FC7C v8::base::Thread::StartSynchronously+219084
+17: 00007FF60A90086E 
+18: 00007FF60A40B0BE v8::base::Thread::StartSynchronously+134158
+18: 00007FF60A8629CF 
+19: 00007FF60A7ABA2E v8::SharedValueConveyor::SharedValueConveyor+16430
+19: 00007FF5AC5D916A 
+20: 00007FF60A7AB45A v8::SharedValueConveyor::SharedValueConveyor+14938
+21: 00007FF60A3885D7 v8::base::AddressSpaceReservation::AddressSpaceReservation+359463
+22: 000002F476D2D4BA 
+
+
+#
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+#
+----- Native stack trace -----
+
+
+
+<--- Last few GCs --->
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+
+
+
+<--- Last few GCs --->
+
+
+
+
+ 2: 00007FF609CD4568 v8::base::CPU::num_virtual_address_bits+103336
+<--- Last few GCs --->
+
+
+#
+#
+ 3: 00007FF60A8453B1 v8::Isolate::ReportExternalAllocationLimitReached+65
+
+<--- JS stacktrace --->
+
+
+ 1: 00007FF609D70CD7 
+
+
+
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+ 4: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+
+<--- JS stacktrace --->
+<--- Last few GCs --->
+<--- JS stacktrace --->
+
+
+
+<--- Last few GCs --->
+#
+ 2: 00007FF609C464FF 
+#
+ 5: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+#
+
+
+----- Native stack trace -----
+ 6: 00007FF60A6464CD v8::FixedArray::Length+130749
+
+#
+#
+
+
+ 3: 00007FF60AEAAAA6 
+----- Native stack trace -----
+
+
+
+
+# Fatal process out of memory: Re-embedded builtins: set permissions
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+
+
+ 4: 00007FF60A845403 
+
+ 7: 00007FF60A697AB3 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+71347
+
+# Fatal process out of memory: Re-embedded builtins: set permissions
+
+#
+<--- JS stacktrace --->
+
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+#
+ 5: 00007FF60A831F36 
+ 8: 00007FF60A68793D v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+5437
+#
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+<--- JS stacktrace --->
+#
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+#
+#
+
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+ 6: 00007FF60A68E870 
+----- Native stack trace -----
+----- Native stack trace -----
+ 9: 00007FF60A6834F5 v8::internal::ThreadIsolation::JitPageReference::Size+190613
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+
+#
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+----- Native stack trace -----
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+10: 00007FF60A00CF5D BIO_ssl_shutdown+189
+
+ 7: 00007FF60A655891 
+#
+
+----- Native stack trace -----
+
+#
+
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 8: 00007FF60A655EB0 
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+11: 7FF8000000000000 
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+
+----- Native stack trace -----
+
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+----- Native stack trace -----
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+
+ 9: 00007FF60A655BB6 
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+#
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+#
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+10: 00007FF60A64569B 
+
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+#
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+11: 00007FF60A644CCA 
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+#
+----- Native stack trace -----
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+12: 00007FF60A69C6B0 
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+----- Native stack trace -----
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+ 9: 00007FF60A655BB6 v8::internal::ThreadIsolation::JitPageReference::Size+3926
+
+ 6: 00007FF60A6DB52A v8::CppHeap::wrapper_descriptor+55594
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+ 9: 00007FF60A655BB6 v8::internal::ThreadIsolation::JitPageReference::Size+3926
+
+10: 00007FF60A64569B v8::FixedArray::Length+127115
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+10: 00007FF60A64569B v8::FixedArray::Length+127115
+ 6: 00007FF60A6DB52A v8::CppHeap::wrapper_descriptor+55594
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+ 7: 00007FF60A70259A v8::base::CPU::has_sse41+82026
+ 7: 00007FF60A70259A v8::base::CPU::has_sse41+82026
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 8: 00007FF60A70057F v8::base::CPU::has_sse41+73807
+11: 00007FF60A644CCA v8::FixedArray::Length+124602
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+ 9: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+ 8: 00007FF60A70057F v8::base::CPU::has_sse41+73807
+11: 00007FF60A644CCA v8::FixedArray::Length+124602
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+ 9: 00007FF60A655BB6 v8::internal::ThreadIsolation::JitPageReference::Size+3926
+12: 00007FF60A69C6B0 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+90800
+13: 00007FF60A7005B3 
+12: 00007FF60A69C6B0 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+90800
+14: 00007FF60A3338C3 
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+ 9: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+10: 00007FF60A83B061 v8::Isolate::Initialize+433
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+13: 00007FF60A7005B3 v8::base::CPU::has_sse41+73859
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+10: 00007FF60A64569B v8::FixedArray::Length+127115
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+13: 00007FF60A7005B3 v8::base::CPU::has_sse41+73859
+15: 00007FF60A83B061 
+10: 00007FF60A83B061 v8::Isolate::Initialize+433
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+11: 00007FF609DB04AD node::NewContext+397
+14: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+ 9: 00007FF60A655BB6 v8::internal::ThreadIsolation::JitPageReference::Size+3926
+11: 00007FF60A644CCA v8::FixedArray::Length+124602
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+14: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+16: 00007FF609DB04AD 
+11: 00007FF609DB04AD node::NewContext+397
+ 9: 00007FF60A655BB6 v8::internal::ThreadIsolation::JitPageReference::Size+3926
+12: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+15: 00007FF60A83B061 v8::Isolate::Initialize+433
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+10: 00007FF60A63B7FC v8::FixedArray::Length+86508
+12: 00007FF60A69C6B0 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+90800
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+15: 00007FF60A83B061 v8::Isolate::Initialize+433
+17: 00007FF609B958F5 
+12: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+10: 00007FF60A63B7FC v8::FixedArray::Length+86508
+13: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+ 9: 00007FF60A655BB6 v8::internal::ThreadIsolation::JitPageReference::Size+3926
+16: 00007FF609DB04AD node::NewContext+397
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+11: 00007FF60A67C3A6 v8::internal::ThreadIsolation::JitPageReference::Size+161606
+13: 00007FF60A7005B3 v8::base::CPU::has_sse41+73859
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+16: 00007FF609DB04AD node::NewContext+397
+18: 00007FF609B9A9E3 
+11: 00007FF60A67C3A6 v8::internal::ThreadIsolation::JitPageReference::Size+161606
+14: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+17: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+14: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+13: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+12: 00007FF60A67C030 v8::internal::ThreadIsolation::JitPageReference::Size+160720
+17: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+19: 00007FF609B8FAE5 
+12: 00007FF60A67C030 v8::internal::ThreadIsolation::JitPageReference::Size+160720
+15: 00007FF609DD1393 uv_poll_stop+371
+14: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+10: 00007FF60A63B7FC v8::FixedArray::Length+86508
+11: 00007FF60A67C3A6 v8::internal::ThreadIsolation::JitPageReference::Size+161606
+18: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+13: 00007FF60A67B718 v8::internal::ThreadIsolation::JitPageReference::Size+158392
+15: 00007FF60A83B061 v8::Isolate::Initialize+433
+ 9: 00007FF60A655BB6 v8::internal::ThreadIsolation::JitPageReference::Size+3926
+18: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+20: 00007FF609DD1393 
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+15: 00007FF609DD1393 uv_poll_stop+371
+13: 00007FF60A67B718 v8::internal::ThreadIsolation::JitPageReference::Size+158392
+16: 00007FF60B5BFA5B inflateValidate+172219
+12: 00007FF60A67C030 v8::internal::ThreadIsolation::JitPageReference::Size+160720
+19: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+ 9: 00007FF60A655BB6 v8::internal::ThreadIsolation::JitPageReference::Size+3926
+14: 00007FF60A67AE91 v8::internal::ThreadIsolation::JitPageReference::Size+156209
+16: 00007FF609DB04AD node::NewContext+397
+10: 00007FF60A63B7FC v8::FixedArray::Length+86508
+19: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+21: 00007FF60B5BFA5B 
+16: 00007FF60B5BFA5B inflateValidate+172219
+14: 00007FF60A67AE91 v8::internal::ThreadIsolation::JitPageReference::Size+156209
+17: 00007FF81502CCB7 BaseThreadInitThunk+23
+20: 00007FF609DD1393 uv_poll_stop+371
+10: 00007FF60A63B7FC v8::FixedArray::Length+86508
+15: 00007FF60A34E452 v8::base::AddressSpaceReservation::AddressSpaceReservation+121506
+17: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+13: 00007FF60A67B718 v8::internal::ThreadIsolation::JitPageReference::Size+158392
+11: 00007FF60A67C3A6 v8::internal::ThreadIsolation::JitPageReference::Size+161606
+22: 00007FF81502CCB7 BaseThreadInitThunk+23
+20: 00007FF609DD1393 uv_poll_stop+371
+17: 00007FF81502CCB7 BaseThreadInitThunk+23
+15: 00007FF60A34E452 v8::base::AddressSpaceReservation::AddressSpaceReservation+121506
+18: 00007FF8159EAD6C RtlUserThreadStart+44
+21: 00007FF60B5BFA5B inflateValidate+172219
+11: 00007FF60A67C3A6 v8::internal::ThreadIsolation::JitPageReference::Size+161606
+16: 00007FF60A34FD42 v8::base::AddressSpaceReservation::AddressSpaceReservation+127890
+18: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+14: 00007FF60A67AE91 v8::internal::ThreadIsolation::JitPageReference::Size+156209
+12: 00007FF60A67C030 v8::internal::ThreadIsolation::JitPageReference::Size+160720
+21: 00007FF60B5BFA5B inflateValidate+172219
+23: 00007FF8159EAD6C RtlUserThreadStart+44
+18: 00007FF8159EAD6C RtlUserThreadStart+44
+16: 00007FF60A34FD42 v8::base::AddressSpaceReservation::AddressSpaceReservation+127890
+22: 00007FF81502CCB7 BaseThreadInitThunk+23
+12: 00007FF60A67C030 v8::internal::ThreadIsolation::JitPageReference::Size+160720
+17: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+19: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+15: 00007FF60A34E452 v8::base::AddressSpaceReservation::AddressSpaceReservation+121506
+13: 00007FF60A67B718 v8::internal::ThreadIsolation::JitPageReference::Size+158392
+22: 00007FF81502CCB7 BaseThreadInitThunk+23
+17: 00007FF60A34B835 v8::base::AddressSpaceReservation::AddressSpaceReservation+110213
+23: 00007FF8159EAD6C RtlUserThreadStart+44
+13: 00007FF60A67B718 v8::internal::ThreadIsolation::JitPageReference::Size+158392
+18: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+16: 00007FF60A34FD42 v8::base::AddressSpaceReservation::AddressSpaceReservation+127890
+20: 00007FF609DD1393 uv_poll_stop+371
+14: 00007FF60A67AE91 v8::internal::ThreadIsolation::JitPageReference::Size+156209
+23: 00007FF8159EAD6C RtlUserThreadStart+44
+18: 00007FF60A3503DF v8::base::AddressSpaceReservation::AddressSpaceReservation+129583
+14: 00007FF60A67AE91 v8::internal::ThreadIsolation::JitPageReference::Size+156209
+19: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+21: 00007FF60B5BFA5B inflateValidate+172219
+17: 00007FF60A34B835 v8::base::AddressSpaceReservation::AddressSpaceReservation+110213
+15: 00007FF60A34E452 v8::base::AddressSpaceReservation::AddressSpaceReservation+121506
+19: 00007FF60A694878 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+58488
+15: 00007FF60A34E452 v8::base::AddressSpaceReservation::AddressSpaceReservation+121506
+20: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+22: 00007FF81502CCB7 BaseThreadInitThunk+23
+16: 00007FF60A34FD42 v8::base::AddressSpaceReservation::AddressSpaceReservation+127890
+18: 00007FF60A3503DF v8::base::AddressSpaceReservation::AddressSpaceReservation+129583
+20: 00007FF60A32B9E0 v8::internal::Version::GetString+92944
+16: 00007FF60A34FD42 v8::base::AddressSpaceReservation::AddressSpaceReservation+127890
+21: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+23: 00007FF8159EAD6C RtlUserThreadStart+44
+19: 00007FF60A32B5A3 v8::internal::Version::GetString+91859
+21: 00007FF60A700A05 v8::base::CPU::has_sse41+74965
+17: 00007FF60A34B835 v8::base::AddressSpaceReservation::AddressSpaceReservation+110213
+17: 00007FF60A34B835 v8::base::AddressSpaceReservation::AddressSpaceReservation+110213
+22: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+20: 00007FF60A343CAA v8::base::AddressSpaceReservation::AddressSpaceReservation+78586
+18: 00007FF60A3503DF v8::base::AddressSpaceReservation::AddressSpaceReservation+129583
+22: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+18: 00007FF60A3503DF v8::base::AddressSpaceReservation::AddressSpaceReservation+129583
+23: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+21: 00007FF60A3353CB v8::base::AddressSpaceReservation::AddressSpaceReservation+18971
+19: 00007FF60A694878 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+58488
+23: 00007FF60A83B061 v8::Isolate::Initialize+433
+19: 00007FF60A694878 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+58488
+20: 00007FF60A32B9E0 v8::internal::Version::GetString+92944
+20: 00007FF60A32B9E0 v8::internal::Version::GetString+92944
+24: 00007FF609DB04AD node::NewContext+397
+24: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+25: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+22: 00007FF60A7009AD v8::base::CPU::has_sse41+74877
+23: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+21: 00007FF60A700A05 v8::base::CPU::has_sse41+74965
+25: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+21: 00007FF60A700A05 v8::base::CPU::has_sse41+74965
+26: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+22: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+27: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+24: 00007FF60A83B061 v8::Isolate::Initialize+433
+25: 00007FF609DB04AD node::NewContext+397
+22: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+26: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+23: 00007FF60A83B061 v8::Isolate::Initialize+433
+27: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+23: 00007FF60A83B061 v8::Isolate::Initialize+433
+28: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+26: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+24: 00007FF609DB04AD node::NewContext+397
+28: 00007FF609DD1393 uv_poll_stop+371
+24: 00007FF609DB04AD node::NewContext+397
+29: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+29: 00007FF60B5BFA5B inflateValidate+172219
+30: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+25: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+27: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+25: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+28: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+26: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+30: 00007FF81502CCB7 BaseThreadInitThunk+23
+31: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+27: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+29: 00007FF609DD1393 uv_poll_stop+371
+31: 00007FF8159EAD6C RtlUserThreadStart+44
+26: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+27: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+32: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+30: 00007FF60B5BFA5B inflateValidate+172219
+28: 00007FF609DD1393 uv_poll_stop+371
+33: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+28: 00007FF609DD1393 uv_poll_stop+371
+29: 00007FF60B5BFA5B inflateValidate+172219
+31: 00007FF81502CCB7 BaseThreadInitThunk+23
+34: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+32: 00007FF8159EAD6C RtlUserThreadStart+44
+29: 00007FF60B5BFA5B inflateValidate+172219
+30: 00007FF81502CCB7 BaseThreadInitThunk+23
+30: 00007FF81502CCB7 BaseThreadInitThunk+23
+35: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+31: 00007FF8159EAD6C RtlUserThreadStart+44
+31: 00007FF8159EAD6C RtlUserThreadStart+44
+36: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+37: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+38: 00007FF60A34B835 v8::base::AddressSpaceReservation::AddressSpaceReservation+110213
+39: 00007FF60A3503DF v8::base::AddressSpaceReservation::AddressSpaceReservation+129583
+40: 00007FF60A694878 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+58488
+41: 00007FF60A32B9E0 v8::internal::Version::GetString+92944
+42: 00007FF60A700A05 v8::base::CPU::has_sse41+74965
+43: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+44: 00007FF60A83B061 v8::Isolate::Initialize+433
+45: 00007FF609DB04AD node::NewContext+397
+46: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+47: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+48: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+49: 00007FF609DD1393 uv_poll_stop+371
+50: 00007FF60B5BFA5B inflateValidate+172219
+51: 00007FF81502CCB7 BaseThreadInitThunk+23
+52: 00007FF8159EAD6C RtlUserThreadStart+44
+
+
+#
+# Fatal error in , line 0
+# Out of memory: HashMap::Initialize
+#
+#
+#
+#FailureMessage Object: 000000FFB7DFAFC0
+----- Native stack trace -----
+
+ 1: 00007FF609D70CD7 
+ 2: 00007FF609C464FF 
+ 3: 00007FF60AEAAE45 
+ 4: 00007FF60A823813 
+ 5: 00007FF60A8232A6 
+ 6: 00007FF60A82354C 
+ 7: 00007FF60A8233E8 
+ 8: 00007FF60A3ECBA0 
+ 9: 00007FF60A426769 
+10: 00007FF60A42417A 
+11: 00007FF60A423E81 
+12: 00007FF60A4257BA 
+13: 00007FF60A422EA9 
+14: 00007FF60A4176D4 
+15: 00007FF60A424C44 
+16: 00007FF60A42427A 
+17: 00007FF60A423E81 
+18: 00007FF60A4257BA 
+19: 00007FF60A422EA9 
+20: 00007FF60A4176D4 
+21: 00007FF60A42AC19 
+22: 00007FF60A42AF75 
+23: 00007FF60A420428 
+24: 00007FF60A41F727 
+25: 00007FF60A420E4A 
+26: 00007FF60A4122ED 
+27: 00007FF60A425E3D 
+28: 00007FF60A40B35C 
+29: 00007FF60A7AD460 
+30: 00007FF60A7B2F84 
+31: 00007FF60A82CABD 
+32: 00007FF60A82C814 
+33: 00007FF609CE1E1D 
+34: 00007FF609CE2387 
+35: 00007FF60A862E18 
+36: 00007FF60A8610D2 
+37: 00007FF60A8610D2 
+38: 00007FF60A8610D2 
+39: 00007FF60A8610D2 
+40: 00007FF58AA99FFF 
+
+<--- Last few GCs --->
+
+
+<--- JS stacktrace --->
+
+
+
+#
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+#
+----- Native stack trace -----
+
+ 1: 00007FF609D70CD7 
+ 2: 00007FF609C464FF 
+ 3: 00007FF60AEAAAA6 
+ 4: 00007FF60A845403 
+ 5: 00007FF60A831F36 
+ 6: 00007FF60A68E870 
+ 7: 00007FF60A655891 
+ 8: 00007FF60A655EB0 
+ 9: 00007FF60A655BB6 
+10: 00007FF60A63B7FC 
+11: 00007FF60A67C3A6 
+12: 00007FF60A67C030 
+13: 00007FF60A67B718 
+14: 00007FF60A67AE91 
+15: 00007FF60A34E452 
+16: 00007FF60A34FD42 
+17: 00007FF60A34B835 
+18: 00007FF60A3503DF 
+19: 00007FF60A694878 
+20: 00007FF60A32B9E0 
+21: 00007FF60A700A05 
+22: 00007FF60A3338C3 
+23: 00007FF60A83B061 
+24: 00007FF609DB04AD 
+25: 00007FF609B958F5 
+26: 00007FF609B9A9E3 
+27: 00007FF609B8FAE5 
+28: 00007FF609DD1393 
+29: 00007FF60B5BFA5B 
+30: 00007FF81502CCB7 BaseThreadInitThunk+23
+31: 00007FF8159EAD6C RtlUserThreadStart+44
+Error: Can't resolve 'tailwindcss' in 'C:\Users\hi\Desktop'
+    [2m[at finishWithoutResolve (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:586:18)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:678:14)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m
+    [2m[at eval (eval at create (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\tapable@2.3.0\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m
+    [2m[at eval (eval at create (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\tapable@2.3.0\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:27:1)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\DescriptionFilePlugin.js:89:43)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m
+    [2m[at eval (eval at create (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\tapable@2.3.0\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m {
+  details: "resolve 'tailwindcss' in 'C:\\Users\\hi\\Desktop'\n" +
+    '  Parsed request is a module\n' +
+    '  using description file: C:\\Users\\hi\\Desktop\\package.json (relative path: .)\n' +
+    '    resolve as module\n' +
+    "      C:\\Users\\hi\\Desktop\\node_modules doesn't exist or is not a directory\n" +
+    "      C:\\Users\\hi\\node_modules doesn't exist or is not a directory\n" +
+    "      C:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "      C:\\node_modules doesn't exist or is not a directory\n" +
+    '      looking for modules in C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\n' +
+    '        single file module\n' +
+    '          using description file: C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\package.json (relative path: ./dist/bin/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/dist/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/node_modules/tailwindcss)\n' +
+    '            no extension\n' +
+    "              C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\\tailwindcss doesn't exist\n" +
+    '            .css\n' +
+    "              C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\\tailwindcss.css doesn't exist\n" +
+    "        C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\\tailwindcss doesn't exist"
+}
+
+<--- Last few GCs --->
+
+
+<--- Last few GCs --->
+
+
+<--- JS stacktrace --->
+
+
+
+<--- JS stacktrace --->
+
+
+#
+
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+
+#
+#
+----- Native stack trace -----
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+
+#
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+----- Native stack trace -----
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+ 9: 00007FF60A655BB6 v8::internal::ThreadIsolation::JitPageReference::Size+3926
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+10: 00007FF60A63B7FC v8::FixedArray::Length+86508
+11: 00007FF60A67C3A6 v8::internal::ThreadIsolation::JitPageReference::Size+161606
+ 9: 00007FF60A655932 v8::internal::ThreadIsolation::JitPageReference::Size+3282
+10: 00007FF60A67E3AB v8::internal::ThreadIsolation::JitPageReference::Size+169803
+11: 00007FF60A67E615 v8::internal::ThreadIsolation::JitPageReference::Size+170421
+12: 00007FF60A67E766 v8::internal::ThreadIsolation::JitPageReference::Size+170758
+13: 00007FF60A6A0AF2 v8::Isolate::GetHeapProfiler+5474
+14: 00007FF60A34E416 v8::base::AddressSpaceReservation::AddressSpaceReservation+121446
+15: 00007FF60A34FD42 v8::base::AddressSpaceReservation::AddressSpaceReservation+127890
+16: 00007FF60A34B835 v8::base::AddressSpaceReservation::AddressSpaceReservation+110213
+17: 00007FF60A3503DF v8::base::AddressSpaceReservation::AddressSpaceReservation+129583
+18: 00007FF60A694878 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+58488
+19: 00007FF60A32B9E0 v8::internal::Version::GetString+92944
+12: 00007FF60A67C030 v8::internal::ThreadIsolation::JitPageReference::Size+160720
+13: 00007FF60A67B718 v8::internal::ThreadIsolation::JitPageReference::Size+158392
+14: 00007FF60A67AE91 v8::internal::ThreadIsolation::JitPageReference::Size+156209
+15: 00007FF60A34E452 v8::base::AddressSpaceReservation::AddressSpaceReservation+121506
+16: 00007FF60A34FD42 v8::base::AddressSpaceReservation::AddressSpaceReservation+127890
+17: 00007FF60A34B835 v8::base::AddressSpaceReservation::AddressSpaceReservation+110213
+18: 00007FF60A3503DF v8::base::AddressSpaceReservation::AddressSpaceReservation+129583
+19: 00007FF60A32B5A3 v8::internal::Version::GetString+91859
+20: 00007FF60A343CAA v8::base::AddressSpaceReservation::AddressSpaceReservation+78586
+21: 00007FF60A3353CB v8::base::AddressSpaceReservation::AddressSpaceReservation+18971
+22: 00007FF60A7009AD v8::base::CPU::has_sse41+74877
+20: 00007FF60A700A05 v8::base::CPU::has_sse41+74965
+21: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+22: 00007FF60A83B061 v8::Isolate::Initialize+433
+23: 00007FF609DB04AD node::NewContext+397
+24: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+25: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+26: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+27: 00007FF609DD1393 uv_poll_stop+371
+23: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+24: 00007FF60A83B061 v8::Isolate::Initialize+433
+25: 00007FF609DB04AD node::NewContext+397
+26: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+28: 00007FF60B5BFA5B inflateValidate+172219
+29: 00007FF81502CCB7 BaseThreadInitThunk+23
+27: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+28: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+29: 00007FF609DD1393 uv_poll_stop+371
+30: 00007FF8159EAD6C RtlUserThreadStart+44
+30: 00007FF60B5BFA5B inflateValidate+172219
+31: 00007FF81502CCB7 BaseThreadInitThunk+23
+32: 00007FF8159EAD6C RtlUserThreadStart+44
+
+
+#
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+#
+----- Native stack trace -----
+
+
+
+#
+
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+<--- Last few GCs --->
+#
+
+----- Native stack trace -----
+
+
+<--- JS stacktrace --->
+
+
+
+#
+
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+
+#
+#
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+----- Native stack trace -----
+#
+
+----- Native stack trace -----
+
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+ 9: 00007FF60A655BB6 v8::internal::ThreadIsolation::JitPageReference::Size+3926
+10: 00007FF60A64569B v8::FixedArray::Length+127115
+11: 00007FF60A644CCA v8::FixedArray::Length+124602
+12: 00007FF60A69C6B0 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+90800
+13: 00007FF60A7005B3 v8::base::CPU::has_sse41+73859
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+14: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+15: 00007FF60A83B061 v8::Isolate::Initialize+433
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+16: 00007FF609DB04AD node::NewContext+397
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+17: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+18: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+19: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+20: 00007FF609DD1393 uv_poll_stop+371
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+21: 00007FF60B5BFA5B inflateValidate+172219
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+22: 00007FF81502CCB7 BaseThreadInitThunk+23
+ 9: 00007FF60A655BB6 v8::internal::ThreadIsolation::JitPageReference::Size+3926
+23: 00007FF8159EAD6C RtlUserThreadStart+44
+10: 00007FF60A64569B v8::FixedArray::Length+127115
+11: 00007FF60A644CCA v8::FixedArray::Length+124602
+12: 00007FF60A69C6B0 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+90800
+13: 00007FF60A7005B3 v8::base::CPU::has_sse41+73859
+14: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+15: 00007FF60A83B061 v8::Isolate::Initialize+433
+16: 00007FF609DB04AD node::NewContext+397
+17: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+18: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+19: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+20: 00007FF609DD1393 uv_poll_stop+371
+21: 00007FF60B5BFA5B inflateValidate+172219
+22: 00007FF81502CCB7 BaseThreadInitThunk+23
+23: 00007FF8159EAD6C RtlUserThreadStart+44
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+ 9: 00007FF60A655932 v8::internal::ThreadIsolation::JitPageReference::Size+3282
+10: 00007FF60A67E3AB v8::internal::ThreadIsolation::JitPageReference::Size+169803
+11: 00007FF60A67E615 v8::internal::ThreadIsolation::JitPageReference::Size+170421
+12: 00007FF60A67E766 v8::internal::ThreadIsolation::JitPageReference::Size+170758
+13: 00007FF60A6A0AF2 v8::Isolate::GetHeapProfiler+5474
+14: 00007FF60A34E416 v8::base::AddressSpaceReservation::AddressSpaceReservation+121446
+15: 00007FF60A34FD42 v8::base::AddressSpaceReservation::AddressSpaceReservation+127890
+16: 00007FF60A34B835 v8::base::AddressSpaceReservation::AddressSpaceReservation+110213
+17: 00007FF60A3503DF v8::base::AddressSpaceReservation::AddressSpaceReservation+129583
+18: 00007FF60A694878 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+58488
+19: 00007FF60A32B9E0 v8::internal::Version::GetString+92944
+20: 00007FF60A700A05 v8::base::CPU::has_sse41+74965
+21: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+22: 00007FF60A83B061 v8::Isolate::Initialize+433
+23: 00007FF609DB04AD node::NewContext+397
+24: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+25: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+26: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+27: 00007FF609DD1393 uv_poll_stop+371
+28: 00007FF60B5BFA5B inflateValidate+172219
+29: 00007FF81502CCB7 BaseThreadInitThunk+23
+30: 00007FF8159EAD6C RtlUserThreadStart+44
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+ 9: 00007FF60A655BB6 v8::internal::ThreadIsolation::JitPageReference::Size+3926
+10: 00007FF60A64569B v8::FixedArray::Length+127115
+11: 00007FF60A644CCA v8::FixedArray::Length+124602
+12: 00007FF60A69C6B0 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+90800
+13: 00007FF60A7005B3 v8::base::CPU::has_sse41+73859
+14: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+15: 00007FF60A83B061 v8::Isolate::Initialize+433
+16: 00007FF609DB04AD node::NewContext+397
+17: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+18: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+19: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+20: 00007FF609DD1393 uv_poll_stop+371
+21: 00007FF60B5BFA5B inflateValidate+172219
+22: 00007FF81502CCB7 BaseThreadInitThunk+23
+23: 00007FF8159EAD6C RtlUserThreadStart+44
+
+<--- Last few GCs --->
+
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 2: 00007FF609CD4568 v8::base::CPU::num_virtual_address_bits+103336
+ 3: 00007FF60A8453B1 v8::Isolate::ReportExternalAllocationLimitReached+65
+ 4: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 5: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+ 6: 00007FF60A6464CD v8::FixedArray::Length+130749
+ 7: 00007FF60A697AB3 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+71347
+ 8: 00007FF60A68793D v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+5437
+ 9: 00007FF60A6834F5 v8::internal::ThreadIsolation::JitPageReference::Size+190613
+10: 00007FF60A00CF5D BIO_ssl_shutdown+189
+Error: Can't resolve 'tailwindcss' in 'C:\Users\hi\Desktop'
+    [2m[at finishWithoutResolve (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:586:18)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:678:14)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m
+    [2m[at eval (eval at create (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\tapable@2.3.0\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m
+    [2m[at eval (eval at create (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\tapable@2.3.0\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:27:1)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\DescriptionFilePlugin.js:89:43)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m
+    [2m[at eval (eval at create (C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\tapable@2.3.0\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\node_modules\.pnpm\enhanced-resolve@5.19.0\node_modules\enhanced-resolve\lib\Resolver.js:739:5)][0m {
+  details: "resolve 'tailwindcss' in 'C:\\Users\\hi\\Desktop'\n" +
+    '  Parsed request is a module\n' +
+    '  using description file: C:\\Users\\hi\\Desktop\\package.json (relative path: .)\n' +
+    '    resolve as module\n' +
+    "      C:\\Users\\hi\\Desktop\\node_modules doesn't exist or is not a directory\n" +
+    "      C:\\Users\\hi\\node_modules doesn't exist or is not a directory\n" +
+    "      C:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "      C:\\node_modules doesn't exist or is not a directory\n" +
+    '      looking for modules in C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\n' +
+    '        single file module\n' +
+    '          using description file: C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\package.json (relative path: ./dist/bin/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/dist/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules;C:/Users/hi/Desktop/npt-hydraulic-fittings-page (1)/node_modules/.pnpm/node_modules/tailwindcss)\n' +
+    '            no extension\n' +
+    "              C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\\tailwindcss doesn't exist\n" +
+    '            .css\n' +
+    "              C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\\tailwindcss.css doesn't exist\n" +
+    "        C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\bin\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules;C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)\\node_modules\\.pnpm\\node_modules\\tailwindcss doesn't exist"
+}
+
+
+#
+# Fatal process out of memory: Re-embedded builtins: set permissions
+#
+----- Native stack trace -----
+
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 6: 00007FF60A6DB52A v8::CppHeap::wrapper_descriptor+55594
+ 7: 00007FF60A70259A v8::base::CPU::has_sse41+82026
+ 8: 00007FF60A70057F v8::base::CPU::has_sse41+73807
+ 9: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+10: 00007FF60A83B061 v8::Isolate::Initialize+433
+11: 00007FF609DB04AD node::NewContext+397
+12: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+13: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+14: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+15: 00007FF609DD1393 uv_poll_stop+371
+16: 00007FF60B5BFA5B inflateValidate+172219
+17: 00007FF81502CCB7 BaseThreadInitThunk+23
+18: 00007FF8159EAD6C RtlUserThreadStart+44
+
+
+#
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+#
+----- Native stack trace -----
+
+ 1: 00007FF609D70CD7 
+ 2: 00007FF609C464FF 
+ 3: 00007FF60AEAAAA6 
+ 4: 00007FF60A845403 
+ 5: 00007FF60A831F36 
+ 6: 00007FF60A68E870 
+ 7: 00007FF60A655891 
+ 8: 00007FF60A655EB0 
+ 9: 00007FF60A655BB6 
+10: 00007FF60A64569B 
+11: 00007FF60A644CCA 
+12: 00007FF60A69C6B0 
+13: 00007FF60A7005B3 
+14: 00007FF60A3338C3 
+15: 00007FF60A83B061 
+16: 00007FF609DB04AD 
+17: 00007FF609B958F5 
+18: 00007FF609B9A9E3 
+19: 00007FF609B8FAE5 
+20: 00007FF609DD1393 
+21: 00007FF60B5BFA5B 
+22: 00007FF81502CCB7 BaseThreadInitThunk+23
+23: 00007FF8159EAD6C RtlUserThreadStart+44
+
+<--- Last few GCs --->
+
+
+<--- JS stacktrace --->
+
+
+
+#
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+#
+----- Native stack trace -----
+
+
+<--- Last few GCs --->
+
+[68184:0000022C352D1000]      131 ms: Scavenge 6.4 (8.0) -> 6.4 (10.5) MB, pooled: 0 MB, 1.33 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[68184:0000022C352D1000]      319 ms: Scavenge 9.1 (11.3) -> 8.2 (11.8) MB, pooled: 0 MB, 1.15 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+
+
+<--- JS stacktrace --->
+
+FATAL ERROR: NewSpace::EnsureCurrentCapacity Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+
+<--- Last few GCs --->
+
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+
+<--- Last few GCs --->
+
+
+<--- JS stacktrace --->
+
+
+
+#
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+#
+----- Native stack trace -----
+
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+ 9: 00007FF60A655BB6 v8::internal::ThreadIsolation::JitPageReference::Size+3926
+10: 00007FF60A63B7FC v8::FixedArray::Length+86508
+11: 00007FF60A67C3A6 v8::internal::ThreadIsolation::JitPageReference::Size+161606
+12: 00007FF60A67C030 v8::internal::ThreadIsolation::JitPageReference::Size+160720
+13: 00007FF60A67B718 v8::internal::ThreadIsolation::JitPageReference::Size+158392
+14: 00007FF60A67AE91 v8::internal::ThreadIsolation::JitPageReference::Size+156209
+15: 00007FF60A34E452 v8::base::AddressSpaceReservation::AddressSpaceReservation+121506
+16: 00007FF60A34FD42 v8::base::AddressSpaceReservation::AddressSpaceReservation+127890
+17: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+18: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+19: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+20: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+21: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+22: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+23: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+24: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+25: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+26: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+27: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+28: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+29: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+30: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+31: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+32: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+33: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+34: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+35: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+36: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+37: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+38: 00007FF60A34B835 v8::base::AddressSpaceReservation::AddressSpaceReservation+110213
+39: 00007FF60A3503DF v8::base::AddressSpaceReservation::AddressSpaceReservation+129583
+40: 00007FF60A694878 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+58488
+41: 00007FF60A32B9E0 v8::internal::Version::GetString+92944
+42: 00007FF60A700A05 v8::base::CPU::has_sse41+74965
+43: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+44: 00007FF60A83B061 v8::Isolate::Initialize+433
+45: 00007FF609DB04AD node::NewContext+397
+46: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+47: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+48: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+49: 00007FF609DD1393 uv_poll_stop+371
+50: 00007FF60B5BFA5B inflateValidate+172219
+51: 00007FF81502CCB7 BaseThreadInitThunk+23
+52: 00007FF8159EAD6C RtlUserThreadStart+44
+ 2: 00007FF609C464FF node::TriggerNodeReport+74095
+ 3: 00007FF60AEAAAA6 v8::base::FatalOOM+54
+ 4: 00007FF60A845403 v8::Isolate::ReportExternalAllocationLimitReached+147
+ 5: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 6: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+ 7: 00007FF60A655891 v8::internal::ThreadIsolation::JitPageReference::Size+3121
+ 8: 00007FF60A655EB0 v8::internal::ThreadIsolation::JitPageReference::Size+4688
+ 9: 00007FF60A655BB6 v8::internal::ThreadIsolation::JitPageReference::Size+3926
+10: 00007FF60A63B7FC v8::FixedArray::Length+86508
+11: 00007FF60A67C3A6 v8::internal::ThreadIsolation::JitPageReference::Size+161606
+12: 00007FF60A67C030 v8::internal::ThreadIsolation::JitPageReference::Size+160720
+13: 00007FF60A67B718 v8::internal::ThreadIsolation::JitPageReference::Size+158392
+14: 00007FF60A67AE91 v8::internal::ThreadIsolation::JitPageReference::Size+156209
+15: 00007FF60A6A12D4 v8::Isolate::GetHeapProfiler+7492
+16: 00007FF60A6A1C1A v8::Isolate::GetHeapProfiler+9866
+17: 00007FF60A34E4CF v8::base::AddressSpaceReservation::AddressSpaceReservation+121631
+18: 00007FF60A34FD42 v8::base::AddressSpaceReservation::AddressSpaceReservation+127890
+19: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+20: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+21: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+22: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+23: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+24: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+25: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+26: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+27: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+28: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+29: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+30: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+31: 00007FF60A34A909 v8::base::AddressSpaceReservation::AddressSpaceReservation+106329
+32: 00007FF60A34F61C v8::base::AddressSpaceReservation::AddressSpaceReservation+126060
+33: 00007FF60A34FE52 v8::base::AddressSpaceReservation::AddressSpaceReservation+128162
+34: 00007FF60A34B835 v8::base::AddressSpaceReservation::AddressSpaceReservation+110213
+35: 00007FF60A3503DF v8::base::AddressSpaceReservation::AddressSpaceReservation+129583
+36: 00007FF60A694878 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+58488
+37: 00007FF60A32B9E0 v8::internal::Version::GetString+92944
+38: 00007FF60A700A05 v8::base::CPU::has_sse41+74965
+39: 00007FF60A3338C3 v8::base::AddressSpaceReservation::AddressSpaceReservation+12051
+40: 00007FF60A83B061 v8::Isolate::Initialize+433
+41: 00007FF609DB04AD node::NewContext+397
+42: 00007FF609B958F5 X509_CRL_get_meth_data+147781
+43: 00007FF609B9A9E3 X509_CRL_get_meth_data+168499
+44: 00007FF609B8FAE5 X509_CRL_get_meth_data+123701
+45: 00007FF609DD1393 uv_poll_stop+371
+46: 00007FF60B5BFA5B inflateValidate+172219
+47: 00007FF81502CCB7 BaseThreadInitThunk+23
+48: 00007FF8159EAD6C RtlUserThreadStart+44
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 1: 00007FF609D70CD7 node::SetCppgcReference+16599
+ 2: 00007FF609CD4568 v8::base::CPU::num_virtual_address_bits+103336
+ 3: 00007FF60A8453B1 v8::Isolate::ReportExternalAllocationLimitReached+65
+ 4: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 5: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+ 6: 00007FF60A66B5F0 v8::internal::ThreadIsolation::JitPageReference::Size+92560
+ 7: 00007FF60A69550B v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+61707
+ 8: 00007FF60A697B1E v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+71454
+ 9: 00007FF60A68793D v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+5437
+10: 00007FF60A6834F5 v8::internal::ThreadIsolation::JitPageReference::Size+190613
+11: 00007FF60A00CF5D BIO_ssl_shutdown+189
+12: 7FF8000000000000 
+ 2: 00007FF609CD4568 v8::base::CPU::num_virtual_address_bits+103336
+ 3: 00007FF60A8453B1 v8::Isolate::ReportExternalAllocationLimitReached+65
+ 4: 00007FF60A831F36 v8::Function::Experimental_IsNopFunction+3302
+ 5: 00007FF60A68E870 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+33904
+ 6: 00007FF60A6464CD v8::FixedArray::Length+130749
+ 7: 00007FF60A697AB3 v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+71347
+ 8: 00007FF60A68793D v8::internal::StrongRootAllocatorBase::StrongRootAllocatorBase+5437
+ 9: 00007FF60A6834F5 v8::internal::ThreadIsolation::JitPageReference::Size+190613
+10: 00007FF60A00CF5D BIO_ssl_shutdown+189

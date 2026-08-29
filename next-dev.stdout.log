@@ -1,0 +1,26 @@
+
+> my-project@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.4:3000
+✓ Ready in 1201ms
+Creating turbopack project {
+  dir: 'C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)',
+  testMode: true
+}
+
+ GET /products/hydraulic-fittings/british-bsp 200 in 3.2s (next.js: 1638ms, application-code: 1586ms)
+ GET /products/hydraulic-fittings/british-bsp 200 in 888ms (next.js: 27ms, application-code: 861ms)
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.4:3000
+✓ Ready in 2.5s
+Creating turbopack project {
+  dir: 'C:\\Users\\hi\\Desktop\\npt-hydraulic-fittings-page (1)',
+  testMode: true
+}
+
+○ Compiling /products/hydraulic-fittings/british-bsp ...
+✓ Finished writing to filesystem cache in 19.3s
