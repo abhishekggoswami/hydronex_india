@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Phone, ChevronRight, Check } from "lucide-react"
+import Topography from "@/components/topography"
+import { BspEditorialProductHero } from "@/components/bsp-editorial-product-hero"
 
 // ─── Application image map ───────────────────────────────────────────────────
 const APP_IMAGE_MAP: Record<string, string> = {
@@ -391,12 +393,13 @@ interface BSPProductDetailProps {
   }
   otherProductsSection: React.ReactNode
   supplementalContent?: React.ReactNode
-  category?: "iso-a" | "iso-b" | "push-and-pull" | "flat-face" | "threaded"
+  editorialHeroOnly?: boolean
+  category?: "iso-a" | "iso-b" | "push-and-pull" | "quick-release" | "flat-face" | "threaded"
   categoryLabel?: string
   categoryPath?: string
 }
 
-export function ISOAProductDetail({ product, otherProductsSection, supplementalContent, category = "iso-a", categoryLabel, categoryPath }: BSPProductDetailProps) {
+export function ISOAProductDetail({ product, otherProductsSection, supplementalContent, editorialHeroOnly = false, category = "iso-a", categoryLabel, categoryPath }: BSPProductDetailProps) {
   const { displayed, phase } = useTypewriter("REQUEST QUOTE")
 
   // Table helpers — same logic as the server page
@@ -460,7 +463,22 @@ export function ISOAProductDetail({ product, otherProductsSection, supplementalC
   )
 
   return (
-    <div className="iso-bsp-product-detail min-h-screen bg-[#f8fafc]">
+    <div className={`iso-bsp-product-detail relative isolate min-h-screen overflow-hidden bg-[#f8fafc]${editorialHeroOnly ? " iso-bsp-product-detail--hero-only" : ""}`}>
+      <Topography
+        className="pointer-events-none fixed inset-0 z-0"
+        lowColor="#9eb8c3"
+        midColor="#f26522"
+        highColor="#ffffff"
+        speed={0.18}
+        morphAmount={1.7}
+        bands={3.4}
+        thickness={0.018}
+        glow={0.22}
+        opacity={0.07}
+        mouseRadius={0.24}
+        mouseStrength={0.3}
+      />
+      <div className="relative z-10">
 
       {/* ── Breadcrumb ─────────────────────────────────────����─────────── */}
       <nav
@@ -519,7 +537,12 @@ export function ISOAProductDetail({ product, otherProductsSection, supplementalC
       </nav>
 
       {/* ── Product Header ──────��────────────────────────────────────── */}
-      <section className="relative overflow-hidden">
+      <BspEditorialProductHero
+        categoryName={categoryLabel || (category === "iso-b" ? "ISO-B Quick Couplers" : category === "push-and-pull" ? "Push-and-Pull Couplers" : category === "flat-face" ? "Flat Face Quick Couplers" : category === "threaded" ? "Threaded Couplers" : "ISO-A Quick Couplers")}
+        product={product}
+      />
+
+      <section className="hidden">
         {/* Factory background image */}
         <div
           className="absolute inset-0 pointer-events-none"
@@ -763,14 +786,7 @@ export function ISOAProductDetail({ product, otherProductsSection, supplementalC
 
       {/* ── Specifications ───────────────────────────────────────────── */}
       {product.specs.length > 0 && (
-        <section
-          className="relative overflow-hidden py-14"
-          style={{
-            background: "linear-gradient(130deg,#c84000,#e05a2e,#f07d1a,#f5a020,#e86b10,#e05a2e,#c84000)",
-            backgroundSize: "300% 300%",
-            animation: "cta-gradient-shift 6s ease infinite",
-          }}
-        >
+        <section className="relative overflow-hidden bg-white py-14">
           {/* Noise texture overlay — same as CTA section */}
           <div
             className="absolute inset-0 pointer-events-none"
@@ -778,53 +794,48 @@ export function ISOAProductDetail({ product, otherProductsSection, supplementalC
               backgroundImage:
                 "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E\")",
               backgroundSize: "200px 200px",
-              opacity: 0.15,
+              opacity: 0.04,
             }}
             aria-hidden
           />
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-3 mb-8">
-              <span className="w-1 h-7 rounded-full bg-white flex-shrink-0" aria-hidden />
-              <h2 className="text-2xl font-bold text-white">Specifications</h2>
+              <span className="w-1 h-7 rounded-full bg-[#e05a2e] flex-shrink-0" aria-hidden />
+              <h2 className="text-2xl font-bold text-[#143126]">Specifications</h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {product.specs.map((spec, idx) => (
                 <div
                   key={idx}
-                  className="group relative flex flex-col gap-1.5 rounded-xl px-5 py-4 transition-all duration-200 hover:-translate-y-0.5"
+                  className="group relative flex flex-col gap-1.5 rounded-xl border border-[#dce5e4] border-l-[3px] border-l-[#f26522] bg-white px-5 py-4 shadow-[0_8px_24px_rgba(11,31,55,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(11,31,55,0.12)]"
                   style={{
-                    background: "rgba(0,0,0,0.28)",
-                    backdropFilter: "blur(12px)",
-                    WebkitBackdropFilter: "blur(12px)",
-                    border: "1px solid rgba(255,255,255,0.15)",
-                    borderLeft: "3px solid rgba(255,255,255,0.70)",
-                    boxShadow: "0 2px 16px rgba(0,0,0,0.18)",
+                    background: "rgba(255,255,255,0.88)",
                   }}
                 >
                   {/* Label row */}
                   <div className="flex items-center gap-2">
                     <span
                       className="inline-block w-1.5 h-1.5 rounded-full flex-shrink-0"
-                      style={{ background: "rgba(255,255,255,0.7)" }}
+                      style={{ background: "#f26522" }}
                       aria-hidden
                     />
                     <span
                       className="text-[10px] font-bold uppercase tracking-widest"
-                      style={{ color: "rgba(255,255,255,0.65)" }}
+                      style={{ color: "#5d746e" }}
                     >
                       {spec.label}
                     </span>
                   </div>
                   {/* Value */}
                   <p
-                    className="text-sm font-semibold leading-snug pl-3.5 text-white"
+                    className="text-sm font-semibold leading-snug pl-3.5 text-[#143126]"
                   >
                     {spec.value}
                   </p>
                   {/* Hover shimmer bottom line */}
                   <span
                     className="absolute bottom-0 left-0 h-0.5 w-0 rounded-full transition-all duration-300 group-hover:w-full"
-                    style={{ background: "linear-gradient(90deg, rgba(255,255,255,0.9), rgba(255,255,255,0.3))" }}
+                    style={{ background: "linear-gradient(90deg, #f26522, rgba(242,101,34,0.18))" }}
                     aria-hidden
                   />
                 </div>
@@ -1939,6 +1950,7 @@ export function ISOAProductDetail({ product, otherProductsSection, supplementalC
       {supplementalContent}
       {otherProductsSection}
 
+      </div>
     </div>
   )
 }

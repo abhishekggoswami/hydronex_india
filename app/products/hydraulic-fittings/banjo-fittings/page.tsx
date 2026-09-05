@@ -2,7 +2,10 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { BSPCtaSection } from "@/components/bsp-cta-section"
 import { BSPProductGrid } from "@/components/bsp-product-grid"
-import { CategoryLandingHero } from "@/components/category-landing-hero"
+import { HydraulicAdaptersHeroSection } from "@/components/hydraulic-adapters-hero-section"
+import { LikedProductsDrawer } from "@/components/liked-products-drawer"
+import { LikedProductsFAB } from "@/components/liked-products-fab"
+import Topography from "@/components/topography"
 import { banjoFittings } from "@/lib/banjo-fittings"
 
 export const metadata: Metadata = {
@@ -21,7 +24,9 @@ export default function BanjoFittingsPage() {
   }))
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="relative isolate min-h-screen overflow-hidden bg-gradient-to-b from-[#f7f8f6] via-[#fbfcfa] to-white">
+      <Topography className="pointer-events-none !fixed inset-0 z-0" lowColor="#9eb8c3" midColor="#f26522" highColor="#ffffff" speed={0.18} morphAmount={1.7} bands={3.4} thickness={0.018} glow={0.22} opacity={0.075} mouseRadius={0.24} mouseStrength={0.34} />
+      <div className="relative z-10">
       <nav
         className="border-b"
         style={{ background: "#f8fafc", borderColor: "rgba(210,225,240,0.7)" }}
@@ -33,23 +38,27 @@ export default function BanjoFittingsPage() {
             <li className="mx-2.5 text-[#94aabf]" aria-hidden>/</li>
             <li><Link href="/products" className="text-[11.5px] font-medium uppercase tracking-wide text-[#2a4a70] transition-colors hover:text-[#e05a2e]">Products</Link></li>
             <li className="mx-2.5 text-[#94aabf]" aria-hidden>/</li>
-            <li><Link href="/products" className="text-[11.5px] font-medium uppercase tracking-wide text-[#4a6a90] transition-colors hover:text-[#e05a2e]">Hydraulic Fittings</Link></li>
+            <li><Link href="/products/hydraulic-fittings" className="text-[11.5px] font-medium uppercase tracking-wide text-[#4a6a90] transition-colors hover:text-[#e05a2e]">Hydraulic Fittings</Link></li>
             <li className="mx-2.5 text-[#94aabf]" aria-hidden>/</li>
             <li className="flex items-center gap-1.5" aria-current="page"><span className="h-1.5 w-1.5 rounded-full bg-[#e05a2e]"/><span className="text-[11.5px] font-bold uppercase tracking-wide text-[#e05a2e]">Banjo Fittings</span></li>
           </ol>
         </div>
       </nav>
 
-      <CategoryLandingHero
+      <HydraulicAdaptersHeroSection
         category="Compact Hydraulic Solutions"
         title="Banjo Fittings - Compact & Efficient"
         description="Hydronex supplies a comprehensive range of banjo fittings featuring compact design and reliable performance. Our banjo fittings are engineered with precision for efficient hydraulic connections in both BSP and metric standards, delivering leak-free performance across demanding industrial and hydraulic applications."
-        ctaHref="/products"
+        featuredProduct={products[0]}
+        productCount={products.length}
+        summary="Hydronex supplies a comprehensive range of banjo fittings featuring compact design and reliable performance."
+        standardLabel="BANJO"
+        standardsDescription="BSP & metric standards"
       />
 
       <section
-        className="bg-anim-section-dots border-b border-[#d0e4f5]/40"
-        style={{ background: "linear-gradient(180deg, #deeefa 0%, #eaf4fc 18%, #f4faff 45%, #fafcff 72%, #ffffff 100%)" }}
+        id="products"
+        className="relative border-b border-[#d0e4f5]/40 bg-transparent"
       >
         <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="mb-12 max-w-3xl">
@@ -90,6 +99,9 @@ export default function BanjoFittingsPage() {
         description="Contact our experts for tailored solutions, bulk orders and technical support."
         buttonLabel="Get A Quote"
       />
+      <LikedProductsDrawer />
+      <LikedProductsFAB />
+      </div>
     </div>
   )
 }

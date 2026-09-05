@@ -7,7 +7,8 @@ import { QKPTProductDetail } from "@/components/qkpt-product-detail"
 import { QKPSProductDetail } from "@/components/qkps-product-detail"
 import { KDFProductDetail } from "@/components/kdf-product-detail"
 import { ISOAProductDetail } from "@/components/iso-a-product-detail"
-import { ISOAOtherProducts } from "@/components/iso-a-other-products"
+import { BSPOtherProducts } from "@/components/bsp-other-products"
+import { BSPCtaSection } from "@/components/bsp-cta-section"
 
 export const dynamicParams = true
 
@@ -41,6 +42,17 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   }
 
   const otherProducts = flatFaceCouplers.filter((p) => p.slug !== slug)
+  const otherProductsSection = (
+    <>
+      <BSPOtherProducts
+        products={otherProducts.map((item) => ({ slug: item.slug, name: item.name, shortName: item.shortName, code: item.code, image: item.image }))}
+        title="Other Flat Face Couplers"
+        basePath="/products/hydraulic-quick-couplings/flat-face-couplers"
+        categoryLabel="Flat Face Couplers"
+      />
+      <BSPCtaSection title="Need Help Selecting a Flat Face Coupler?" description="Our expert team is ready to help with product selection, technical support and bulk orders." buttonLabel="Get A Quote" ctaHref="/#contact" />
+    </>
+  )
 
   // QKPT series uses extended product detail component
   if (product.slug === "flat-face-qkpt-series-carbon-steel") {
@@ -64,7 +76,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           category="flat-face"
           categoryLabel="Flat Face Couplers"
         />
-        <QKPTProductDetail
+        <div className="flat-face-technical-content"><QKPTProductDetail
           product={{
             name: product.name,
             basicSpecTable: product.basicSpecTable,
@@ -74,8 +86,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             qkptCouplerDiagramImage: product.qkptCouplerDiagramImage,
             qkptNippleDiagramImage: product.qkptNippleDiagramImage,
           }}
-          otherProductsSection={<ISOAOtherProducts products={otherProducts} basePath="/products/hydraulic-quick-couplings/flat-face-couplers" />}
-        />
+          otherProductsSection={otherProductsSection}
+        /></div>
       </>
     )
   }
@@ -102,7 +114,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           category="flat-face"
           categoryLabel="Flat Face Couplers"
         />
-        <QKPSProductDetail
+        <div className="flat-face-technical-content"><QKPSProductDetail
           product={{
             name: product.name,
             basicSpecTable: product.basicSpecTable,
@@ -112,8 +124,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             qkpsNippleDiagramImage: product.qkpsNippleDiagramImage,
             qkpsCouplerDiagramImage: product.qkpsCouplerDiagramImage,
           }}
-          otherProductsSection={<ISOAOtherProducts products={otherProducts} basePath="/products/hydraulic-quick-couplings/flat-face-couplers" />}
-        />
+          otherProductsSection={otherProductsSection}
+        /></div>
       </>
     )
   }
@@ -140,7 +152,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           category="flat-face"
           categoryLabel="Flat Face Couplers"
         />
-        <KDFProductDetail
+        <div className="flat-face-technical-content"><KDFProductDetail
           product={{
             name: product.name,
             basicSpecTable: product.basicSpecTable,
@@ -151,8 +163,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             kdfFemaleDiagramImage: product.kdfFemaleDiagramImage,
             kdfMaleDiagramImage: product.kdfMaleDiagramImage,
           }}
-          otherProductsSection={<ISOAOtherProducts products={otherProducts} basePath="/products/hydraulic-quick-couplings/flat-face-couplers" />}
-        />
+          otherProductsSection={otherProductsSection}
+        /></div>
       </>
     )
   }
@@ -179,7 +191,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           category="flat-face"
           categoryLabel="Flat Face Couplers"
         />
-        <QKEPProductDetail
+        <div className="flat-face-technical-content"><QKEPProductDetail
           product={{
             name: product.name,
             basicSpecTable: product.basicSpecTable,
@@ -190,14 +202,14 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             couplerDiagramImage: product.couplerDiagramImage,
             nippelDiagramImage: product.nippelDiagramImage,
           }}
-          otherProductsSection={<ISOAOtherProducts products={otherProducts} basePath="/products/hydraulic-quick-couplings/flat-face-couplers" />}
-        />
+          otherProductsSection={otherProductsSection}
+        /></div>
       </>
     )
   }
 
   return (
-    <FlatFaceProductDetail
+    <div className="flat-face-technical-content"><FlatFaceProductDetail
       product={{
         name: product.name,
         shortName: product.shortName,
@@ -214,7 +226,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         specificationTable: product.specificationTable,
         detailedSpecificationTable: product.detailedSpecificationTable,
       }}
-      otherProductsSection={<ISOAOtherProducts products={otherProducts} basePath="/products/hydraulic-quick-couplings/flat-face-couplers" />}
-    />
+      otherProductsSection={otherProductsSection}
+    /></div>
   )
 }

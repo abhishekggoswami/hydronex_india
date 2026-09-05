@@ -24,7 +24,7 @@ export default function MetricHoseFittingsPage() {
               Products
             </Link>
             <ChevronRight size={16} className="text-gray-400" />
-            <Link href="/products" className="hover:text-[#e05a2e] transition-colors">
+            <Link href="/products/hydraulic-fittings" className="hover:text-[#e05a2e] transition-colors">
               Hydraulic Fittings
             </Link>
             <ChevronRight size={16} className="text-gray-400" />

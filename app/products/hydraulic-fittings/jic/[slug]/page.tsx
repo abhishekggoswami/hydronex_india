@@ -1,8 +1,8 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { BSPCtaSection } from "@/components/bsp-cta-section"
-import { BSPProductCard } from "@/components/bsp-product-card"
 import { BSPProductDetail } from "@/components/bsp-product-detail"
+import { BSPOtherProducts } from "@/components/bsp-other-products"
 import { jicHydraulicFittings } from "@/lib/jic-hydraulic-fittings"
 
 export const dynamicParams = true
@@ -75,16 +75,21 @@ export default async function ProductPage({ params }: Props) {
         tableNote: product.tableNote,
         image: product.image,
       }}
+      editorialHero
       otherProductsSection={
         <>
-          <section className="bg-anim-section-dots border-b border-[#d0e4f5]/40" style={{ background: "linear-gradient(180deg, #deeefa, #eaf4fc 18%, #f4faff 45%, #fafcff 72%, #fff)" }}>
-            <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-              <h2 className="mb-10 text-3xl font-bold text-[#0e1c35]">Other JIC Hydraulic Fittings</h2>
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 lg:gap-10">
-                {otherProducts.map((item, index) => <BSPProductCard key={item.slug} index={index} basePath="/products/hydraulic-fittings/jic" categoryLabel="JIC Hydraulic Fittings" product={{ id: 70000 + item.id, name: item.name, code: item.code, image: item.image, slug: item.slug }} />)}
-              </div>
-            </div>
-          </section>
+          <BSPOtherProducts
+            products={otherProducts.map((item) => ({
+              slug: item.slug,
+              name: item.name,
+              shortName: item.shortName || item.name,
+              code: item.code,
+              image: item.image,
+            }))}
+            title="Other JIC Hydraulic Fittings"
+            basePath="/products/hydraulic-fittings/jic"
+            categoryLabel="JIC Hydraulic Fittings"
+          />
           <BSPCtaSection title="Connect with Our JIC Experts" description="Hydronex specializes in high-quality JIC hydraulic fittings for North American applications. Contact us today for quotes, technical support, or bulk orders." buttonLabel="Get Your Quote Today" />
         </>
       }

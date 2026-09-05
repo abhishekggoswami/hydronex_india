@@ -449,7 +449,7 @@ export default function BritishBSPFittingsPage() {
               {/* Level 3 */}
               <li className="flex items-center">
                 <Link
-                  href="/products"
+                  href="/products/hydraulic-fittings"
                   className="text-[11.5px] font-medium tracking-wide uppercase transition-colors duration-150 hover:text-[#e05a2e]"
                   style={{ color: "#4a6a90", letterSpacing: "0.05em" }}
                 >

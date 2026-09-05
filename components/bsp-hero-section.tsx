@@ -23,29 +23,29 @@ export function BSPHeroSection() {
 
             {/* A paired product overview, centered over the hero on larger screens. */}
             <div className="absolute right-5 top-6 z-20 flex w-[min(21.5rem,calc(100%-2.5rem))] sm:right-8 sm:top-8 lg:left-1/2 lg:right-auto lg:top-[clamp(2rem,8vh,5.5rem)] lg:w-auto lg:-translate-x-1/2 lg:gap-5">
-              <aside className="relative hidden h-[316px] w-[26rem] overflow-hidden rounded-[1.6rem] border border-white/35 bg-[#0b3539]/45 p-6 shadow-[0_22px_60px_rgba(2,16,27,0.36)] backdrop-blur-xl lg:block" aria-label="British BSP fitting range overview">
+              <aside className="relative hidden h-[360px] w-[min(30rem,calc((100vw-6rem)/2))] overflow-hidden rounded-[1.8rem] border border-white/35 bg-[#0b3539]/45 p-7 shadow-[0_22px_60px_rgba(2,16,27,0.36)] backdrop-blur-xl lg:block" aria-label="British BSP fitting range overview">
                 <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(132deg,rgba(255,255,255,0.2),transparent_40%,rgba(85,222,222,0.1))]" aria-hidden="true" />
                 <div className="pointer-events-none absolute -bottom-16 -left-12 h-40 w-40 rounded-full bg-[#f1854a]/15 blur-3xl" aria-hidden="true" />
 
                 <div className="relative">
                   <p className="flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.18em] text-white/70"><span className="h-1.5 w-1.5 rounded-full bg-[#f1854a] shadow-[0_0_10px_rgba(241,133,74,0.9)]" />British BSP range</p>
-                  <h2 className="mt-4 max-w-[17ch] text-[1.55rem] font-semibold leading-[0.98] tracking-[-0.045em] text-white">Connections for every hydraulic layout.</h2>
-                  <p className="mt-4 max-w-[35ch] text-[14px] leading-[1.45] text-white/75">Explore thread forms, sealing options and configurations made to build compatible, reliable systems.</p>
+                  <h2 className="mt-5 max-w-[17ch] text-[1.75rem] font-semibold leading-[0.98] tracking-[-0.045em] text-white">Connections for every hydraulic layout.</h2>
+                  <p className="mt-5 max-w-[38ch] text-[15px] leading-[1.5] text-white/75">Explore thread forms, sealing options and configurations made to build compatible, reliable systems.</p>
 
-                  <div className="mt-5 grid grid-cols-3 border-y border-white/20 py-4 text-center">
+                  <div className="mt-6 grid grid-cols-3 border-y border-white/20 py-4 text-center">
                     {[['BSPP', 'parallel'], ['BSPT', 'tapered'], ['60°', 'cone seat']].map(([value, label]) => (
                       <div key={value} className="border-l border-white/15 px-2 first:border-l-0">
-                        <p className="text-sm font-extrabold tracking-[-0.04em] text-[#8ae6dc]">{value}</p>
-                        <p className="mt-1 text-[8px] font-semibold uppercase tracking-[0.12em] text-white/55">{label}</p>
+                        <p className="text-base font-extrabold tracking-[-0.04em] text-[#8ae6dc]">{value}</p>
+                        <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.12em] text-white/55">{label}</p>
                       </div>
                     ))}
                   </div>
-                  <p className="mt-4 text-[9px] font-bold uppercase tracking-[0.15em] text-white/60">Straight, 45° &amp; 90° fitting options</p>
+                  <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.15em] text-white/60">Straight, 45° &amp; 90° fitting options</p>
                 </div>
               </aside>
 
               {/* Featured fitting card */}
-              <aside className="group relative w-full overflow-hidden rounded-[1.6rem] border border-white/35 bg-[#0b3539]/45 p-3.5 shadow-[0_22px_60px_rgba(2,16,27,0.36)] backdrop-blur-xl transition-transform duration-500 hover:-translate-y-1 sm:p-4 lg:h-[316px] lg:w-[26rem] lg:p-5" aria-label="Featured BSP fitting">
+              <aside className="group relative w-full overflow-hidden rounded-[1.8rem] border border-white/35 bg-[#0b3539]/45 p-3.5 shadow-[0_22px_60px_rgba(2,16,27,0.36)] backdrop-blur-xl transition-transform duration-500 hover:-translate-y-1 sm:p-4 lg:h-[360px] lg:w-[min(30rem,calc((100vw-6rem)/2))] lg:p-6" aria-label="Featured BSP fitting">
                 <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(112deg,rgba(255,255,255,0.22),transparent_30%,transparent_70%,rgba(85,222,222,0.12))]" aria-hidden="true" />
                 <div className="pointer-events-none absolute -right-14 -top-20 h-44 w-44 rounded-full bg-cyan-200/20 blur-3xl" aria-hidden="true" />
 
@@ -54,15 +54,15 @@ export function BSPHeroSection() {
                   <span className="rounded-full border border-white/20 bg-white/10 px-2 py-1 text-white/80">BSP</span>
                 </div>
 
-                <div className="relative mt-3 h-[142px] overflow-hidden rounded-[1rem] border border-white/15 bg-[#08282d]/35 lg:h-[156px]">
+                <div className="relative mt-4 h-[142px] overflow-hidden rounded-[1.1rem] border border-white/15 bg-[#08282d]/35 lg:h-[188px]">
                   <div className="pointer-events-none absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(169,237,238,0.28)_1px,transparent_1px),linear-gradient(90deg,rgba(169,237,238,0.28)_1px,transparent_1px)] [background-size:24px_24px]" aria-hidden="true" />
                   <div className="pointer-events-none absolute inset-x-8 bottom-2 h-8 rounded-full bg-cyan-300/25 blur-2xl" aria-hidden="true" />
                   <Image src="/images/hydraulic-fittings/90-bsp-female-60-cone-seal-22691.png" alt="90 degree BSP female 60 degree cone seal fitting" width={668} height={373} priority className="relative z-10 h-full w-full scale-[1.08] object-contain p-3 transition-transform duration-500 group-hover:scale-[1.15]" style={{ filter: "invert(1) sepia(.22) saturate(.75) hue-rotate(132deg) brightness(1.8) drop-shadow(0 8px 14px rgba(0,0,0,.45))" }} />
                 </div>
 
-                <div className="relative mt-3 flex items-end justify-between gap-4">
-                  <div><p className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#8ae6dc]">22691 series</p><p className="mt-1 text-[1.05rem] font-semibold leading-tight tracking-[-0.025em] text-white">90° BSP Female<br />60° Cone Seal</p></div>
-                  <div className="shrink-0 border-l border-white/20 pl-3 text-right text-[8px] font-medium uppercase leading-relaxed tracking-[0.1em] text-white/65">ISO 8434-6<br />BS 5200</div>
+                <div className="relative mt-4 flex items-end justify-between gap-4">
+                  <div><p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#8ae6dc]">22691 series</p><p className="mt-1 text-[1.2rem] font-semibold leading-tight tracking-[-0.025em] text-white">90° BSP Female<br />60° Cone Seal</p></div>
+                  <div className="shrink-0 border-l border-white/20 pl-4 text-right text-[9px] font-medium uppercase leading-relaxed tracking-[0.1em] text-white/65">ISO 8434-6<br />BS 5200</div>
                 </div>
               </aside>
             </div>

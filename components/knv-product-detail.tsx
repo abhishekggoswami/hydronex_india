@@ -224,7 +224,7 @@ export function KNVProductDetail({ product, otherProductsSection }: KNVProductPr
 
       {/* Performance Specifications Table */}
       {product.performanceSpecsTable && product.performanceSpecsTable.length > 0 && (
-        <section className="border-t border-border py-16 px-6 sm:px-8 lg:px-12">
+        <section className="quick-release-performance-section border-t border-border py-16 px-6 sm:px-8 lg:px-12">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl font-semibold text-foreground mb-12">Performance Specifications</h2>
 
@@ -271,11 +271,7 @@ export function KNVProductDetail({ product, otherProductsSection }: KNVProductPr
       )}
 
       {/* Other Products Section */}
-      <section className="border-t border-border py-16 px-6 sm:px-8 lg:px-12">
-        <div className="max-w-6xl mx-auto">
-          {otherProductsSection}
-        </div>
-      </section>
+      <div className="quick-release-related-products">{otherProductsSection}</div>
     </div>
   )
 }

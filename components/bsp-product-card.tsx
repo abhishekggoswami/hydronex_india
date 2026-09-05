@@ -11,6 +11,9 @@ interface BSPProductCardProps {
   index?: number
   basePath?: string
   categoryLabel?: string
+  productType?: string
+  productTypeLabel?: string
+  disableDetails?: boolean
 }
 
 function getFittingLabel(name: string): string {
@@ -30,12 +33,12 @@ function getSeriesCode(code: string) {
   return code.split("-").at(-1) ?? code
 }
 
-function BSPProductCardInner({ product, index = 0, basePath = "/products/hydraulic-fittings/british-bsp", categoryLabel = "British BSP Fittings" }: BSPProductCardProps) {
+function BSPProductCardInner({ product, index = 0, basePath = "/products/hydraulic-fittings/british-bsp", categoryLabel = "British BSP Fittings", productType, productTypeLabel = "Fitting style", disableDetails = false }: BSPProductCardProps) {
   const { isLiked, toggleLike } = useLikedProducts()
   const liked = isLiked(product.id)
-  const label = useMemo(() => getFittingLabel(product.name), [product.name])
+  const label = useMemo(() => productType ?? getFittingLabel(product.name), [product.name, productType])
   const series = useMemo(() => getSeriesCode(product.code), [product.code])
-  const productHref = product.slug ? `${basePath}/${product.slug}` : undefined
+  const productHref = !disableDetails && product.slug ? `${basePath}/${product.slug}` : undefined
 
   const toggleSaved = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault()
@@ -96,7 +99,7 @@ function BSPProductCardInner({ product, index = 0, basePath = "/products/hydraul
           <div className="mt-4 grid grid-cols-3 divide-x divide-white/15 text-center">
             <div className="px-2">
               <span className="block text-[10px] font-bold text-[#dbeaf3]">{label}</span>
-              <span className="mt-1 block text-[9px] text-white/55">Fitting style</span>
+              <span className="mt-1 block text-[9px] text-white/55">{productTypeLabel}</span>
             </div>
             <div className="px-2">
               <span className="block text-[10px] font-bold text-[#dbeaf3]">{product.code}</span>

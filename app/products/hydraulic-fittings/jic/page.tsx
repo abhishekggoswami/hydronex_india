@@ -3,7 +3,10 @@ import Link from "next/link"
 import { Mail, MapPin, Phone } from "lucide-react"
 import { BSPCtaSection } from "@/components/bsp-cta-section"
 import { BSPProductGrid } from "@/components/bsp-product-grid"
-import { CategoryLandingHero } from "@/components/category-landing-hero"
+import { HydraulicAdaptersHeroSection } from "@/components/hydraulic-adapters-hero-section"
+import { LikedProductsDrawer } from "@/components/liked-products-drawer"
+import { LikedProductsFAB } from "@/components/liked-products-fab"
+import Topography from "@/components/topography"
 import { jicHydraulicFittings } from "@/lib/jic-hydraulic-fittings"
 
 export const metadata: Metadata = {
@@ -26,14 +29,25 @@ export default function JICFittingsPage() {
   const jicProducts = jicHydraulicFittings.map((product) => ({ id: 70000 + product.id, name: product.name, code: product.code, image: product.image, slug: product.slug }))
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="relative isolate min-h-screen overflow-hidden bg-gradient-to-b from-[#f7f8f6] via-[#fbfcfa] to-white">
+      <Topography className="pointer-events-none !fixed inset-0 z-0" lowColor="#9eb8c3" midColor="#f26522" highColor="#ffffff" speed={0.18} morphAmount={1.7} bands={3.4} thickness={0.018} glow={0.22} opacity={0.075} mouseRadius={0.24} mouseStrength={0.34} />
+      <div className="relative z-10">
       <nav className="border-b" style={{ background: "#f8fafc", borderColor: "rgba(210,225,240,0.7)" }} aria-label="Breadcrumb">
-        <div className="mx-auto max-w-7xl px-4 py-2.5 sm:px-6 lg:px-8"><ol className="flex flex-wrap items-center gap-0"><li><Link href="/" className="text-[11.5px] font-semibold uppercase tracking-wide text-[#0f2040] transition-colors hover:text-[#e05a2e]">Home</Link></li><li className="mx-2.5 text-[#94aabf]" aria-hidden>/</li><li><Link href="/products" className="text-[11.5px] font-medium uppercase tracking-wide text-[#2a4a70] transition-colors hover:text-[#e05a2e]">Products</Link></li><li className="mx-2.5 text-[#94aabf]" aria-hidden>/</li><li><Link href="/products" className="text-[11.5px] font-medium uppercase tracking-wide text-[#4a6a90] transition-colors hover:text-[#e05a2e]">Hydraulic Fittings</Link></li><li className="mx-2.5 text-[#94aabf]" aria-hidden>/</li><li className="flex items-center gap-1.5" aria-current="page"><span className="h-1.5 w-1.5 rounded-full bg-[#e05a2e]" /><span className="text-[11.5px] font-bold uppercase tracking-wide text-[#e05a2e]">JIC Hydraulic Fittings</span></li></ol></div>
+        <div className="mx-auto max-w-7xl px-4 py-2.5 sm:px-6 lg:px-8"><ol className="flex flex-wrap items-center gap-0"><li><Link href="/" className="text-[11.5px] font-semibold uppercase tracking-wide text-[#0f2040] transition-colors hover:text-[#e05a2e]">Home</Link></li><li className="mx-2.5 text-[#94aabf]" aria-hidden>/</li><li><Link href="/products" className="text-[11.5px] font-medium uppercase tracking-wide text-[#2a4a70] transition-colors hover:text-[#e05a2e]">Products</Link></li><li className="mx-2.5 text-[#94aabf]" aria-hidden>/</li><li><Link href="/products/hydraulic-fittings" className="text-[11.5px] font-medium uppercase tracking-wide text-[#4a6a90] transition-colors hover:text-[#e05a2e]">Hydraulic Fittings</Link></li><li className="mx-2.5 text-[#94aabf]" aria-hidden>/</li><li className="flex items-center gap-1.5" aria-current="page"><span className="h-1.5 w-1.5 rounded-full bg-[#e05a2e]" /><span className="text-[11.5px] font-bold uppercase tracking-wide text-[#e05a2e]">JIC Hydraulic Fittings</span></li></ol></div>
       </nav>
 
-      <CategoryLandingHero category="JIC Standard" title="JIC Hydraulic Fittings" description="High-performance 37-degree flare design with metal-to-metal sealing for demanding hydraulic applications." ctaHref="/products" />
+      <HydraulicAdaptersHeroSection
+        category="JIC Standard"
+        title="JIC Hydraulic Fittings"
+        description="High-performance 37-degree flare design with metal-to-metal sealing for demanding hydraulic applications."
+        featuredProduct={jicProducts[0]}
+        productCount={jicProducts.length}
+        summary="High-performance 37-degree flare design with metal-to-metal sealing for demanding hydraulic applications."
+        standardLabel="JIC"
+        standardsDescription="37° flare · Metal-to-metal seal"
+      />
 
-      <section className="bg-anim-section-dots border-b border-[#d0e4f5]/40" style={{ background: "linear-gradient(180deg, #deeefa 0%, #eaf4fc 18%, #f4faff 45%, #fafcff 72%, #ffffff 100%)" }}>
+      <section id="products" className="relative border-b border-[#d0e4f5]/40 bg-transparent">
         <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="mb-12 max-w-3xl">
             <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#e05a2e]">Hydraulic Fittings / JIC Standard</p>
@@ -57,6 +71,9 @@ export default function JICFittingsPage() {
         buttonLabel="Get Your Quote Today"
         supplementaryContent={<div className="grid grid-cols-1 gap-5 sm:grid-cols-3"><Link href="tel:+1-555-0123" className="group rounded-sm border border-white/20 bg-white/10 p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-white/45 hover:bg-white/18"><span className="mb-3 inline-flex rounded-full bg-white/15 p-3 text-white transition-transform duration-300 group-hover:scale-110"><Phone size={21} /></span><span className="mb-1 block font-bold text-white">Call Us</span><span className="block text-sm text-white/75">+1 (555) 012-3456</span></Link><Link href="mailto:sales@hydronex.com" className="group rounded-sm border border-white/20 bg-white/10 p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-white/45 hover:bg-white/18"><span className="mb-3 inline-flex rounded-full bg-white/15 p-3 text-white transition-transform duration-300 group-hover:scale-110"><Mail size={21} /></span><span className="mb-1 block font-bold text-white">Email</span><span className="block text-sm text-white/75">sales@hydronex.com</span></Link><Link href="#" className="group rounded-sm border border-white/20 bg-white/10 p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-white/45 hover:bg-white/18"><span className="mb-3 inline-flex rounded-full bg-white/15 p-3 text-white transition-transform duration-300 group-hover:scale-110"><MapPin size={21} /></span><span className="mb-1 block font-bold text-white">Visit Us</span><span className="block text-sm text-white/75">1234 Industrial Ave, City, ST</span></Link></div>}
       />
+      <LikedProductsDrawer />
+      <LikedProductsFAB />
+      </div>
     </div>
   )
 }

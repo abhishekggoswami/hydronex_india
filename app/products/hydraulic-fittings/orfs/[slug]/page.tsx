@@ -1,8 +1,8 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { BSPCtaSection } from "@/components/bsp-cta-section"
-import { BSPProductCard } from "@/components/bsp-product-card"
 import { BSPProductDetail } from "@/components/bsp-product-detail"
+import { BSPOtherProducts } from "@/components/bsp-other-products"
 import { orfsHydraulicFittings } from "@/lib/orfs-hydraulic-fittings"
 
 export const dynamicParams = true
@@ -77,33 +77,21 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         tableNote: product.tableNote,
         image: product.image,
       }}
+      editorialHero
       otherProductsSection={
         <>
-          <section className="bg-anim-section-dots border-b border-[#d0e4f5]/40 bg-[linear-gradient(135deg,#f8fcff_0%,#e7f4fd_100%)] py-20">
-            <div className="container mx-auto px-4">
-              <div className="mb-10">
-                <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[#ed5629]">Related</p>
-                <h2 className="font-heading text-3xl font-bold text-[#0d2949]">Other ORFS Hydraulic Fittings</h2>
-              </div>
-              <div className="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
-                {otherProducts.map((item, index) => (
-                  <BSPProductCard
-                    key={item.slug}
-                    product={{
-                      id: 90000 + item.id,
-                      name: item.name,
-                      code: item.shortName || item.name,
-                      image: item.image,
-                      slug: item.slug,
-                    }}
-                    index={index}
-                    basePath="/products/hydraulic-fittings/orfs"
-                    categoryLabel="ORFS Hydraulic Fittings"
-                  />
-                ))}
-              </div>
-            </div>
-          </section>
+          <BSPOtherProducts
+            products={otherProducts.map((item) => ({
+              slug: item.slug,
+              name: item.name,
+              shortName: item.shortName || item.name,
+              code: item.shortName || item.name,
+              image: item.image,
+            }))}
+            title="Other ORFS Hydraulic Fittings"
+            basePath="/products/hydraulic-fittings/orfs"
+            categoryLabel="ORFS Hydraulic Fittings"
+          />
           <BSPCtaSection
             title="Connect with Our ORFS Experts"
             description="Hydronex specializes in high-quality ORFS (O-Ring Face Seal) hydraulic fittings for high-pressure, high-vibration applications. Contact us today for quotes, technical support, or bulk orders."

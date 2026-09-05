@@ -1,310 +1,60 @@
-import { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
-import { ChevronRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
+import type { Metadata } from "next"
+import { BSPCtaSection } from "@/components/bsp-cta-section"
+import { LandingProductFooter } from "@/components/landing-product-chrome"
+import Topography from "@/components/topography"
 
 export const metadata: Metadata = {
   title: "Hydraulic Quick Couplings - ISO 7241, ISO 5675, High-Pressure - Hydronex",
-  description:
-    "Explore our comprehensive range of hydraulic quick couplings including ISO 7241-A, ISO 5675 Agricultural, Pioneer 4000 Series, and high-pressure quick couplers for all your hydraulic connection needs.",
+  description: "Explore our comprehensive range of hydraulic quick couplings including ISO 7241-A, ISO 5675 Agricultural, Pioneer 4000 Series, and high-pressure quick couplers for all your hydraulic connection needs.",
+}
+
+const couplingTypes = [
+  { name: "ISO-A Couplers", href: "/products/hydraulic-quick-couplings/iso-a-couplers", description: "Standard ISO 7241-A hydraulic quick-connect couplings for reliable, leak-free connections in diverse industrial applications", features: ["ISO 7241-A Standard", "Flat-Face Design", "Zero Spillage", "Poppet Valve Technology"], image: "/images/hydraulic-quick-couplings/kze-steel-coupler.png", label: "ISO 7241-A", color: "#293e57" },
+  { name: "ISO-B Couplers", href: "/products/hydraulic-quick-couplings/iso-b-couplers", description: "ISO 7241-B series quick couplings providing superior performance for medium to high-pressure hydraulic systems", features: ["ISO 7241-B Standard", "High Performance", "Medium-High Pressure", "Durable Design"], image: "/images/hydraulic-quick-couplings/kzb-steel-coupler.png", label: "ISO 7241-B", color: "#30414b" },
+  { name: "Push And Pull Coupler", href: "/products/hydraulic-quick-couplings/push-and-pull-coupler", description: "Ergonomic push and pull type quick couplings designed for easy and safe connection and disconnection operations", features: ["Push-Pull Operation", "Ergonomic Design", "Easy Engagement", "Safety Features"], image: "/images/hydraulic-quick-couplings/kzeb-steel-ball-coupler.png", label: "Push / Pull", color: "#39475c" },
+  { name: "Quick-Release Couplers", href: "/products/hydraulic-quick-couplings/quick-release-couplers", description: "Fast-connect quick-release couplers for rapid connection and disconnection with minimal fluid loss", features: ["Quick Connect", "Minimal Spillage", "Rapid Operation", "Field-Tested"], image: "/images/hydraulic-quick-couplings/kze-couplers-female-thread.png", label: "Quick Release", color: "#453c52", diagram: true },
+  { name: "High-Pressure Couplers", href: "/products/hydraulic-quick-couplings/high-pressure-couplers", description: "Heavy-duty high-pressure quick couplings engineered for extreme pressure applications and demanding industrial environments", features: ["10,000 PSI Rated", "Extreme Pressure", "Heavy-Duty Construction", "Industrial Grade"], image: "/images/hydraulic-quick-couplings/kzess-stainless-steel-coupler.png", label: "High Pressure", color: "#304a40" },
+  { name: "Flat-Face Couplers", href: "/products/hydraulic-quick-couplings/flat-face-couplers", description: "Zero-spillage flat-face quick couplings designed for environmentally sensitive applications", features: ["Zero Spillage", "Flat-Face Design", "Environmental Safety", "Easy Cleaning"], image: "/images/hydraulic-quick-couplings/kzbss-stainless-steel-coupler.png", label: "Flat Face", color: "#263f43" },
+  { name: "Threaded Couplers", href: "/products/hydraulic-quick-couplings/threaded-couplers", description: "Threaded hydraulic couplings for secure, high-pressure connections in demanding industrial applications", features: ["Threaded Connection", "High Pressure", "Secure Fit", "Industrial Use"], image: "/images/hydraulic-quick-couplings/nipple-female-thread.png", label: "Threaded", color: "#4a372e", diagram: true },
+  { name: "Straight Through Couplings", href: "/products/hydraulic-quick-couplings/straight-through-couplings", description: "Straight through hydraulic couplings for unrestricted fluid flow and minimal pressure drop", features: ["Full Flow Design", "Low Pressure Drop", "High Flow Rate", "Efficient Operation"], image: "/images/hydraulic-quick-couplings/kze-nipple-female-thread.png", label: "Straight Through", color: "#493f31", diagram: true },
+  { name: "Brass Mold Coolant Line", href: "/products/hydraulic-quick-couplings/brass-mold-coolant-line", description: "Brass mold coolant line couplings designed for injection molding and cooling applications", features: ["Brass Construction", "Mold Cooling", "Corrosion Resistant", "Easy Installation"], image: "/images/hydraulic-quick-couplings/kzd-brass-coupler.png", label: "Brass", color: "#3b4551" },
+  { name: "Dust Plugs", href: "/products/hydraulic-quick-couplings/dust-plug", description: "Protective dust plugs to keep hydraulic coupling connections clean and free from contamination", features: ["Contamination Protection", "Easy Installation", "Durable Material", "Universal Fit"], image: "/images/hydraulic-quick-couplings/kzeb-nipple-female-thread.png", label: "Protection", color: "#4e3a2f", diagram: true },
+]
+
+const specifications = [
+  { title: "ISO 7241-A Series", items: ["Standard hydraulic quick-connect couplings", "Flat-face design for zero spillage", "Compatible with multiple pressure ranges"] },
+  { title: "High-Pressure Series", items: ["10,000 PSI high-pressure quick couplers", "Advanced pressure containment systems", "Extreme duty industrial applications"] },
+  { title: "Agricultural Series", items: ["ISO 5675 agricultural quick couplers", "Field-proven durable construction", "Suitable for farm equipment and machinery"] },
+  { title: "Flat-Face Quick Couplings", items: ["Zero spillage design", "Easy connection and disconnection", "Environmentally friendly operation"] },
+]
+
+function CouplingTypeCard({ item, index }: { item: (typeof couplingTypes)[number]; index: number }) {
+  return <Link href={item.href} className="group relative block min-h-[430px] overflow-hidden rounded-[1.5rem] transition-transform duration-500 hover:-translate-y-1" style={{ backgroundColor: item.color }}>
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_68%_25%,rgba(255,255,255,0.23),transparent_34%)]" />
+    <div className="absolute inset-x-0 top-0 h-[61%] bg-[linear-gradient(135deg,rgba(255,255,255,0.08),transparent)]" />
+    <span className="absolute left-5 top-5 z-10 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-white/75"><span className="h-1.5 w-1.5 rounded-full bg-[#f26522] shadow-[0_0_10px_rgba(242,101,34,0.9)]" />{String(index + 1).padStart(2, "0")} / {item.label}</span>
+    <div className="pointer-events-none absolute left-1/2 top-[39%] h-[47%] w-[72%] -translate-x-1/2 -translate-y-1/2 rounded-[40%] bg-white/10 blur-3xl transition-colors duration-500 group-hover:bg-white/20" />
+    <img src={item.image} alt="" className={`absolute left-1/2 top-[39%] h-[48%] w-[75%] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_24px_22px_rgba(0,0,0,0.56)] transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-3 ${item.diagram ? "brightness-0 invert" : ""}`} />
+    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/72 to-transparent px-5 pb-5 pt-16 text-white"><div className="flex items-end justify-between gap-4"><div><h2 className="max-w-[15rem] font-heading text-2xl font-extrabold uppercase leading-[0.92] tracking-[-0.045em] text-white sm:text-3xl">{item.name}</h2><p className="mt-3 max-w-[18rem] border-l-2 border-[#f26522] pl-3 text-[12px] font-medium leading-[1.55] tracking-[0.01em] text-white/80">{item.description}</p></div><span className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white text-[#171717] transition-[width,background-color,color] duration-500 group-hover:w-28 group-hover:bg-[#f26522] group-hover:text-white"><ArrowRight size={16} className="shrink-0 transition-transform duration-500 group-hover:-rotate-45" /><span className="w-0 overflow-hidden whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.1em] opacity-0 transition-all duration-300 group-hover:ml-2 group-hover:w-14 group-hover:opacity-100">Explore</span></span></div><ul className="mt-5 grid grid-cols-2 gap-x-3 gap-y-2 border-t border-white/15 pt-4 text-[10px] font-semibold leading-tight text-white/70">{item.features.map((feature) => <li key={feature} className="flex gap-1.5"><span className="text-[#f26522]">+</span>{feature}</li>)}</ul></div>
+  </Link>
 }
 
 export default function HydraulicQuickCouplingsPage() {
-  const couplingTypes = [
-    {
-      name: "ISO-A Couplers",
-      slug: "iso-a-couplers",
-      description: "Standard ISO 7241-A hydraulic quick-connect couplings for reliable, leak-free connections in diverse industrial applications",
-      href: "/products/hydraulic-quick-couplings/iso-a-couplers",
-      features: ["ISO 7241-A Standard", "Flat-Face Design", "Zero Spillage", "Poppet Valve Technology"],
-    },
-    {
-      name: "ISO-B Couplers",
-      slug: "iso-b-couplers",
-      description: "ISO 7241-B series quick couplings providing superior performance for medium to high-pressure hydraulic systems",
-      href: "/products/hydraulic-quick-couplings/iso-b-couplers",
-      features: ["ISO 7241-B Standard", "High Performance", "Medium-High Pressure", "Durable Design"],
-    },
-    {
-      name: "Push And Pull Coupler",
-      slug: "push-and-pull-coupler",
-      description: "Ergonomic push and pull type quick couplings designed for easy and safe connection and disconnection operations",
-      href: "/products/hydraulic-quick-couplings/push-and-pull-coupler",
-      features: ["Push-Pull Operation", "Ergonomic Design", "Easy Engagement", "Safety Features"],
-    },
-    {
-      name: "Quick-Release Couplers",
-      slug: "quick-release-couplers",
-      description: "Fast-connect quick-release couplers for rapid connection and disconnection with minimal fluid loss",
-      href: "/products/hydraulic-quick-couplings/quick-release-couplers",
-      features: ["Quick Connect", "Minimal Spillage", "Rapid Operation", "Field-Tested"],
-    },
-    {
-      name: "High-Pressure Couplers",
-      slug: "high-pressure-couplers",
-      description: "Heavy-duty high-pressure quick couplings engineered for extreme pressure applications and demanding industrial environments",
-      href: "/products/hydraulic-quick-couplings/high-pressure-couplers",
-      features: ["10,000 PSI Rated", "Extreme Pressure", "Heavy-Duty Construction", "Industrial Grade"],
-    },
-    {
-      name: "Flat-Face Couplers",
-      slug: "flat-face-couplers",
-      description: "Specialized flat-face design couplings that prevent spillage and contamination in hydraulic systems",
-      href: "/products/hydraulic-quick-couplings/flat-face-couplers",
-      features: ["Flat-Face Design", "Zero Spillage", "Contamination Prevention", "Clean Operation"],
-    },
-    {
-      name: "Threaded Couplers",
-      slug: "threaded-couplers",
-      description: "Thread-locked quick couplings providing secure and vibration-resistant connections for demanding applications",
-      href: "/products/hydraulic-quick-couplings/threaded-couplers",
-      features: ["Thread Locked", "Vibration Resistant", "Secure Connection", "Industrial Applications"],
-    },
-    {
-      name: "Straight Through Couplings",
-      slug: "straight-through-couplings",
-      description: "Straight-through flow quick couplings for uninterrupted hydraulic system performance and low pressure applications",
-      href: "/products/hydraulic-quick-couplings/straight-through-couplings",
-      features: ["Straight Flow Path", "Low Pressure", "Continuous Operation", "Simple Design"],
-    },
-    {
-      name: "Brass Mold Coolant-Line Quick Couplers",
-      slug: "brass-mold-coolant-line",
-      description: "Specialized brass quick couplers designed for mold cooling applications with excellent corrosion resistance",
-      href: "/products/hydraulic-quick-couplings/brass-mold-coolant-line",
-      features: ["Brass Construction", "Coolant-Line Compatible", "Corrosion Resistant", "Mold Applications"],
-    },
-    {
-      name: "Dust Plug",
-      slug: "dust-plug",
-      description: "Protective dust plugs for quick coupling ports preventing contamination and maintaining system cleanliness",
-      href: "/products/hydraulic-quick-couplings/dust-plug",
-      features: ["Protective Cover", "Contamination Prevention", "Port Protection", "Easy Application"],
-    },
-  ]
-
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Breadcrumb */}
-      <nav className="bg-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-[#e05a2e] transition-colors">
-              Home
-            </Link>
-            <ChevronRight size={16} className="text-gray-400" />
-            <Link href="/products" className="hover:text-[#e05a2e] transition-colors">
-              Products
-            </Link>
-            <ChevronRight size={16} className="text-gray-400" />
-            <span className="text-gray-900 font-medium">Hydraulic Quick Couplings</span>
-          </div>
-        </div>
-      </nav>
-
-      {/* Header and Introduction Section */}
-      <section className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* Left Column - Text Content */}
-            <div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Hydraulic Quick Couplings</h1>
-              <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                Sinopulse is a factory for hydraulic fluid products, including the research, design, and production of hydraulic quick couplings. With its advanced technology, our products easily meet diverse market demands and comply with international standards and the specific requirements of various manufacturers.
-              </p>
-              <p className="text-lg text-gray-700 font-semibold mb-4">
-                We can supply any type of hydraulic quick connect fittings.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                Our hydraulic quick couplers and couplings are field-tested to ensure stable operation under high pressure, giving you peace of mind when connecting.
-              </p>
-            </div>
-
-            {/* Right Column - Introduction Image */}
-            <div className="flex items-center justify-center">
-              <div className="relative w-full h-96 rounded-lg overflow-hidden bg-white border border-gray-200 shadow-sm">
-                <Image
-                  src="/images/hydraulic-quick-couplings-intro.png"
-                  alt="Hydraulic Quick Couplings"
-                  fill
-                  className="object-contain p-8"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Product Types Section */}
-      <section className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">Our Product Range Includes:</h2>
-            <p className="text-gray-600">ISO-A and ISO-B Couplers, Push and Pull Couplers, Quick-Release and High-Pressure Couplers, Flat-Face and Threaded Couplers, Straight Through Couplings, Brass Mold Coolant-Line Quick Couplers, and Dust Plugs for complete hydraulic connection solutions.</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {couplingTypes.map((type) => (
-              <Link
-                key={type.slug}
-                href={type.href}
-                className="group"
-              >
-                <div className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-[#e05a2e] transition-all duration-300 h-full flex flex-col">
-                  {/* Header */}
-                  <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-6 border-b border-gray-200">
-                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-[#e05a2e] transition-colors line-clamp-2">
-                      {type.name}
-                    </h3>
-                  </div>
-
-                  {/* Description */}
-                  <div className="p-6 flex-grow">
-                    <p className="text-sm text-gray-600 mb-6 line-clamp-3">{type.description}</p>
-
-                    {/* Features */}
-                    <div className="space-y-2 mb-6">
-                      <p className="text-xs font-semibold text-gray-900 uppercase tracking-wide mb-3">Key Features</p>
-                      {type.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-start gap-2">
-                          <span className="text-[#e05a2e] font-bold mt-1 text-sm">•</span>
-                          <span className="text-sm text-gray-600">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* CTA */}
-                  <div className="p-6 pt-0 border-t border-gray-100">
-                    <div className="flex items-center gap-2 text-sm font-semibold text-[#e05a2e] group-hover:gap-3 transition-all">
-                      Explore Range
-                      <ChevronRight size={16} />
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Specifications Section */}
-      <section className="bg-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Main Specifications</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-[#e05a2e] text-white flex items-center justify-center font-bold text-sm">1</span>
-                ISO 7241-A Series
-              </h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex gap-3">
-                  <span className="text-[#e05a2e] font-bold">✓</span>
-                  <span>Standard hydraulic quick-connect couplings</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#e05a2e] font-bold">✓</span>
-                  <span>Flat-face design for zero spillage</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#e05a2e] font-bold">✓</span>
-                  <span>Compatible with multiple pressure ranges</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-[#e05a2e] text-white flex items-center justify-center font-bold text-sm">2</span>
-                High-Pressure Series
-              </h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex gap-3">
-                  <span className="text-[#e05a2e] font-bold">✓</span>
-                  <span>10,000 PSI high-pressure quick couplers</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#e05a2e] font-bold">✓</span>
-                  <span>Advanced pressure containment systems</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#e05a2e] font-bold">✓</span>
-                  <span>Extreme duty industrial applications</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-[#e05a2e] text-white flex items-center justify-center font-bold text-sm">3</span>
-                Agricultural Series
-              </h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex gap-3">
-                  <span className="text-[#e05a2e] font-bold">✓</span>
-                  <span>ISO 5675 agricultural quick couplers</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#e05a2e] font-bold">✓</span>
-                  <span>Field-proven durable construction</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#e05a2e] font-bold">✓</span>
-                  <span>Suitable for farm equipment and machinery</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-[#e05a2e] text-white flex items-center justify-center font-bold text-sm">4</span>
-                Flat-Face Quick Couplings
-              </h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex gap-3">
-                  <span className="text-[#e05a2e] font-bold">✓</span>
-                  <span>Zero spillage design</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#e05a2e] font-bold">✓</span>
-                  <span>Easy connection and disconnection</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#e05a2e] font-bold">✓</span>
-                  <span>Environmentally friendly operation</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="bg-white border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-12 border border-gray-200">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Need More Information?</h2>
-            <p className="text-lg text-gray-700 mb-8 max-w-2xl">
-              For more details about our hydraulic quick couplings and specifications, please send us an online inquiry or contact our team directly.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/#contact"
-                className="inline-block bg-[#e05a2e] text-white font-bold px-8 py-3 rounded hover:bg-[#d04a1e] transition-colors"
-              >
-                Send Inquiry
-              </Link>
-              <Link
-                href="/#contact"
-                className="inline-block border-2 border-[#e05a2e] text-[#e05a2e] font-bold px-8 py-3 rounded hover:bg-[#e05a2e] hover:text-white transition-colors"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+  return <main className="min-h-screen overflow-hidden bg-[#efefef] text-[#171717]" style={{ fontFamily: "Arial, Helvetica, system-ui, sans-serif" }}>
+    <div className="relative isolate overflow-hidden bg-gradient-to-b from-[#f7f8f6] via-[#fbfcfa] to-white"><div className="pointer-events-none absolute inset-0 z-0" style={{ maskImage: "linear-gradient(to bottom, black 0%, rgba(0,0,0,0.78) 42%, rgba(0,0,0,0.28) 78%, transparent 100%)", WebkitMaskImage: "linear-gradient(to bottom, black 0%, rgba(0,0,0,0.78) 42%, rgba(0,0,0,0.28) 78%, transparent 100%)" }}><Topography className="h-full w-full" lowColor="#9eb8c3" midColor="#f26522" highColor="#ffffff" speed={0.18} morphAmount={1.7} bands={2.65} thickness={0.018} glow={0.22} opacity={0.1} mouseRadius={0.24} mouseStrength={0.34} /></div>
+      <section className="relative flex min-h-[calc(100svh-88px)] flex-col overflow-hidden px-3 pb-3 pt-10 sm:px-5 sm:pt-14 lg:px-8"><div className="relative z-10 mx-auto flex w-full max-w-none min-h-0 flex-1 flex-col"><h1 className="whitespace-nowrap text-center font-heading text-[#143126]" style={{ fontSize: "clamp(1.35rem, 4.15vw, 4.7rem)", fontWeight: 800, letterSpacing: "-0.07em", lineHeight: 0.9 }}>HYDRAULIC QUICK COUPLINGS</h1>
+        <div className="relative mt-8 flex min-h-[430px] flex-1 sm:mt-10"><div className="relative h-full min-h-[430px] flex-1 overflow-hidden rounded-[1.8rem] bg-[#0b3539] shadow-[0_22px_60px_rgba(2,16,27,0.22)] sm:min-h-[540px] sm:rounded-[2.25rem] lg:min-h-[max(620px,calc(100svh-300px))]"><video autoPlay muted loop playsInline preload="auto" className="pointer-events-none absolute inset-0 h-full w-full object-cover" aria-label="Hydronex hydraulic quick couplings in production"><source src="/videos/hydraulic-fittings-hero.mp4" type="video/mp4" /></video>
+          <div className="absolute right-5 top-6 z-20 flex w-[min(21.5rem,calc(100%-2.5rem))] sm:right-8 sm:top-8 lg:left-1/2 lg:right-auto lg:top-[clamp(2rem,8vh,5.5rem)] lg:w-auto lg:-translate-x-1/2 lg:gap-5">
+            <aside className="relative hidden h-[360px] w-[min(30rem,calc((100vw-6rem)/2))] overflow-hidden rounded-[1.8rem] border border-white/35 bg-black/25 p-7 shadow-[0_22px_60px_rgba(2,16,27,0.36)] backdrop-blur-md lg:block"><div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black/75 via-black/25 to-transparent" /><div className="relative z-10"><p className="flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.18em] text-white/70"><span className="h-1.5 w-1.5 rounded-full bg-[#f1854a]" />Hydraulic quick couplings</p><h2 className="mt-4 max-w-[17ch] text-[1.75rem] font-semibold leading-[0.98] tracking-[-0.045em] text-white">Fast, secure hydraulic connections.</h2><p className="mt-5 max-w-[22rem] text-[14px] font-medium leading-[1.5] text-white/80">We can supply any type of hydraulic quick connect fittings.</p><div className="mt-6 grid grid-cols-3 border-y border-white/25 py-4 text-center"><span><b className="block text-lg text-white">10</b><small className="text-[8px] font-bold uppercase tracking-[0.12em] text-white/65">Types</small></span><span className="border-x border-white/20"><b className="block text-lg text-white">ISO</b><small className="text-[8px] font-bold uppercase tracking-[0.12em] text-white/65">Standards</small></span><span><b className="block text-lg text-white">HP</b><small className="text-[8px] font-bold uppercase tracking-[0.12em] text-white/65">Rated</small></span></div></div></aside>
+            <aside className="group relative h-[360px] w-full overflow-hidden rounded-[1.8rem] border border-white/35 bg-black/25 p-6 shadow-[0_22px_60px_rgba(2,16,27,0.36)] backdrop-blur-md transition-transform duration-500 hover:-translate-y-1 sm:h-[400px] lg:w-[min(30rem,calc((100vw-6rem)/2))]"><div className="absolute inset-0 bg-[linear-gradient(132deg,rgba(255,255,255,0.18),transparent_40%,rgba(255,255,255,0.05))]" /><div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/80 via-black/25 to-transparent" /><div className="relative z-10 flex h-full flex-col"><p className="flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.18em] text-white/70"><span className="h-1.5 w-1.5 rounded-full bg-[#f1854a] shadow-[0_0_10px_rgba(241,133,74,0.9)]" />Featured range</p><div className="relative mt-5 flex-1 overflow-hidden rounded-[1.1rem] border border-white/20 bg-black/15"><div className="pointer-events-none absolute inset-0 opacity-35 [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:24px_24px]" /><img src="/images/hydraulic-quick-couplings/kzb-steel-coupler.png" alt="ISO-B hydraulic quick coupler" className="relative z-10 h-full w-full object-contain p-5 drop-shadow-[0_18px_18px_rgba(0,0,0,0.45)] transition-transform duration-500 group-hover:scale-110" /></div><div className="mt-4 flex items-end justify-between"><div><p className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#9ce7df]">Hydronex</p><h2 className="mt-1 text-xl font-semibold leading-none text-white">Hydraulic Quick Couplings</h2></div><span className="rounded-full border border-white/35 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.12em] text-white/75">ISO</span></div></div></aside>
+          </div><div className="absolute inset-x-0 bottom-0 z-10 bg-white/95 px-5 pb-5 pt-6 sm:px-8 lg:pl-[calc(50%+2.5rem)]"><div className="mx-auto grid max-w-[40rem] grid-cols-3 divide-x divide-[#143126]/15 text-center"><div><b className="block text-[1.5rem] leading-none text-[#143126]">10</b><span className="mt-1 block text-[8px] font-bold uppercase tracking-[0.15em] text-[#143126]/65">Coupling types</span></div><div><b className="block text-[1.5rem] leading-none text-[#143126]">ISO</b><span className="mt-1 block text-[8px] font-bold uppercase tracking-[0.15em] text-[#143126]/65">Standards</span></div><div><b className="block text-[1.5rem] leading-none text-[#143126]">HP</b><span className="mt-1 block text-[8px] font-bold uppercase tracking-[0.15em] text-[#143126]/65">Performance</span></div></div></div>
+        </div></div></div></section>
     </div>
-  )
+    <section className="relative overflow-hidden bg-[#f7f8f6] px-4 py-20 sm:px-6 lg:px-8"><Topography className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.07]" lowColor="#f26522" midColor="#f0b08b" highColor="#ffffff" speed={0.12} morphAmount={1.2} /><div className="relative mx-auto max-w-7xl"><div className="max-w-4xl"><p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e05a2e]">Hydraulic connections</p><h2 className="mt-3 font-heading text-4xl font-extrabold tracking-[-0.055em] text-[#143126] sm:text-5xl">Couplings built for reliable flow.</h2><p className="mt-6 text-lg leading-relaxed text-[#42546b]">Sinopulse is a factory for hydraulic fluid products, including the research, design, and production of hydraulic quick couplings. With its advanced technology, our products easily meet diverse market demands and comply with international standards and the specific requirements of various manufacturers.</p><p className="mt-4 text-lg leading-relaxed text-[#42546b]">Our hydraulic quick couplers and couplings are field-tested to ensure stable operation under high pressure, giving you peace of mind when connecting.</p></div><div className="mt-14 flex flex-wrap items-end justify-between gap-5"><div><p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e05a2e]">Explore the range</p><h2 className="mt-2 font-heading text-3xl font-extrabold tracking-[-0.05em] text-[#143126] sm:text-4xl">Our Product Range Includes:</h2></div><p className="max-w-2xl text-sm leading-relaxed text-[#56677d]">ISO-A and ISO-B Couplers, Push and Pull Couplers, Quick-Release and High-Pressure Couplers, Flat-Face and Threaded Couplers, Straight Through Couplings, Brass Mold Coolant-Line Quick Couplers, and Dust Plugs for complete hydraulic connection solutions.</p></div><div className="mt-9 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">{couplingTypes.map((item, index) => <CouplingTypeCard key={item.href} item={item} index={index} />)}</div></div></section>
+    <section className="relative overflow-hidden bg-[#143126] px-4 py-20 text-white sm:px-6 lg:px-8"><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(46,112,103,0.55),transparent_38%),radial-gradient(circle_at_90%_80%,rgba(242,101,34,0.23),transparent_38%)]" /><div className="relative mx-auto max-w-7xl"><p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f1854a]">Performance standards</p><h2 className="mt-3 font-heading text-4xl font-extrabold tracking-[-0.055em] sm:text-5xl">Technical specifications</h2><div className="mt-10 grid gap-5 md:grid-cols-2">{specifications.map((spec, index) => <article key={spec.title} className="group rounded-[1.4rem] border border-white/15 bg-white/[0.07] p-7 transition duration-500 hover:-translate-y-1 hover:bg-white/[0.12]"><p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f1854a]">0{index + 1} / Series</p><h3 className="mt-3 text-2xl font-bold tracking-[-0.04em] text-white">{spec.title}</h3><ul className="mt-6 space-y-3 border-t border-white/15 pt-5">{spec.items.map((item) => <li key={item} className="flex gap-3 text-sm leading-relaxed text-white/80"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f26522] shadow-[0_0_10px_rgba(242,101,34,0.9)]" />{item}</li>)}</ul></article>)}</div></div></section>
+    <BSPCtaSection title="Need More Information?" description="For more details about our hydraulic quick couplings and specifications, please send us an online inquiry or contact our team directly." buttonLabel="Send Inquiry" ctaHref="/#contact" supplementaryContent={<Link href="/#contact" className="inline-flex items-center gap-2 border-b border-[#143126]/35 pb-1 text-sm font-bold text-[#143126] transition hover:border-[#f26522] hover:text-[#e05a2e]">Contact Us <ArrowRight size={15} /></Link>} />
+    <LandingProductFooter />
+  </main>
 }

@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation"
 import { Metadata } from "next"
 import { pushPullCouplers } from "@/lib/push-and-pull-couplers"
+import { BSPCtaSection } from "@/components/bsp-cta-section"
+import { BSPOtherProducts } from "@/components/bsp-other-products"
 import { ISOAProductDetail } from "@/components/iso-a-product-detail"
-import { ISOAOtherProducts } from "@/components/iso-a-other-products"
 import { KZAProductDetail } from "@/components/kza-product-detail"
 import { KZAVProductDetail } from "@/components/kzav-product-detail"
 
@@ -47,7 +48,28 @@ export default async function PushPullProductPage({ params }: PageProps) {
   }
 
   const otherProducts = pushPullCouplers.filter(p => p.id !== product.id)
-  const otherProductsSection = <ISOAOtherProducts products={otherProducts} basePath="/products/hydraulic-quick-couplings/push-and-pull-coupler" />
+  const otherProductsSection = (
+    <>
+      <BSPOtherProducts
+        products={otherProducts.map((item) => ({
+          slug: item.slug,
+          name: item.name,
+          shortName: item.shortName,
+          code: item.code,
+          image: item.image,
+        }))}
+        title="Other Push-and-Pull Couplers"
+        basePath="/products/hydraulic-quick-couplings/push-and-pull-coupler"
+        categoryLabel="Push-and-Pull Couplers"
+      />
+      <BSPCtaSection
+        title="Need Help Selecting the Right Push-and-Pull Coupler?"
+        description="Our expert team is ready to help with product selection, technical support and bulk orders."
+        buttonLabel="Contact Sales"
+        ctaHref="/contact"
+      />
+    </>
+  )
 
   // Use KZAV component for KZAV Series
   if (product.slug === "kzav-series-steel") {

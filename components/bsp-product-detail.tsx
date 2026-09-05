@@ -206,6 +206,8 @@ interface BSPProductDetailProps {
     material?: string
     surfaceTreat?: string
     application?: string
+    applicationHeading?: string
+    note?: string
     features: string[]
     specs: Spec[]
     applications: string[]
@@ -220,6 +222,7 @@ interface BSPProductDetailProps {
   parentCategoryHref?: string
   showParentCategory?: boolean
   additionalSpecificationSection?: React.ReactNode
+  featureHeading?: string
   editorialHero?: boolean
 }
 
@@ -232,7 +235,7 @@ function EditorialBspHero({
 }) {
   return (
     <section className="relative px-4 pb-16 pt-7 sm:px-6 sm:pb-20 lg:px-8 lg:pt-10">
-      <div className="mx-auto grid max-w-[1500px] items-center gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(360px,0.75fr)] lg:gap-14">
+      <div className="mx-auto grid max-w-[1500px] items-start gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(360px,0.75fr)] lg:gap-14">
         <div className="relative min-h-[390px] sm:min-h-[520px] lg:min-h-[min(66vh,650px)]">
           {/* The reference card is a single SVG-defined silhouette: its lower-right edge sweeps into a soft concave scoop for the arrow control. */}
           <svg className="absolute h-0 w-0" aria-hidden>
@@ -300,6 +303,20 @@ function EditorialBspHero({
           </h1>
           <p className="mt-8 max-w-[41rem] font-sans text-base leading-relaxed text-[#0b1f37]/70 sm:text-lg">{product.description}</p>
 
+          {(product.application || product.note) ? (
+            <div className="mt-6 max-w-[41rem] border-l-2 border-[#f26522] pl-4 font-sans">
+              {product.application ? (
+                <>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#f26522]">
+                    {product.applicationHeading ?? "Application"}
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-[#0b1f37]/70">{product.application}</p>
+                </>
+              ) : null}
+              {product.note ? <p className="mt-3 text-sm font-semibold leading-relaxed text-[#143126]">{product.note}</p> : null}
+            </div>
+          ) : null}
+
           <div className="mt-9 grid max-w-[38rem] grid-cols-1 border-y border-[#0b1f37]/15 py-4 font-sans text-sm text-[#0b1f37]/75 sm:grid-cols-2">
             {product.material ? <p className="border-b border-[#0b1f37]/10 py-2 pr-4 sm:border-b-0 sm:border-r"><span className="font-sans font-bold text-[#0b1f37]">Material</span><br />{product.material}</p> : null}
             {product.surfaceTreat ? <p className="py-2 sm:pl-5"><span className="font-sans font-bold text-[#0b1f37]">Surface finish</span><br />{product.surfaceTreat}</p> : null}
@@ -324,6 +341,7 @@ export function BSPProductDetail({
   parentCategoryHref = "/products",
   showParentCategory = true,
   additionalSpecificationSection,
+  featureHeading = "Key Features",
   editorialHero = false,
 }: BSPProductDetailProps) {
   const { displayed, phase } = useTypewriter("REQUEST QUOTE")
@@ -828,7 +846,7 @@ export function BSPProductDetail({
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-3 mb-8">
               <span className="w-1 h-7 rounded-full bg-[#e05a2e] flex-shrink-0" aria-hidden />
-              <h2 className="text-2xl font-bold text-white">Key Features</h2>
+              <h2 className="text-2xl font-bold text-white">{featureHeading}</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {product.features.map((feature, idx) => (

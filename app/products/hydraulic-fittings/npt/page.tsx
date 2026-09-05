@@ -3,7 +3,10 @@ import Link from "next/link"
 import { Mail, MapPin, Phone } from "lucide-react"
 import { BSPCtaSection } from "@/components/bsp-cta-section"
 import { BSPProductGrid } from "@/components/bsp-product-grid"
-import { CategoryLandingHero } from "@/components/category-landing-hero"
+import { HydraulicAdaptersHeroSection } from "@/components/hydraulic-adapters-hero-section"
+import { LikedProductsDrawer } from "@/components/liked-products-drawer"
+import { LikedProductsFAB } from "@/components/liked-products-fab"
+import Topography from "@/components/topography"
 import { nptHydraulicFittings } from "@/lib/npt-hydraulic-fittings"
 
 export const metadata: Metadata = {
@@ -24,7 +27,9 @@ export default function NPTFittingsPage() {
   }))
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="relative isolate min-h-screen overflow-hidden bg-gradient-to-b from-[#f7f8f6] via-[#fbfcfa] to-white">
+      <Topography className="pointer-events-none !fixed inset-0 z-0" lowColor="#9eb8c3" midColor="#f26522" highColor="#ffffff" speed={0.18} morphAmount={1.7} bands={3.4} thickness={0.018} glow={0.22} opacity={0.075} mouseRadius={0.24} mouseStrength={0.34} />
+      <div className="relative z-10">
       <nav
         className="border-b"
         style={{ background: "#f8fafc", borderColor: "rgba(210,225,240,0.7)" }}
@@ -45,7 +50,7 @@ export default function NPTFittingsPage() {
             </li>
             <li className="mx-2.5 flex items-center text-[#94aabf]" aria-hidden>/</li>
             <li className="flex items-center">
-              <Link href="/products" className="text-[11.5px] font-medium uppercase tracking-wide text-[#4a6a90] transition-colors duration-150 hover:text-[#e05a2e]">
+              <Link href="/products/hydraulic-fittings" className="text-[11.5px] font-medium uppercase tracking-wide text-[#4a6a90] transition-colors duration-150 hover:text-[#e05a2e]">
                 Hydraulic Fittings
               </Link>
             </li>
@@ -58,16 +63,11 @@ export default function NPTFittingsPage() {
         </div>
       </nav>
 
-      <CategoryLandingHero
-        category="NPT Standard Pipe"
-        title="NPT Hydraulic Fittings"
-        description="Hydronex supplies a wide range of precision-engineered NPT (National Pipe Thread) hydraulic fittings. Our NPT fittings feature high-quality stainless steel construction that can stand strong working conditions, providing reliable and leak-free connections across North American hydraulic applications."
-        ctaHref="/products"
-      />
+      <div className="relative overflow-hidden bg-transparent">
+      <HydraulicAdaptersHeroSection category="NPT Standard Pipe" title="NPT Hydraulic Fittings" description="Hydronex supplies a wide range of precision-engineered NPT (National Pipe Thread) hydraulic fittings. Our NPT fittings feature high-quality stainless steel construction that can stand strong working conditions, providing reliable and leak-free connections across North American hydraulic applications." featuredProduct={nptProducts[0]} productCount={nptProducts.length} />
 
       <section
-        className="bg-anim-section-dots border-b border-[#d0e4f5]/40"
-        style={{ background: "linear-gradient(180deg, #deeefa 0%, #eaf4fc 18%, #f4faff 45%, #fafcff 72%, #ffffff 100%)" }}
+        className="relative z-10 border-b border-[#d0e4f5]/40 bg-transparent"
       >
         <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="mb-12 max-w-3xl">
@@ -101,6 +101,7 @@ export default function NPTFittingsPage() {
           />
         </div>
       </section>
+      </div>
 
       <BSPCtaSection
         title="Connect with Our NPT Experts"
@@ -141,6 +142,9 @@ export default function NPTFittingsPage() {
           </div>
         }
       />
+      <LikedProductsDrawer />
+      <LikedProductsFAB />
+      </div>
     </div>
   )
 }

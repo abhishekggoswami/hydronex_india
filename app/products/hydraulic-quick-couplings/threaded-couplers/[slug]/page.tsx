@@ -1,8 +1,9 @@
 import { Metadata } from "next"
 import { threadedCouplers } from "@/lib/threaded-couplers"
 import { notFound } from "next/navigation"
-import { ISOAOtherProducts } from "@/components/iso-a-other-products"
 import { ISOAProductDetail } from "@/components/iso-a-product-detail"
+import { BSPOtherProducts } from "@/components/bsp-other-products"
+import { BSPCtaSection } from "@/components/bsp-cta-section"
 
 export const dynamicParams = true
 
@@ -51,7 +52,8 @@ export default async function ProductPage({
     }))
 
   return (
-    <ISOAProductDetail
+    <div className="threaded-bsp-detail">
+      <ISOAProductDetail
       product={{
         name: product.name,
         shortName: product.shortName,
@@ -95,14 +97,25 @@ export default async function ProductPage({
         dustProtectionTable: product.dustProtectionTable as any,
       }}
       otherProductsSection={
-        <ISOAOtherProducts
-          products={otherProducts}
-          basePath="/products/hydraulic-quick-couplings/threaded-couplers"
-        />
+        <>
+          <BSPOtherProducts
+            products={otherProducts}
+            title="Other Threaded Couplers"
+            basePath="/products/hydraulic-quick-couplings/threaded-couplers"
+            categoryLabel="Threaded Couplers"
+          />
+          <BSPCtaSection
+            title="Need Help Selecting a Threaded Coupler?"
+            description="Our expert team is ready to help with product selection, technical support and bulk orders."
+            buttonLabel="Get A Quote"
+            ctaHref="/#contact"
+          />
+        </>
       }
       category="threaded"
       categoryLabel="Threaded Couplers"
       categoryPath="/products/hydraulic-quick-couplings/threaded-couplers"
-    />
+      />
+    </div>
   )
 }

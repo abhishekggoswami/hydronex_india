@@ -6,7 +6,8 @@ import { LikedProductsDrawer } from "@/components/liked-products-drawer"
 import { LikedProductsFAB } from "@/components/liked-products-fab"
 import { BSPProductGrid } from "@/components/bsp-product-grid"
 import { BSPCtaSection } from "@/components/bsp-cta-section"
-import { CategoryLandingHero } from "@/components/category-landing-hero"
+import { HydraulicAdaptersHeroSection } from "@/components/hydraulic-adapters-hero-section"
+import Topography from "@/components/topography"
 
 export const metadata: Metadata = {
   title: "Push-and-Pull Couplers – Hydraulic Quick Couplings | Hydronex",
@@ -35,7 +36,23 @@ const features = [
 
 export default function PushPullCouplerPage() {
   return (
-    <div className="min-h-screen bg-[#f8fafc]">
+    <div className="relative isolate min-h-screen overflow-hidden bg-gradient-to-b from-[#f7f8f6] via-[#fbfcfa] to-white">
+      <Topography
+        className="pointer-events-none !fixed inset-0 z-0"
+        lowColor="#9eb8c3"
+        midColor="#f26522"
+        highColor="#ffffff"
+        speed={0.18}
+        morphAmount={1.7}
+        bands={3.4}
+        thickness={0.018}
+        glow={0.22}
+        opacity={0.075}
+        mouseRadius={0.24}
+        mouseStrength={0.34}
+      />
+
+      <div className="relative z-10">
       <nav className="border-b border-[#e8eef5] bg-white shadow-sm" aria-label="Breadcrumb">
         <div className="mx-auto max-w-7xl px-4 py-2.5 sm:px-6 lg:px-8">
           <ol className="flex flex-wrap items-center gap-0">
@@ -57,15 +74,18 @@ export default function PushPullCouplerPage() {
         </div>
       </nav>
 
-      <CategoryLandingHero
+      <HydraulicAdaptersHeroSection
         category="Hydraulic Quick Couplings / Push-and-Pull"
         title="Push-and-Pull Couplers"
         description="Push-and-pull type quick couplers are designed for applications requiring frequent and simple connection and disconnection. These couplers feature an intuitive mechanism that minimizes operator training while maintaining reliability and safety."
-        ctaHref="#products"
-        palette="#15324d"
+        featuredProduct={pushPullProducts[0]}
+        productCount={pushPullProducts.length}
+        summary="Push-and-pull type quick couplers are designed for applications requiring frequent and simple connection and disconnection."
+        standardLabel="PUSH-PULL"
+        standardsDescription="ISO 7241 Standard"
       />
 
-      <section id="products" className="bg-anim-section-dots relative overflow-hidden border-b border-[#d0e4f5]/40" style={{ background: "linear-gradient(180deg, #deeefa 0%, #eaf4fc 18%, #f4faff 45%, #fafcff 72%, #ffffff 100%)" }}>
+      <section id="products" className="relative overflow-hidden border-b border-[#d0e4f5]/40 bg-transparent">
         <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="mb-12 max-w-4xl">
             <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#e05a2e]">Push-and-Pull Couplers</p>
@@ -104,6 +124,7 @@ export default function PushPullCouplerPage() {
       <BSPCtaSection title="Need Push-and-Pull Coupler Solutions?" description="Push-and-pull couplers offer a simple and intuitive connection mechanism that requires minimal operator training. The poppet valve design ensures minimal fluid loss during disconnection, making them ideal for maintenance operations and equipment transfers." />
       <LikedProductsDrawer />
       <LikedProductsFAB />
+      </div>
     </div>
   )
 }

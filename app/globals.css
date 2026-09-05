@@ -420,6 +420,21 @@
   box-shadow: inset 3px 0 0 #e05a2e;
 }
 
+/* Keeps the three-level valve data header aligned with the BSP product-table treatment. */
+.pneumatic-specification-table thead tr:last-child th {
+  border: 0;
+  border-right: 1px solid #e2e8f0;
+  padding: 0.5rem 0.625rem;
+  color: #0e1c35;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.pneumatic-specification-table thead tr:last-child th:last-child {
+  border-right: 0;
+}
+
 /* ── BSP PRODUCT DETAIL PAGE ────────────────────────────────────────────── */
 
 /* Heading word stagger-in */
@@ -589,6 +604,9 @@
   max-width: 80rem;
   margin-inline: auto;
 }
+.iso-bsp-product-detail--hero-only .bsp-editorial-product-hero ~ section {
+  display: none;
+}
 .quick-release-special-detail section,
 .quick-release-special-detail main > section {
   position: relative;
@@ -607,8 +625,8 @@
   background-size: 26px 26px;
   opacity: .38;
 }
-.quick-release-special-detail section > *,
-.quick-release-special-detail main > section > * {
+.quick-release-special-detail section > :not(.absolute),
+.quick-release-special-detail main > section > :not(.absolute) {
   position: relative;
   z-index: 1;
 }
@@ -617,6 +635,16 @@
   background: linear-gradient(130deg, #061428, #0a2a52, #0d4080, #061428);
   background-size: 300% 300%;
   animation: quick-release-section-in .65s cubic-bezier(.22,1,.36,1) both, bsp-features-move 8s ease infinite;
+}
+.quick-release-special-detail .quick-release-performance-section {
+  margin-bottom: 0 !important;
+  padding-bottom: 1.5rem !important;
+}
+.quick-release-special-detail .quick-release-related-products > section:first-child {
+  padding-top: 0 !important;
+}
+.quick-release-special-detail .quick-release-related-products > section:first-child > div {
+  padding-top: 2rem !important;
 }
 .quick-release-special-detail h2 {
   color: #0e1c35 !important;
@@ -648,11 +676,19 @@
 }
 .quick-release-special-detail tbody .text-foreground,
 .quick-release-special-detail tbody .text-muted-foreground,
-.quick-release-special-detail tbody td {
+.quick-release-special-detail tbody td,
+.quick-release-special-detail section:nth-child(even) tbody .text-foreground,
+.quick-release-special-detail section:nth-child(even) tbody .text-muted-foreground,
+.quick-release-special-detail section:nth-child(even) tbody td,
+.quick-release-special-detail main > section:nth-child(even) tbody .text-foreground,
+.quick-release-special-detail main > section:nth-child(even) tbody .text-muted-foreground,
+.quick-release-special-detail main > section:nth-child(even) tbody td {
   color: #334155 !important;
   font-weight: 500;
 }
-.quick-release-special-detail tbody td.font-medium {
+.quick-release-special-detail tbody td.font-medium,
+.quick-release-special-detail section:nth-child(even) tbody td.font-medium,
+.quick-release-special-detail main > section:nth-child(even) tbody td.font-medium {
   color: #0e1c35 !important;
   font-weight: 700;
 }
@@ -690,6 +726,12 @@
 .quick-release-special-detail tbody tr {
   transition: background .2s ease, box-shadow .2s ease, transform .2s ease;
 }
+.quick-release-special-detail tbody tr:nth-child(odd) {
+  background: rgba(241, 245, 249, .96) !important;
+}
+.quick-release-special-detail tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, .98) !important;
+}
 .quick-release-special-detail tbody tr:hover {
   background: #fff4ef !important;
   box-shadow: inset 3px 0 #e05a2e;
@@ -708,6 +750,256 @@
   .quick-release-special-detail section,
   .quick-release-special-detail img,
   .quick-release-special-detail tbody tr { animation: none !important; transition: none !important; }
+}
+
+/* Flat-face coupling technical sections follow the BSP detail visual language
+   without changing the original diagrams or specification tables. */
+.flat-face-technical-content > section {
+  position: relative;
+  overflow: hidden;
+  padding: 3.5rem 1rem !important;
+  animation: quick-release-section-in .65s cubic-bezier(.22,1,.36,1) both;
+}
+.flat-face-technical-content > section:nth-child(even) {
+  background: linear-gradient(135deg, #fdf6f0 0%, #f9f4ef 42%, #f5f8ff 100%) !important;
+  background-size: 100% 100%;
+  animation: quick-release-section-in .65s cubic-bezier(.22,1,.36,1) both;
+}
+.flat-face-technical-content h2,
+.flat-face-technical-content h3 {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  color: #0e1c35 !important;
+  font-weight: 800 !important;
+}
+.flat-face-technical-content h2::before,
+.flat-face-technical-content h3::before {
+  content: "";
+  width: 4px;
+  height: 1.8rem;
+  border-radius: 999px;
+  background: #e05a2e;
+}
+.flat-face-technical-content > section:nth-child(even) h2,
+.flat-face-technical-content > section:nth-child(even) h3 { color: #0e1c35 !important; }
+.flat-face-technical-content .overflow-x-auto {
+  border: 1px solid rgba(224,90,46,.22) !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 12px 30px rgba(11,31,55,.10);
+}
+.flat-face-technical-content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgba(255,255,255,.96);
+}
+.flat-face-technical-content thead,
+.flat-face-technical-content thead tr,
+.flat-face-technical-content thead .bg-blue-700 {
+  background: linear-gradient(100deg, #c84000, #e05a2e, #f07d1a) !important;
+  color: #fff !important;
+}
+.flat-face-technical-content thead th {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  color: #fff !important;
+  font-size: .75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .025em;
+}
+.flat-face-technical-content tbody tr:nth-child(odd) { background: #f1f5f9 !important; }
+.flat-face-technical-content tbody tr:nth-child(even) { background: #fff !important; }
+.flat-face-technical-content tbody td {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  border-color: rgba(15,32,64,.08) !important;
+  color: #334155 !important;
+}
+.flat-face-technical-content tbody td.font-medium { color: #0e1c35 !important; }
+.flat-face-technical-content tbody tr { transition: background .2s ease, box-shadow .2s ease; }
+.flat-face-technical-content tbody tr:hover { background: #fff4ef !important; box-shadow: inset 3px 0 #e05a2e; }
+.flat-face-technical-content img { transition: transform .45s cubic-bezier(.22,1,.36,1), filter .35s ease; }
+.flat-face-technical-content section:hover img { transform: scale(1.035); filter: drop-shadow(0 10px 18px rgba(224,90,46,.18)); }
+
+/* Every Flat Face product table uses the same complete specification treatment
+   as the BSP reference: a navy surface, orange header band and quiet data rows. */
+.flat-face-technical-content > section:has(table) {
+  background: linear-gradient(130deg, #06142a 0%, #082754 50%, #0d4385 100%) !important;
+  background-size: 220% 220% !important;
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+  animation: quick-release-section-in .65s cubic-bezier(.22,1,.36,1) both, bsp-features-move 8s ease infinite !important;
+}
+.flat-face-technical-content > section:has(table) h2,
+.flat-face-technical-content > section:has(table) h3 {
+  color: #fff !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,.16);
+}
+.flat-face-technical-content > section:has(table) h2::before,
+.flat-face-technical-content > section:has(table) h3::before {
+  background: linear-gradient(180deg, #ff9a45, #ed5527) !important;
+}
+.flat-face-technical-content > section:has(table) p {
+  color: rgba(226, 235, 248, .78) !important;
+}
+.flat-face-technical-content > section:has(table) .overflow-x-auto {
+  overflow-x: auto;
+  border: 0 !important;
+  border-radius: 1.25rem 1.25rem .25rem .25rem !important;
+  background: #fff;
+  box-shadow: 0 18px 38px rgba(0,0,0,.22) !important;
+}
+.flat-face-technical-content > section:has(table) table {
+  min-width: 42rem;
+  background: #fff !important;
+}
+.flat-face-technical-content > section:has(table) thead,
+.flat-face-technical-content > section:has(table) thead tr,
+.flat-face-technical-content > section:has(table) thead .bg-blue-700 {
+  background: linear-gradient(100deg, #d64500 0%, #eb5c16 55%, #fa7b1a 100%) !important;
+}
+.flat-face-technical-content > section:has(table) thead tr + tr,
+.flat-face-technical-content > section:has(table) thead tr + tr th {
+  background: rgba(255,255,255,.08) !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.28);
+}
+.flat-face-technical-content > section:has(table) thead th {
+  padding: 1rem 1.35rem !important;
+  border-color: rgba(255,255,255,.25) !important;
+  color: #fff !important;
+  font-size: .74rem !important;
+  font-weight: 750 !important;
+  letter-spacing: .035em;
+  line-height: 1.2;
+  text-shadow: none;
+}
+.flat-face-technical-content > section:has(table) thead tr:first-child th:first-child {
+  border-top-left-radius: 1.2rem;
+}
+.flat-face-technical-content > section:has(table) thead tr:first-child th:last-child {
+  border-top-right-radius: 1.2rem;
+}
+.flat-face-technical-content > section:has(table) tbody tr:nth-child(odd) {
+  background: #edf2f8 !important;
+}
+.flat-face-technical-content > section:has(table) tbody tr:nth-child(even) {
+  background: #fff !important;
+}
+.flat-face-technical-content > section:has(table) tbody td {
+  padding: 1rem 1.35rem !important;
+  border-color: #dce5ef !important;
+  color: #1e3658 !important;
+  font-size: .93rem;
+  line-height: 1.35;
+}
+.flat-face-technical-content > section:has(table) tbody td:first-child,
+.flat-face-technical-content > section:has(table) tbody td.font-medium {
+  color: #0a2346 !important;
+  font-weight: 700 !important;
+}
+.flat-face-technical-content > section:has(table) tbody tr:hover {
+  background: #fff1ea !important;
+  box-shadow: inset 4px 0 #ef5b2a !important;
+}
+/* Keep the original technical diagrams readable whenever they sit beside a table. */
+.flat-face-technical-content > section:has(table) .flex.justify-center > .relative {
+  overflow: hidden;
+  border: 1px solid rgba(224,90,46,.24);
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 14px 30px rgba(0,0,0,.16);
+}
+
+@media (max-width: 640px) {
+  .flat-face-technical-content > section:has(table) {
+    padding-top: 2.75rem !important;
+    padding-bottom: 2.75rem !important;
+  }
+  .flat-face-technical-content > section:has(table) thead th,
+  .flat-face-technical-content > section:has(table) tbody td {
+    padding: .8rem 1rem !important;
+  }
+}
+
+/* BSP product-table surface: this intentionally follows the light specification
+   table shown on the British BSP product page rather than the dark feature panel. */
+.flat-face-technical-content > section:has(table) {
+  background: linear-gradient(135deg, #fdf6f0 0%, #f9f4ef 42%, #f5f8ff 100%) !important;
+  background-size: 100% 100% !important;
+  animation: quick-release-section-in .65s cubic-bezier(.22,1,.36,1) both !important;
+}
+.flat-face-technical-content > section:has(table) h2,
+.flat-face-technical-content > section:has(table) h3 {
+  color: #0e1c35 !important;
+  text-shadow: none;
+}
+.flat-face-technical-content > section:has(table) p {
+  color: #62738b !important;
+}
+.flat-face-technical-content > section:has(table) .overflow-x-auto {
+  border: 1px solid #e2e8f0 !important;
+  border-top: 3px solid #e05a2e !important;
+  border-radius: .7rem !important;
+  background: #fff !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06), 0 4px 24px rgba(224,90,46,.06) !important;
+}
+.flat-face-technical-content > section:has(table) table {
+  min-width: 0;
+  background: #fff !important;
+}
+.flat-face-technical-content > section:has(table) thead,
+.flat-face-technical-content > section:has(table) thead tr,
+.flat-face-technical-content > section:has(table) thead .bg-blue-700,
+.flat-face-technical-content > section:has(table) thead .bg-blue-600 {
+  background: linear-gradient(90deg, #fff0eb 0%, #fff7f3 100%) !important;
+}
+.flat-face-technical-content > section:has(table) thead tr + tr,
+.flat-face-technical-content > section:has(table) thead tr + tr th {
+  background: linear-gradient(90deg, #fff0eb 0%, #fff7f3 100%) !important;
+  box-shadow: inset 0 -2px #e05a2e !important;
+}
+.flat-face-technical-content > section:has(table) thead th {
+  background: transparent !important;
+  padding: .85rem .8rem !important;
+  border-color: #e2e8f0 !important;
+  color: #0e1c35 !important;
+  font-size: .68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .09em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.flat-face-technical-content > section:has(table) thead tr:first-child th:first-child,
+.flat-face-technical-content > section:has(table) thead tr:first-child th:last-child {
+  border-radius: 0;
+}
+.flat-face-technical-content > section:has(table) tbody tr:nth-child(odd) {
+  background: #fff !important;
+}
+.flat-face-technical-content > section:has(table) tbody tr:nth-child(even) {
+  background: #fafbfc !important;
+}
+.flat-face-technical-content > section:has(table) tbody td {
+  padding: .7rem .8rem !important;
+  border-color: #e2e8f0 !important;
+  color: #374151 !important;
+  font-size: .82rem;
+  line-height: 1.25;
+}
+.flat-face-technical-content > section:has(table) tbody td:first-child {
+  color: #c0420a !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-weight: 700 !important;
+}
+.flat-face-technical-content > section:has(table) tbody td.font-medium {
+  color: #374151 !important;
+  font-family: inherit;
+  font-weight: 500 !important;
+}
+.flat-face-technical-content > section:has(table) tbody tr:hover {
+  background: #fff4ef !important;
+  box-shadow: inset 3px 0 #e05a2e !important;
 }
 
 /* ── NPT PRODUCT DETAIL PAGE (IDENTICAL TO BSP) ──────────────────────────── */
@@ -1002,3 +1294,290 @@
   from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Threaded Coupler detail pages use the BSP engineering-table treatment while
+   retaining the original series-specific columns, values and diagrams. */
+.threaded-bsp-detail .iso-bsp-product-detail .overflow-x-auto {
+  border: 1px solid #e2e8f0 !important;
+  border-top: 3px solid #e05a2e !important;
+  border-radius: .7rem !important;
+  background: #fff !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06), 0 4px 24px rgba(224,90,46,.06) !important;
+}
+
+.threaded-bsp-detail .iso-bsp-product-detail table {
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff !important;
+}
+
+.threaded-bsp-detail .iso-bsp-product-detail table thead,
+.threaded-bsp-detail .iso-bsp-product-detail table thead tr,
+.threaded-bsp-detail .iso-bsp-product-detail table thead .bg-gray-100 {
+  background: linear-gradient(90deg, #fff0eb 0%, #fff7f3 100%) !important;
+}
+
+.threaded-bsp-detail .iso-bsp-product-detail table thead th {
+  background: transparent !important;
+  color: #0e1c35 !important;
+  border-color: #e2e8f0 !important;
+  font-size: .68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.threaded-bsp-detail .iso-bsp-product-detail table thead tr:last-child th {
+  box-shadow: inset 0 -2px #e05a2e;
+}
+
+.threaded-bsp-detail .iso-bsp-product-detail table tbody tr:nth-child(odd) {
+  background: #fff !important;
+}
+
+.threaded-bsp-detail .iso-bsp-product-detail table tbody tr:nth-child(even) {
+  background: #fafbfc !important;
+}
+
+.threaded-bsp-detail .iso-bsp-product-detail table tbody td {
+  color: #374151 !important;
+  border-color: #e2e8f0 !important;
+}
+
+.threaded-bsp-detail .iso-bsp-product-detail table tbody td:first-child {
+  color: #c0420a !important;
+  font-family: var(--font-mono, monospace);
+  font-weight: 700 !important;
+  letter-spacing: .04em;
+}
+
+.threaded-bsp-detail .iso-bsp-product-detail table tbody tr:hover {
+  background: #fff4ef !important;
+  box-shadow: inset 3px 0 #e05a2e;
+}
+
+/* Straight-through couplings use the High-Pressure Coupler detail surface,
+   while their existing diagrams and engineering rows remain in place. */
+.straight-through-detail > section {
+  position: relative;
+  background: transparent !important;
+}
+
+.straight-through-detail .overflow-x-auto {
+  border: 1px solid #dce5e4 !important;
+  border-radius: 1.1rem !important;
+  background: #fff !important;
+  box-shadow: 0 12px 30px rgba(11,31,55,.12) !important;
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+}
+
+.straight-through-detail .overflow-x-auto:hover {
+  border-color: rgba(224,90,46,.68) !important;
+  box-shadow: 0 18px 42px rgba(11,31,55,.18) !important;
+  transform: translateY(-2px);
+}
+
+.straight-through-detail table thead tr[style] {
+  background: linear-gradient(100deg, #c84000, #e05a2e, #f07d1a) !important;
+}
+
+.straight-through-detail table tbody tr {
+  transition: background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.straight-through-detail table tbody tr:hover {
+  background: #fff4ef !important;
+  box-shadow: inset 3px 0 #e05a2e;
+}
+
+.straight-through-detail table tbody td:first-child {
+  color: #0e1c35 !important;
+  font-weight: 700;
+}
+
+.straight-through-detail > section:first-of-type li.text-slate-700,
+.straight-through-detail > section:first-of-type li .text-slate-700 {
+  color: rgba(255,255,255,.85) !important;
+}
+
+.straight-through-detail > section:first-of-type li .text-blue-600 {
+  color: #f26522 !important;
+}
+
+/* Shared BSP table structure for the High-Pressure and Straight-Through
+   coupling pages. This changes presentation only; all existing table schemas
+   and engineering data remain unchanged. */
+.high-pressure-detail .overflow-x-auto,
+.straight-through-detail .overflow-x-auto {
+  border: 1px solid #e2e8f0 !important;
+  border-top: 3px solid #e05a2e !important;
+  border-radius: .7rem !important;
+  background: #fff !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06), 0 4px 24px rgba(224,90,46,.06) !important;
+}
+
+.high-pressure-detail table,
+.straight-through-detail table {
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff !important;
+}
+
+.high-pressure-detail table thead,
+.high-pressure-detail table thead tr,
+.straight-through-detail table thead,
+.straight-through-detail table thead tr,
+.straight-through-detail table thead tr[style] {
+  background: linear-gradient(90deg, #fff0eb 0%, #fff7f3 100%) !important;
+}
+
+.high-pressure-detail table thead th,
+.straight-through-detail table thead th {
+  background: transparent !important;
+  color: #0e1c35 !important;
+  border-color: #e2e8f0 !important;
+  font-size: .68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.high-pressure-detail table thead tr:last-child th,
+.straight-through-detail table thead tr:last-child th {
+  box-shadow: inset 0 -2px #e05a2e;
+}
+
+.high-pressure-detail table tbody tr:nth-child(odd),
+.straight-through-detail table tbody tr:nth-child(odd) {
+  background: #fff !important;
+}
+
+.high-pressure-detail table tbody tr:nth-child(even),
+.straight-through-detail table tbody tr:nth-child(even) {
+  background: #fafbfc !important;
+}
+
+.high-pressure-detail table tbody td,
+.straight-through-detail table tbody td {
+  border-color: #e2e8f0 !important;
+  color: #374151 !important;
+}
+
+.high-pressure-detail table tbody td:first-child,
+.straight-through-detail table tbody td:first-child {
+  color: #c0420a !important;
+  font-family: var(--font-mono, monospace);
+  font-weight: 700 !important;
+  letter-spacing: .04em;
+}
+
+.high-pressure-detail table tbody tr:hover,
+.straight-through-detail table tbody tr:hover {
+  background: #fff4ef !important;
+  box-shadow: inset 3px 0 #e05a2e;
+}
+
+/* Brass Mold Coolant-Line follows the same High-Pressure detail surface. */
+.bmcl-high-pressure-detail > section {
+  position: relative;
+  background: transparent !important;
+}
+
+.bmcl-high-pressure-detail .overflow-x-auto {
+  border: 1px solid #e2e8f0 !important;
+  border-top: 3px solid #e05a2e !important;
+  border-radius: .7rem !important;
+  background: #fff !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06), 0 4px 24px rgba(224,90,46,.06) !important;
+  transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
+}
+
+.bmcl-high-pressure-detail .overflow-x-auto:hover {
+  border-color: rgba(224,90,46,.68) !important;
+  box-shadow: 0 18px 42px rgba(11,31,55,.18) !important;
+  transform: translateY(-2px);
+}
+
+.bmcl-high-pressure-detail table {
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff !important;
+}
+
+.bmcl-high-pressure-detail table thead,
+.bmcl-high-pressure-detail table thead tr,
+.bmcl-high-pressure-detail table thead tr[style] {
+  background: linear-gradient(90deg, #fff0eb 0%, #fff7f3 100%) !important;
+}
+
+.bmcl-high-pressure-detail table thead th {
+  background: transparent !important;
+  color: #0e1c35 !important;
+  border-color: #e2e8f0 !important;
+  font-size: .68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.bmcl-high-pressure-detail table thead tr:last-child th {
+  box-shadow: inset 0 -2px #e05a2e;
+}
+
+.bmcl-high-pressure-detail table tbody tr:nth-child(odd) { background: #fff !important; }
+.bmcl-high-pressure-detail table tbody tr:nth-child(even) { background: #fafbfc !important; }
+.bmcl-high-pressure-detail table tbody td { border-color: #e2e8f0 !important; color: #374151 !important; }
+.bmcl-high-pressure-detail table tbody td:first-child { color: #c0420a !important; font-family: var(--font-mono, monospace); font-weight: 700 !important; letter-spacing: .04em; }
+.bmcl-high-pressure-detail table tbody tr:hover { background: #fff4ef !important; box-shadow: inset 3px 0 #e05a2e; }
+
+.bmcl-high-pressure-detail > section:first-of-type li.text-slate-700,
+.bmcl-high-pressure-detail > section:first-of-type li .text-slate-700 { color: rgba(255,255,255,.85) !important; }
+.bmcl-high-pressure-detail > section:first-of-type li .text-blue-600 { color: #f26522 !important; }
+
+/* Dust Plug & Cap adopts the Straight-Through Couplings detail treatment while
+   retaining its original series tables and product imagery. */
+.dust-plug-detail .overflow-x-auto {
+  border: 1px solid #e2e8f0 !important;
+  border-top: 3px solid #e05a2e !important;
+  border-radius: .7rem !important;
+  background: #fff !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06), 0 4px 24px rgba(224,90,46,.06) !important;
+  transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
+}
+
+.dust-plug-detail .overflow-x-auto:hover {
+  border-color: rgba(224,90,46,.68) !important;
+  box-shadow: 0 18px 42px rgba(11,31,55,.18) !important;
+  transform: translateY(-2px);
+}
+
+.dust-plug-detail table {
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff !important;
+}
+
+.dust-plug-detail table thead,
+.dust-plug-detail table thead tr {
+  background: linear-gradient(90deg, #fff0eb 0%, #fff7f3 100%) !important;
+}
+
+.dust-plug-detail table thead th {
+  background: transparent !important;
+  color: #0e1c35 !important;
+  border-color: #e2e8f0 !important;
+  font-size: .68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.dust-plug-detail table thead tr:last-child th {
+  box-shadow: inset 0 -2px #e05a2e;
+}
+
+.dust-plug-detail table tbody tr:nth-child(odd) { background: #fff !important; }
+.dust-plug-detail table tbody tr:nth-child(even) { background: #fafbfc !important; }
+.dust-plug-detail table tbody td { border-color: #e2e8f0 !important; color: #374151 !important; }
+.dust-plug-detail table tbody td:first-child { color: #c0420a !important; font-family: var(--font-mono, monospace); font-weight: 700 !important; letter-spacing: .04em; }
+.dust-plug-detail table tbody tr:hover { background: #fff4ef !important; box-shadow: inset 3px 0 #e05a2e; }

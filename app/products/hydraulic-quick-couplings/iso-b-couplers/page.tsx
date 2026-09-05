@@ -3,7 +3,10 @@ import Link from "next/link"
 import { isoBCouplers } from "@/lib/iso-b-couplers"
 import { BSPCtaSection } from "@/components/bsp-cta-section"
 import { BSPProductGrid } from "@/components/bsp-product-grid"
-import { CategoryLandingHero } from "@/components/category-landing-hero"
+import { HydraulicAdaptersHeroSection } from "@/components/hydraulic-adapters-hero-section"
+import { LikedProductsDrawer } from "@/components/liked-products-drawer"
+import { LikedProductsFAB } from "@/components/liked-products-fab"
+import Topography from "@/components/topography"
 
 export const metadata: Metadata = {
   title: "ISO-B Couplers – Hydraulic Quick Couplings | Hydronex",
@@ -33,7 +36,23 @@ export default function IsoBCouplerPage() {
   const overview = "ISO 7241-B series is mainly used in North America and chemical industry. The purpose of this standard is to ensure that hydraulic connectors from different manufacturers can be used interchangeably, thereby improving the compatibility and safety of equipment."
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="relative isolate min-h-screen overflow-hidden bg-gradient-to-b from-[#f7f8f6] via-[#fbfcfa] to-white">
+      <Topography
+        className="pointer-events-none !fixed inset-0 z-0"
+        lowColor="#9eb8c3"
+        midColor="#f26522"
+        highColor="#ffffff"
+        speed={0.18}
+        morphAmount={1.7}
+        bands={3.4}
+        thickness={0.018}
+        glow={0.22}
+        opacity={0.075}
+        mouseRadius={0.24}
+        mouseStrength={0.34}
+      />
+
+      <div className="relative z-10">
       <nav
         className="border-b"
         style={{ background: "#f8fafc", borderColor: "rgba(210,225,240,0.7)" }}
@@ -61,16 +80,20 @@ export default function IsoBCouplerPage() {
         </div>
       </nav>
 
-      <CategoryLandingHero
+      <HydraulicAdaptersHeroSection
         category="Hydraulic Quick Couplings / ISO-B"
         title="ISO-B Couplers Quick Connectors for North America"
         description={overview}
-        ctaHref="/products/hydraulic-quick-couplings"
+        featuredProduct={isoBProducts[0]}
+        productCount={isoBProducts.length}
+        summary={overview}
+        standardLabel="ISO-B"
+        standardsDescription="ISO 7241-B Standard"
       />
 
       <section
-        className="bg-anim-section-dots border-b border-[#d0e4f5]/40"
-        style={{ background: "linear-gradient(180deg, #deeefa 0%, #eaf4fc 18%, #f4faff 45%, #fafcff 72%, #ffffff 100%)" }}
+        id="products"
+        className="relative border-b border-[#d0e4f5]/40 bg-transparent"
       >
         <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="mb-8">
@@ -114,6 +137,9 @@ export default function IsoBCouplerPage() {
       </section>
 
       <BSPCtaSection />
+      <LikedProductsDrawer />
+      <LikedProductsFAB />
+      </div>
     </div>
   )
 }

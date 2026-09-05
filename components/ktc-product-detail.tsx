@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
+import Topography from "@/components/topography"
 
 interface SpecsTableRow {
   partNo: string
@@ -56,20 +57,21 @@ export function KTCProductDetail({ product }: KTCProductDetailProps) {
 
   return (
     <motion.section
-      className="py-20 bg-gradient-to-b from-background to-slate-50/50"
+      className="high-pressure-detail relative isolate overflow-hidden bg-[#f8fafc] py-16 sm:py-20"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={containerVariants}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Topography className="pointer-events-none absolute inset-0 z-0" lowColor="#9eb8c3" midColor="#f26522" highColor="#ffffff" speed={0.18} morphAmount={1.7} bands={3.4} thickness={0.018} glow={0.22} opacity={0.07} mouseRadius={0.24} mouseStrength={0.3} />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Features & Technical Specs */}
         <motion.div
-          className="grid md:grid-cols-2 gap-12 mb-16"
+          className="mb-16 grid gap-10 overflow-hidden rounded-[1.5rem] bg-[linear-gradient(130deg,#061428,#0a2a52,#0d4080)] p-7 shadow-[0_22px_52px_rgba(11,31,55,.18)] md:grid-cols-2 md:p-10"
           variants={itemVariants}
         >
           <div>
-            <h2 className="text-3xl font-bold mb-8 text-slate-900">Features</h2>
+            <h2 className="mb-8 flex items-center gap-3 text-3xl font-bold text-white before:h-7 before:w-1 before:rounded-full before:bg-[#f26522] before:content-['']">Features</h2>
             <ul className="space-y-4">
               {product.features.map((feature, index) => (
                 <motion.li
@@ -77,24 +79,24 @@ export function KTCProductDetail({ product }: KTCProductDetailProps) {
                   className="flex items-start gap-3"
                   variants={itemVariants}
                 >
-                  <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex-shrink-0 mt-0.5">
+                  <span className="inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#f26522] text-white shadow-[0_0_14px_rgba(242,101,34,.45)] mt-0.5">
                     ✓
                   </span>
-                  <span className="text-slate-700">{feature}</span>
+                  <span className="text-white/85">{feature}</span>
                 </motion.li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold mb-8 text-slate-900">
+            <h2 className="mb-8 flex items-center gap-3 text-3xl font-bold text-white before:h-7 before:w-1 before:rounded-full before:bg-[#f26522] before:content-['']">
               Technical Specifications
             </h2>
             <ul className="space-y-4">
               {product.techSpecs?.map((spec, index) => (
                 <motion.li
                   key={index}
-                  className="flex items-start gap-3 text-slate-700"
+                  className="flex items-start gap-3 text-white/85"
                   variants={itemVariants}
                 >
                   <span className="text-blue-600 font-bold mt-1">•</span>
@@ -107,12 +109,12 @@ export function KTCProductDetail({ product }: KTCProductDetailProps) {
 
         {/* Female Coupler */}
         <motion.div className="mb-20" variants={itemVariants}>
-          <h2 className="text-3xl font-bold mb-12 text-slate-900">
+          <h2 className="mb-10 flex items-center gap-3 text-3xl font-bold text-[#0e1c35] before:h-7 before:w-1 before:rounded-full before:bg-[#f26522] before:content-['']">
             Female Coupler
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center mb-8">
             <motion.div
-              className="relative w-full h-96 bg-white rounded-lg p-8 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
+              className="relative flex h-96 w-full items-center justify-center overflow-hidden rounded-[1.5rem] border border-[#d0e4f5] bg-white p-8 shadow-[0_18px_38px_rgba(11,31,55,.14)] transition-shadow hover:shadow-[0_24px_52px_rgba(11,31,55,.24)]"
               whileHover={{ scale: 1.02 }}
             >
               <Image
@@ -133,10 +135,10 @@ export function KTCProductDetail({ product }: KTCProductDetailProps) {
           </div>
 
           {/* Female Specs Table */}
-          <motion.div className="overflow-x-auto rounded-lg shadow-lg" variants={itemVariants}>
+          <motion.div className="overflow-x-auto rounded-[1.1rem] border border-[#dce5e4] bg-white shadow-[0_12px_30px_rgba(11,31,55,.12)]" variants={itemVariants}>
             <table className="w-full">
               <thead>
-                <tr className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+                <tr className="bg-[linear-gradient(100deg,#c84000,#e05a2e,#f07d1a)] text-white">
                   <th className="px-6 py-4 text-left font-semibold">Part No.</th>
                   <th className="px-6 py-4 text-left font-semibold">Thread</th>
                   <th className="px-6 py-4 text-left font-semibold">
@@ -185,10 +187,10 @@ export function KTCProductDetail({ product }: KTCProductDetailProps) {
 
         {/* Male Coupler */}
         <motion.div className="mb-16" variants={itemVariants}>
-          <h2 className="text-3xl font-bold mb-12 text-slate-900">Male Coupler</h2>
+          <h2 className="mb-10 flex items-center gap-3 text-3xl font-bold text-[#0e1c35] before:h-7 before:w-1 before:rounded-full before:bg-[#f26522] before:content-['']">Male Coupler</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center mb-8">
             <motion.div
-              className="relative w-full h-96 bg-white rounded-lg p-8 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
+              className="relative flex h-96 w-full items-center justify-center overflow-hidden rounded-[1.5rem] border border-[#d0e4f5] bg-white p-8 shadow-[0_18px_38px_rgba(11,31,55,.14)] transition-shadow hover:shadow-[0_24px_52px_rgba(11,31,55,.24)]"
               whileHover={{ scale: 1.02 }}
             >
               <Image
@@ -209,10 +211,10 @@ export function KTCProductDetail({ product }: KTCProductDetailProps) {
           </div>
 
           {/* Male Specs Table */}
-          <motion.div className="overflow-x-auto rounded-lg shadow-lg" variants={itemVariants}>
+          <motion.div className="overflow-x-auto rounded-[1.1rem] border border-[#dce5e4] bg-white shadow-[0_12px_30px_rgba(11,31,55,.12)]" variants={itemVariants}>
             <table className="w-full">
               <thead>
-                <tr className="bg-gradient-to-r from-slate-700 to-slate-800 text-white">
+                <tr className="bg-[linear-gradient(100deg,#c84000,#e05a2e,#f07d1a)] text-white">
                   <th className="px-6 py-4 text-left font-semibold">Part No.</th>
                   <th className="px-6 py-4 text-left font-semibold">Thread</th>
                   <th className="px-6 py-4 text-left font-semibold">

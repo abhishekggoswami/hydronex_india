@@ -1,7 +1,8 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { BSPProductCard } from "@/components/bsp-product-card"
+import { BSPCtaSection } from "@/components/bsp-cta-section"
 import { BSPProductDetail } from "@/components/bsp-product-detail"
+import { BSPOtherProducts } from "@/components/bsp-other-products"
 import { getAllSocketlessFittingSlugs, getSocketlessFittingBySlug, socketlessFittings } from "@/lib/socketless-fittings"
 
 export const dynamicParams = true
@@ -74,32 +75,23 @@ export default async function SocketlessProductPage({
         partTable: normaliseRows(fitting.partTable),
         image: fitting.image,
       }}
+      editorialHero
       otherProductsSection={
-        <section className="bg-anim-section-dots border-b border-[#d0e4f5]/40 bg-[linear-gradient(135deg,#f8fcff_0%,#e7f4fd_100%)] py-20">
-          <div className="container mx-auto px-4">
-            <div className="mb-10">
-              <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[#ed5629]">Related</p>
-              <h2 className="font-heading text-3xl font-bold text-[#0d2949]">Other Socketless Fittings</h2>
-            </div>
-            <div className="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
-              {otherProducts.map((product, index) => (
-                <BSPProductCard
-                  key={product.slug}
-                  product={{
-                    id: 110000 + product.id,
-                    name: product.name,
-                    code: product.code,
-                    image: product.image,
-                    slug: product.slug,
-                  }}
-                  index={index}
-                  basePath="/products/hydraulic-fittings/socketless-fittings"
-                  categoryLabel="Socketless Fittings"
-                />
-              ))}
-            </div>
-          </div>
-        </section>
+        <>
+          <BSPOtherProducts
+            products={otherProducts.map((product) => ({
+              slug: product.slug,
+              name: product.name,
+              shortName: product.code,
+              code: product.code,
+              image: product.image,
+            }))}
+            title="Other Socketless Fittings"
+            basePath="/products/hydraulic-fittings/socketless-fittings"
+            categoryLabel="Socketless Fittings"
+          />
+          <BSPCtaSection title="Need Help Selecting the Right Socketless Fitting?" description="Our expert team is ready to help you find the perfect socketless fitting for your hydraulic application. Contact us for technical assistance and custom solutions." buttonLabel="Contact Sales" ctaHref="/contact" />
+        </>
       }
     />
   )

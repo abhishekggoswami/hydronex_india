@@ -3,7 +3,10 @@ import Link from "next/link"
 import { quickReleaseCouplers } from "@/lib/quick-release-couplers"
 import { BSPCtaSection } from "@/components/bsp-cta-section"
 import { BSPProductGrid } from "@/components/bsp-product-grid"
-import { CategoryLandingHero } from "@/components/category-landing-hero"
+import { HydraulicAdaptersHeroSection } from "@/components/hydraulic-adapters-hero-section"
+import { LikedProductsDrawer } from "@/components/liked-products-drawer"
+import { LikedProductsFAB } from "@/components/liked-products-fab"
+import Topography from "@/components/topography"
 
 export const metadata: Metadata = {
   title: "Quick Release Couplers – Hydraulic Quick Couplings | Hydronex",
@@ -16,7 +19,9 @@ const applicationText = "Quick release couplers are designed for applications wh
 const usageText = "Quick release couplers offer a rapid and intuitive connection mechanism with flat-face design that ensures zero fluid loss during disconnection. This makes them ideal for maintenance operations, equipment transfers, and applications where environmental and safety concerns require minimal spillage."
 
 export default function QuickReleaseCouplerPage() {
-  return <div className="min-h-screen bg-white">
+  return <div className="relative isolate min-h-screen overflow-hidden bg-gradient-to-b from-[#f7f8f6] via-[#fbfcfa] to-white">
+    <Topography className="pointer-events-none !fixed inset-0 z-0" lowColor="#9eb8c3" midColor="#f26522" highColor="#ffffff" speed={0.18} morphAmount={1.7} bands={3.4} thickness={0.018} glow={0.22} opacity={0.075} mouseRadius={0.24} mouseStrength={0.34} />
+    <div className="relative z-10">
     <nav className="border-b" style={{ background: "#f8fafc", borderColor: "rgba(210,225,240,0.7)" }} aria-label="Breadcrumb">
       <div className="mx-auto max-w-7xl px-4 py-2.5 sm:px-6 lg:px-8"><ol className="flex flex-wrap items-center gap-0">
         <li><Link href="/" className="text-[11.5px] font-semibold uppercase tracking-wide text-[#0f2040] transition-colors hover:text-[#e05a2e]">Home</Link></li><li className="mx-2.5 text-[#94aabf]" aria-hidden>/</li>
@@ -26,9 +31,9 @@ export default function QuickReleaseCouplerPage() {
       </ol></div>
     </nav>
 
-    <CategoryLandingHero category="Hydraulic Quick Couplings / Quick Release" title="Quick Release Couplers" description="Flat-face quick disconnect couplers designed for zero fluid loss and maximum reliability. Perfect for applications requiring frequent connections and disconnections with minimal environmental impact." ctaHref="/products/hydraulic-quick-couplings" />
+    <HydraulicAdaptersHeroSection category="Hydraulic Quick Couplings / Quick Release" title="Quick Release Couplers" description="Flat-face quick disconnect couplers designed for zero fluid loss and maximum reliability. Perfect for applications requiring frequent connections and disconnections with minimal environmental impact." featuredProduct={quickReleaseProducts[0]} productCount={quickReleaseProducts.length} summary="Flat-face quick disconnect couplers designed for zero fluid loss and maximum reliability." standardLabel="QUICK RELEASE" standardsDescription="Flat Face & Zero Fluid Loss" />
 
-    <section className="bg-anim-section-dots border-b border-[#d0e4f5]/40" style={{ background: "linear-gradient(180deg, #deeefa 0%, #eaf4fc 18%, #f4faff 45%, #fafcff 72%, #ffffff 100%)" }}>
+    <section id="products" className="relative border-b border-[#d0e4f5]/40 bg-transparent">
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <header className="mb-10 max-w-4xl"><p className="mb-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#e05a2e]">Hydraulic Quick Couplings / Quick Release</p><h2 className="mb-4 text-3xl font-extrabold leading-tight text-[#0f2040] sm:text-4xl">Quick Release Couplers<span className="mt-0.5 block text-2xl font-semibold text-[#1a5fa8] sm:text-3xl">Zero fluid loss, maximum reliability</span></h2><div className="flex items-center gap-3"><span className="h-[3px] w-10 rounded-full bg-[#e05a2e]" /><span className="h-[3px] w-4 rounded-full bg-[#1a5fa8]/40" /></div></header>
         <div className="mb-14 grid gap-8 text-sm leading-relaxed text-[#2a4a70]/80 md:grid-cols-2 sm:text-base">
@@ -40,5 +45,8 @@ export default function QuickReleaseCouplerPage() {
       </div>
     </section>
     <BSPCtaSection />
+    <LikedProductsDrawer />
+    <LikedProductsFAB />
+    </div>
   </div>
 }

@@ -21,10 +21,46 @@ const productTree: NavItem[] = [
   { name: "Low Pressure Hoses",             href: "/products/low-pressure-hoses" },
   { name: "Special Application Hoses",      href: "/products/special-application-hoses" },
   { name: "Hydraulic Accessories",          href: "/products/hydraulic-accessories" },
+  {
+    name: "Hydraulic Pumps",
+    href: "/products/hydraulic-pumps",
+    children: [
+      { name: "Hand Pumps", href: "/products/hydraulic-pumps/hand-pumps" },
+      { name: "Bent Axis Pumps", href: "/products/hydraulic-pumps/bent-axis-pumps" },
+      { name: "Variable Displacement Pumps", href: "/products/hydraulic-pumps/variable-displacement-pumps" },
+      { name: "Gear Pumps", href: "/products/hydraulic-pumps/gear-pumps" },
+      { name: "Vane Pumps", href: "/products/hydraulic-pumps/vane-pumps" },
+    ],
+  },
+  {
+    name: "Hydraulic Motors",
+    href: "/products/hydraulic-motors",
+    children: [
+      { name: "Orbital Motors", href: "/products/hydraulic-motors/orbital-motors" },
+      { name: "Bent Axis Piston Motors", href: "/products/hydraulic-motors/bent-axis-piston-motors" },
+      { name: "Radial Piston Motors", href: "/products/hydraulic-motors/radial-piston-motors" },
+    ],
+  },
+  {
+    name: "Hydraulic Cylinders",
+    href: "/products/hydraulic-cylinders",
+    children: [
+      { name: "Single Acting Cylinders", href: "/products/hydraulic-cylinders/single-acting-cylinders" },
+      { name: "Double Acting Cylinders", href: "/products/hydraulic-cylinders/double-acting-cylinders" },
+    ],
+  },
+  {
+    name: "Mobile Control Valve",
+    href: "/products/mobile-control-valve",
+    children: [
+      { name: "Sectional Valves", href: "/products/mobile-control-valve/sectional-valves" },
+      { name: "Monoblock Valves", href: "/products/mobile-control-valve/monoblock-valves" },
+    ],
+  },
   { name: "Hydraulic Hose End Fittings",    href: "/products/hydraulic-hose-end-fittings" },
   {
     name: "Hydraulic Fittings",
-    href: "/products",
+    href: "/products/hydraulic-fittings",
     children: [
       {
         name: "Metric Hose Fittings",

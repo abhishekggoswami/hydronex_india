@@ -15,9 +15,17 @@ interface Product {
 
 interface BSPOtherProductsProps {
   products: Product[]
+  title?: string
+  basePath?: string
+  categoryLabel?: string
 }
 
-export function BSPOtherProducts({ products }: BSPOtherProductsProps) {
+export function BSPOtherProducts({
+  products,
+  title = "Other Products",
+  basePath = "/products/hydraulic-fittings/british-bsp",
+  categoryLabel = "British BSP Fittings",
+}: BSPOtherProductsProps) {
   if (!products.length) return null
 
   return (
@@ -39,7 +47,7 @@ export function BSPOtherProducts({ products }: BSPOtherProductsProps) {
         mouseStrength={0.34}
       />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="text-3xl font-bold text-[#0e1c35] mb-10">Other Products</h2>
+        <h2 className="text-3xl font-bold text-[#0e1c35] mb-10">{title}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
           {products.map((prod, i) => (
             <div
@@ -58,6 +66,8 @@ export function BSPOtherProducts({ products }: BSPOtherProductsProps) {
                   slug: prod.slug,
                 }}
                 index={i}
+                basePath={basePath}
+                categoryLabel={categoryLabel}
               />
             </div>
           ))}

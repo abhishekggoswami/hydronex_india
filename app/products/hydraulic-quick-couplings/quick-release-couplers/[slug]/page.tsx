@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation"
 import { Metadata } from "next"
 import { quickReleaseCouplers } from "@/lib/quick-release-couplers"
+import { BSPCtaSection } from "@/components/bsp-cta-section"
+import { BSPOtherProducts } from "@/components/bsp-other-products"
 import { ISOAProductDetail } from "@/components/iso-a-product-detail"
-import { ISOAOtherProducts } from "@/components/iso-a-other-products"
 import { KTMProductDetail } from "@/components/ktm-product-detail"
 import { KNVProductDetail } from "@/components/knv-product-detail"
 
@@ -45,7 +46,28 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   }
 
   const otherProducts = quickReleaseCouplers.filter(p => p.id !== product.id)
-  const otherProductsSection = <ISOAOtherProducts products={otherProducts} basePath="/products/hydraulic-quick-couplings/quick-release-couplers" />
+  const otherProductsSection = (
+    <>
+      <BSPOtherProducts
+        products={otherProducts.map((item) => ({
+          slug: item.slug,
+          name: item.name,
+          shortName: item.shortName,
+          code: item.code,
+          image: item.image,
+        }))}
+        title="Other Quick Release Couplers"
+        basePath="/products/hydraulic-quick-couplings/quick-release-couplers"
+        categoryLabel="Quick Release Couplers"
+      />
+      <BSPCtaSection
+        title="Need Help Selecting the Right Quick Release Coupler?"
+        description="Our expert team is ready to help with product selection, technical support and bulk orders."
+        buttonLabel="Contact Sales"
+        ctaHref="/contact"
+      />
+    </>
+  )
 
   // Use KTM component for KTM Series
   if (product.slug === "ktm-series-steel") {
@@ -66,7 +88,10 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             image: product.image,
           }}
           otherProductsSection={<div />}
+          editorialHeroOnly
           category="quick-release"
+          categoryLabel="Quick Release Couplers"
+          categoryPath="/products/hydraulic-quick-couplings/quick-release-couplers"
         />
         <KTMProductDetail
           product={{
@@ -113,7 +138,10 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             image: product.image,
           }}
           otherProductsSection={<div />}
+          editorialHeroOnly
           category="quick-release"
+          categoryLabel="Quick Release Couplers"
+          categoryPath="/products/hydraulic-quick-couplings/quick-release-couplers"
         />
         <KNVProductDetail
           product={{
@@ -158,6 +186,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         }}
         otherProductsSection={otherProductsSection}
         category="quick-release"
+        categoryLabel="Quick Release Couplers"
+        categoryPath="/products/hydraulic-quick-couplings/quick-release-couplers"
       />
     </>
   )

@@ -1,7 +1,8 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { BSPProductCard } from "@/components/bsp-product-card"
+import { BSPCtaSection } from "@/components/bsp-cta-section"
 import { BSPProductDetail } from "@/components/bsp-product-detail"
+import { BSPOtherProducts } from "@/components/bsp-other-products"
 import { ISOATechnicalSections } from "@/components/iso-a-technical-sections"
 import { isoACouplers } from "@/lib/iso-a-couplers"
 
@@ -54,6 +55,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         applications: product.applications ?? [],
         image: product.image,
       }}
+      editorialHero
       otherProductsSection={
         <>
           <ISOATechnicalSections
@@ -65,31 +67,24 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             couplerDiagramImage={product.couplerDiagramImage}
             tableNote={product.tableNote}
           />
-          <section className="bg-anim-section-dots border-b border-[#d0e4f5]/40 bg-[linear-gradient(135deg,#f8fcff_0%,#e7f4fd_100%)] py-20">
-            <div className="container mx-auto px-4">
-              <div className="mb-10">
-                <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[#ed5629]">Related</p>
-                <h2 className="font-heading text-3xl font-bold text-[#0d2949]">Other ISO-A Couplers</h2>
-              </div>
-              <div className="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
-                {otherProducts.map((item, index) => (
-                  <BSPProductCard
-                    key={item.slug}
-                    product={{
-                      id: 150000 + item.id,
-                      name: item.name,
-                      code: item.code,
-                      image: item.image,
-                      slug: item.slug,
-                    }}
-                    index={index}
-                    basePath="/products/hydraulic-quick-couplings/iso-a-couplers"
-                    categoryLabel="ISO-A Couplers"
-                  />
-                ))}
-              </div>
-            </div>
-          </section>
+          <BSPOtherProducts
+            products={otherProducts.map((item) => ({
+              slug: item.slug,
+              name: item.name,
+              shortName: item.shortName,
+              code: item.code,
+              image: item.image,
+            }))}
+            title="Other ISO-A Couplers"
+            basePath="/products/hydraulic-quick-couplings/iso-a-couplers"
+            categoryLabel="ISO-A Couplers"
+          />
+          <BSPCtaSection
+            title="Need Help Selecting the Right ISO-A Coupler?"
+            description="Our expert team is ready to help with product selection, technical support and bulk orders."
+            buttonLabel="Contact Sales"
+            ctaHref="/contact"
+          />
         </>
       }
     />

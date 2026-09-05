@@ -256,7 +256,7 @@ export function KTMProductDetail({ product, otherProductsSection }: KTMProductDe
 
         {/* Performance Specifications Table */}
         {product.performanceSpecsTable && (
-          <section className="mb-16">
+          <section className="quick-release-performance-section mb-0">
             <h2 className="mb-8 text-3xl font-bold text-foreground">Performance Specifications</h2>
             
             <div className="overflow-x-auto rounded-lg border border-border">
@@ -307,7 +307,7 @@ export function KTMProductDetail({ product, otherProductsSection }: KTMProductDe
         )}
 
         {/* Other Products Section */}
-        <section>{otherProductsSection}</section>
+        <div className="quick-release-related-products">{otherProductsSection}</div>
       </main>
     </div>
   )

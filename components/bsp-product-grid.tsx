@@ -17,10 +17,13 @@ interface BSPProductGridProps {
   products: BSPProduct[]
   basePath?: string
   categoryLabel?: string
+  productType?: string
+  productTypeLabel?: string
   searchScope?: string
+  disableProductLinks?: boolean
 }
 
-export function BSPProductGrid({ products, basePath, categoryLabel, searchScope = "British BSP" }: BSPProductGridProps) {
+export function BSPProductGrid({ products, basePath, categoryLabel, productType, productTypeLabel, searchScope = "British BSP", disableProductLinks = false }: BSPProductGridProps) {
   const [query, setQuery] = useState("")
   const [open, setOpen] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
@@ -230,7 +233,7 @@ export function BSPProductGrid({ products, basePath, categoryLabel, searchScope 
               key={product.id}
               style={{ "--shimmer-delay": `${(i % 5) * 0.9}s` } as React.CSSProperties}
             >
-              <BSPProductCard product={product} index={i} basePath={basePath} categoryLabel={categoryLabel} />
+              <BSPProductCard product={product} index={i} basePath={basePath} categoryLabel={categoryLabel} productType={productType} productTypeLabel={productTypeLabel} disableDetails={disableProductLinks} />
             </div>
           ))}
         </div>

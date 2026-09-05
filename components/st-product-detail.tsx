@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 import type { StraightThroughCoupling } from "@/lib/straight-through-couplings"
+import Topography from "@/components/topography"
 
 interface STProductDetailProps {
   product: StraightThroughCoupling
@@ -21,13 +22,13 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 }
 
-const tableHeaderStyle = "bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4] text-white"
+const tableHeaderStyle = "bg-[linear-gradient(100deg,#c84000,#e05a2e,#f07d1a)] text-white"
 
 function SectionHeading({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-3 mb-8">
       <span className="w-1 h-7 rounded-full bg-[#e05a2e] flex-shrink-0" aria-hidden />
-      <h2 className="text-2xl font-bold text-gray-900">{children}</h2>
+      <h2 className="text-3xl font-bold text-[#0e1c35]">{children}</h2>
     </div>
   )
 }
@@ -35,8 +36,8 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
 function DiagramBox({ src, alt }: { src: string; alt: string }) {
   return (
     <motion.div
-      className="w-full max-w-xl mx-auto bg-white rounded-lg border border-gray-200 p-8 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow mb-8"
-      whileHover={{ scale: 1.01 }}
+      className="w-full max-w-xl mx-auto min-h-80 bg-white rounded-[1.5rem] border border-[#d0e4f5] p-8 flex items-center justify-center shadow-[0_18px_38px_rgba(11,31,55,.14)] hover:shadow-[0_24px_52px_rgba(11,31,55,.24)] transition-shadow mb-8"
+      whileHover={{ scale: 1.02 }}
     >
       <Image src={src} alt={alt} width={400} height={280} className="object-contain" />
     </motion.div>
@@ -46,39 +47,50 @@ function DiagramBox({ src, alt }: { src: string; alt: string }) {
 export function STProductDetail({ product }: STProductDetailProps) {
   return (
     <motion.div
+      className="straight-through-detail relative isolate overflow-hidden bg-[#f8fafc] py-16 sm:py-20"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={containerVariants}
     >
+      <Topography className="pointer-events-none absolute inset-0 z-0" lowColor="#9eb8c3" midColor="#f26522" highColor="#ffffff" speed={0.18} morphAmount={1.7} bands={3.4} thickness={0.018} glow={0.22} opacity={0.07} mouseRadius={0.24} mouseStrength={0.3} />
+      <div className="relative z-10">
       {/* ── Features & Tech Specs ──────────────────────────────────────── */}
-      <section className="py-16 bg-gradient-to-b from-white to-slate-50">
+      <section className="py-0 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="grid md:grid-cols-2 gap-12" variants={itemVariants}>
+          <motion.div className="mb-16 grid gap-10 overflow-hidden rounded-[1.5rem] bg-[linear-gradient(130deg,#061428,#0a2a52,#0d4080)] p-7 shadow-[0_22px_52px_rgba(11,31,55,.18)] md:grid-cols-2 md:p-10" variants={itemVariants}>
             <div>
-              <h2 className="text-3xl font-bold mb-8 text-slate-900">Features</h2>
+              <h2 className="mb-8 flex items-center gap-3 text-3xl font-bold text-white before:h-7 before:w-1 before:rounded-full before:bg-[#f26522] before:content-['']">Features</h2>
               <ul className="space-y-4">
                 {product.features.map((f, i) => (
                   <motion.li key={i} className="flex items-start gap-3" variants={itemVariants}>
-                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex-shrink-0 mt-0.5 text-xs font-bold">
+                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#f26522] text-white shadow-[0_0_14px_rgba(242,101,34,.45)] flex-shrink-0 mt-0.5 text-xs font-bold">
                       ✓
                     </span>
-                    <span className="text-slate-700">{f}</span>
+                    <span className="text-white/85">{f}</span>
                   </motion.li>
                 ))}
               </ul>
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-8 text-slate-900">Technical Specifications</h2>
+              <h2 className="mb-8 flex items-center gap-3 text-3xl font-bold text-white before:h-7 before:w-1 before:rounded-full before:bg-[#f26522] before:content-['']">Technical Specifications</h2>
               <ul className="space-y-4">
                 {product.techSpecs.map((s, i) => (
-                  <motion.li key={i} className="flex items-start gap-3 text-slate-700" variants={itemVariants}>
-                    <span className="text-blue-600 font-bold mt-0.5">•</span>
+                  <motion.li key={i} className="flex items-start gap-3 text-white/85" variants={itemVariants}>
+                    <span className="mt-0.5 font-bold text-[#f26522]">•</span>
                     <span>{s}</span>
                   </motion.li>
                 ))}
               </ul>
             </div>
+          </motion.div>
+          <motion.div className="mb-16 grid gap-3 sm:grid-cols-2 lg:grid-cols-4" variants={itemVariants}>
+            {product.specs.map((spec, index) => (
+              <motion.div key={index} className="group rounded-xl border border-[#dce5e4] border-l-[3px] border-l-[#f26522] bg-white/90 px-5 py-4 shadow-[0_8px_24px_rgba(11,31,55,.06)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(11,31,55,.12)]" variants={itemVariants}>
+                <p className="mb-1 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[#5d746e]"><span className="h-1.5 w-1.5 rounded-full bg-[#f26522]" />{spec.label}</p>
+                <p className="pl-3.5 text-sm font-semibold leading-snug text-[#143126]">{spec.value}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>
@@ -335,6 +347,7 @@ export function STProductDetail({ product }: STProductDetailProps) {
           </motion.div>
         </div>
       </section>
+      </div>
     </motion.div>
   )
 }

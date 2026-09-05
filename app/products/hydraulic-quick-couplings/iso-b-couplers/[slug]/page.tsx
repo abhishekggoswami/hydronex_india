@@ -1,7 +1,8 @@
 import { Metadata } from "next"
 import { isoBCouplers } from "@/lib/iso-b-couplers"
 import { notFound } from "next/navigation"
-import { ISOAOtherProducts } from "@/components/iso-a-other-products"
+import { BSPCtaSection } from "@/components/bsp-cta-section"
+import { BSPOtherProducts } from "@/components/bsp-other-products"
 import { ISOAProductDetail } from "@/components/iso-a-product-detail"
 
 export const dynamicParams = true
@@ -58,7 +59,28 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         techSpecs: product.techSpecs,
         image: product.image,
       }}
-      otherProductsSection={<ISOAOtherProducts products={otherProducts} basePath="/products/hydraulic-quick-couplings/iso-b-couplers" categoryLabel="ISO-B Quick Couplers" />}
+      otherProductsSection={
+        <>
+          <BSPOtherProducts
+            products={otherProducts.map((item) => ({
+              slug: item.slug,
+              name: item.name,
+              shortName: item.shortName,
+              code: item.code,
+              image: item.image,
+            }))}
+            title="Other ISO-B Couplers"
+            basePath="/products/hydraulic-quick-couplings/iso-b-couplers"
+            categoryLabel="ISO-B Quick Couplers"
+          />
+          <BSPCtaSection
+            title="Need Help Selecting the Right ISO-B Coupler?"
+            description="Our expert team is ready to help with product selection, technical support and bulk orders."
+            buttonLabel="Contact Sales"
+            ctaHref="/contact"
+          />
+        </>
+      }
       category="iso-b"
       categoryLabel="ISO-B Quick Couplers"
       categoryPath="/products/hydraulic-quick-couplings/iso-b-couplers"

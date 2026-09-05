@@ -1,7 +1,8 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { BSPProductCard } from "@/components/bsp-product-card"
+import { BSPCtaSection } from "@/components/bsp-cta-section"
 import { BSPProductDetail } from "@/components/bsp-product-detail"
+import { BSPOtherProducts } from "@/components/bsp-other-products"
 import { banjoFittings, getAllBanjoFittingSlugs, getBanjoFittingBySlug } from "@/lib/banjo-fittings"
 
 export const dynamicParams = true
@@ -76,32 +77,23 @@ export default async function BanjoProductPage({
         partTable: normaliseRows(fitting.partTable),
         image: fitting.image,
       }}
+      editorialHero
       otherProductsSection={
-        <section className="bg-anim-section-dots border-b border-[#d0e4f5]/40 bg-[linear-gradient(135deg,#f8fcff_0%,#e7f4fd_100%)] py-20">
-          <div className="container mx-auto px-4">
-            <div className="mb-10">
-              <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[#ed5629]">Related</p>
-              <h2 className="font-heading text-3xl font-bold text-[#0d2949]">Other Banjo Fittings</h2>
-            </div>
-            <div className="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
-              {otherProducts.map((product, index) => (
-                <BSPProductCard
-                  key={product.slug}
-                  product={{
-                    id: 100000 + product.id,
-                    name: product.name,
-                    code: product.code,
-                    image: product.image,
-                    slug: product.slug,
-                  }}
-                  index={index}
-                  basePath="/products/hydraulic-fittings/banjo-fittings"
-                  categoryLabel="Banjo Fittings"
-                />
-              ))}
-            </div>
-          </div>
-        </section>
+        <>
+          <BSPOtherProducts
+            products={otherProducts.map((product) => ({
+              slug: product.slug,
+              name: product.name,
+              shortName: product.code,
+              code: product.code,
+              image: product.image,
+            }))}
+            title="Other Banjo Fittings"
+            basePath="/products/hydraulic-fittings/banjo-fittings"
+            categoryLabel="Banjo Fittings"
+          />
+          <BSPCtaSection title="Need Banjo Fitting Solutions?" description="Contact our experts for tailored solutions, bulk orders and technical support." buttonLabel="Get A Quote" />
+        </>
       }
     />
   )

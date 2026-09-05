@@ -1,7 +1,8 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { BSPProductCard } from "@/components/bsp-product-card"
+import { BSPCtaSection } from "@/components/bsp-cta-section"
 import { BSPProductDetail } from "@/components/bsp-product-detail"
+import { BSPOtherProducts } from "@/components/bsp-other-products"
 import { reusableHoseFittings } from "@/lib/reusable-hose-fittings"
 
 export const dynamicParams = true
@@ -71,32 +72,28 @@ export default async function ProductPage({ params }: Props) {
         tableNote: product.tableNote,
         image: product.image,
       }}
+      editorialHero
       otherProductsSection={
-        <section className="bg-anim-section-dots border-b border-[#d0e4f5]/40 bg-[linear-gradient(135deg,#f8fcff_0%,#e7f4fd_100%)] py-20">
-          <div className="container mx-auto px-4">
-            <div className="mb-10">
-              <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[#ed5629]">Related</p>
-              <h2 className="font-heading text-3xl font-bold text-[#0d2949]">Other Reusable Hose Fittings</h2>
-            </div>
-            <div className="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
-              {otherProducts.map((item, index) => (
-                <BSPProductCard
-                  key={item.slug}
-                  product={{
-                    id: 120000 + item.id,
-                    name: item.name,
-                    code: item.code,
-                    image: item.image,
-                    slug: item.slug,
-                  }}
-                  index={index}
-                  basePath="/products/hydraulic-fittings/reusable-hose-fittings"
-                  categoryLabel="Reusable Hose Fittings"
-                />
-              ))}
-            </div>
-          </div>
-        </section>
+        <>
+          <BSPOtherProducts
+            products={otherProducts.map((item) => ({
+              slug: item.slug,
+              name: item.name,
+              shortName: item.code,
+              code: item.code,
+              image: item.image,
+            }))}
+            title="Other Reusable Hose Fittings"
+            basePath="/products/hydraulic-fittings/reusable-hose-fittings"
+            categoryLabel="Reusable Hose Fittings"
+          />
+          <BSPCtaSection
+            title="Need Help Selecting the Right Reusable Hose Fitting?"
+            description="Our expert team is ready to help with product selection, technical support and bulk orders."
+            buttonLabel="Contact Sales"
+            ctaHref="/contact"
+          />
+        </>
       }
     />
   )

@@ -2,7 +2,10 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { BSPCtaSection } from "@/components/bsp-cta-section"
 import { BSPProductGrid } from "@/components/bsp-product-grid"
-import { CategoryLandingHero } from "@/components/category-landing-hero"
+import { HydraulicAdaptersHeroSection } from "@/components/hydraulic-adapters-hero-section"
+import { LikedProductsDrawer } from "@/components/liked-products-drawer"
+import { LikedProductsFAB } from "@/components/liked-products-fab"
+import Topography from "@/components/topography"
 
 export const metadata: Metadata = {
   title: "ISO-A Couplers – Hydraulic Quick Couplings | Hydronex",
@@ -52,7 +55,23 @@ export default function IsoACouplerPage() {
   const usageText = "The connectors are used in a wide range of hydraulic applications. This type of double-stop connector can be used in the following situations: the fluid delivery pipeline needs to be connected and disconnected due to equipment operation or maintenance, and it is hoped that no fluid loss will occur. KZE SS connectors are mainly used for hydraulic fluid pipelines, but are also used for chemical water, steam and some gas pipelines."
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="relative isolate min-h-screen overflow-hidden bg-gradient-to-b from-[#f7f8f6] via-[#fbfcfa] to-white">
+      <Topography
+        className="pointer-events-none !fixed inset-0 z-0"
+        lowColor="#9eb8c3"
+        midColor="#f26522"
+        highColor="#ffffff"
+        speed={0.18}
+        morphAmount={1.7}
+        bands={3.4}
+        thickness={0.018}
+        glow={0.22}
+        opacity={0.075}
+        mouseRadius={0.24}
+        mouseStrength={0.34}
+      />
+
+      <div className="relative z-10">
       {/* ── Breadcrumb Navigation ────────────────────────────────────── */}
       <nav
         className="bg-white border-b border-[#e0e8f0]"
@@ -123,19 +142,20 @@ export default function IsoACouplerPage() {
       </nav>
 
       {/* ── Hero Section ──────────────────────────────────────────────── */}
-      <CategoryLandingHero
+      <HydraulicAdaptersHeroSection
         category="Hydraulic Quick Couplings / ISO-A"
         title="ISO-A Couplers - KZE Series Quick Connectors"
         description="ISO 7241-A standard specifies the interface dimensions and basic performance requirements of hydraulic quick connectors, which are widely used in fields such as agricultural and forestry machinery."
-        ctaHref="/products/hydraulic-quick-couplings"
+        featuredProduct={products[0]}
+        productCount={products.length}
+        summary="ISO 7241-A standard specifies the interface dimensions and basic performance requirements of hydraulic quick connectors."
+        standardLabel="ISO-A"
+        standardsDescription="ISO 7241-A Standard"
       />
 
       <section
-        className="bg-anim-section-dots border-b border-[#d0e4f5]/40"
-        style={{
-          background:
-            "linear-gradient(180deg, #deeefa 0%, #eaf4fc 18%, #f4faff 45%, #fafcff 72%, #ffffff 100%)",
-        }}
+        id="products"
+        className="relative border-b border-[#d0e4f5]/40 bg-transparent"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
           {/* Section heading */}
@@ -255,8 +275,11 @@ export default function IsoACouplerPage() {
 
       {/* ── CTA Section ───────────────────────────────────────────────── */}
       <BSPCtaSection />
+      <LikedProductsDrawer />
+      <LikedProductsFAB />
 
       {/* ── Liked Products Drawer + FAB ───────────────────────────────── */}
+      </div>
     </div>
   )
 }
