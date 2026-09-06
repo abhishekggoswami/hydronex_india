@@ -18,6 +18,8 @@ interface BspEditorialProductHeroProps {
 }
 
 export function BspEditorialProductHero({ categoryName, product }: BspEditorialProductHeroProps) {
+  const isTechnicalDiagram = Boolean(product.image && (/\/images\/hydraulic-fittings\//.test(product.image) || /(?:diagram|drawing|schematic)/i.test(product.image)))
+
   return (
     <section className="bsp-editorial-product-hero relative px-4 pb-16 pt-7 sm:px-6 sm:pb-20 lg:px-8 lg:pt-10">
       <div className="mx-auto grid max-w-[1500px] items-center gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(360px,0.75fr)] lg:gap-14">
@@ -28,7 +30,7 @@ export function BspEditorialProductHero({ categoryName, product }: BspEditorialP
             </defs>
           </svg>
 
-          <div className="absolute inset-0 overflow-hidden shadow-[0_28px_72px_rgba(11,31,55,0.18)]" style={{ clipPath: "url(#iso-bsp-product-clip)" }}>
+          <div className="absolute inset-0 z-0 overflow-hidden shadow-[0_28px_72px_rgba(11,31,55,0.18)]" style={{ clipPath: "url(#iso-bsp-product-clip)" }}>
             <Silk speed={5} scale={1} color="#0d4080" noiseIntensity={1.5} rotation={0} className="absolute inset-0 h-full w-full" />
             <svg className="pointer-events-none absolute inset-0 h-full w-full opacity-20" viewBox="0 0 1000 720" preserveAspectRatio="none" aria-hidden>
               <path d="M0 0H1000V112L646 354H0Z" fill="#6f9fbe" fillOpacity="0.55" />
@@ -37,15 +39,15 @@ export function BspEditorialProductHero({ categoryName, product }: BspEditorialP
             </svg>
           </div>
 
-          <div className="absolute inset-0" style={{ clipPath: "url(#iso-bsp-product-clip)" }}>
+          <div className="absolute inset-0 z-[1]" style={{ clipPath: "url(#iso-bsp-product-clip)" }}>
             <div className="absolute left-6 top-5 z-10 flex items-center gap-2 font-sans text-[9px] font-bold uppercase tracking-[0.2em] text-white sm:left-8 sm:top-7">
               <span className="h-1.5 w-1.5 rounded-full bg-[#f26522]" />
               Hydronex / {categoryName}
             </div>
             <div className="absolute right-6 top-5 z-10 font-mono text-[10px] font-semibold text-white/65 sm:right-8 sm:top-7">{product.slug.split("-").pop()?.toUpperCase()}</div>
             {product.image ? (
-              <div className="absolute inset-0 z-[1] flex items-center justify-center px-9 py-14 transition-transform duration-500 hover:scale-[1.03] sm:px-16 sm:py-20">
-                <Image src={product.image} alt={product.name} fill priority sizes="(max-width: 1024px) 100vw, 58vw" className="object-contain p-10 sm:p-16" style={{ filter: "invert(1) sepia(0.14) saturate(0.7) hue-rotate(165deg) drop-shadow(0 26px 20px rgba(7,20,38,0.28))" }} />
+              <div className="absolute inset-0 z-[2] flex items-center justify-center px-9 py-14 transition-transform duration-500 hover:scale-[1.03] sm:px-16 sm:py-20">
+                <Image src={product.image} alt={product.name} fill priority sizes="(max-width: 1024px) 100vw, 58vw" className={`object-contain p-10 sm:p-16${isTechnicalDiagram ? " technical-diagram-image" : ""}`} />
               </div>
             ) : null}
           </div>

@@ -392,8 +392,7 @@ export function SocketlessProductDetail({ product, otherProductsSection }: Socke
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="object-contain max-w-full max-h-full w-auto h-auto"
-                      style={{ filter: "invert(1) brightness(1.05) contrast(1.1)", opacity: 1 }}
+                      className="technical-diagram-image object-contain max-w-full max-h-full w-auto h-auto"
                       crossOrigin="anonymous"
                     />
                   </div>

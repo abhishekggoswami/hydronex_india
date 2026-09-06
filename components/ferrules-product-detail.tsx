@@ -123,8 +123,7 @@ export function FerruleProductDetail({ product, categorySlug }: FerruleProductDe
                         fill
                         priority
                         sizes="(max-width: 1024px) 100vw, 50vw"
-                        className="object-contain p-12"
-                        style={{ filter: "invert(1) opacity(0.85)" }}
+                        className="technical-diagram-image object-contain p-12"
                       />
                     </div>
                     <div className="absolute bottom-4 right-4 z-40 opacity-30 hover:opacity-50 transition-opacity">

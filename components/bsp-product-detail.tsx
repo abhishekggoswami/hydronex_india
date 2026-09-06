@@ -229,9 +229,11 @@ interface BSPProductDetailProps {
 function EditorialBspHero({
   product,
   categoryName,
+  isTechnicalDiagram,
 }: {
   product: BSPProductDetailProps["product"]
   categoryName: string
+  isTechnicalDiagram: boolean
 }) {
   return (
     <section className="relative px-4 pb-16 pt-7 sm:px-6 sm:pb-20 lg:px-8 lg:pt-10">
@@ -255,7 +257,7 @@ function EditorialBspHero({
             </defs>
           </svg>
 
-          <div className="absolute inset-0 overflow-hidden shadow-[0_28px_72px_rgba(11,31,55,0.18)]" style={{ clipPath: "url(#bsp-product-card-clip)" }}>
+          <div className="absolute inset-0 z-0 overflow-hidden shadow-[0_28px_72px_rgba(11,31,55,0.18)]" style={{ clipPath: "url(#bsp-product-card-clip)" }}>
             <Silk speed={5} scale={1} color="#0d4080" noiseIntensity={1.5} rotation={0} className="absolute inset-0 h-full w-full" />
             <svg className="pointer-events-none absolute inset-0 h-full w-full opacity-20" viewBox="0 0 1000 720" preserveAspectRatio="none" aria-hidden>
               <rect width="1000" height="720" fill="url(#bsp-product-card-base)" />
@@ -266,14 +268,14 @@ function EditorialBspHero({
             </svg>
           </div>
 
-          <div className="absolute inset-0" style={{ clipPath: "url(#bsp-product-card-clip)" }}>
+          <div className="absolute inset-0 z-[1]" style={{ clipPath: "url(#bsp-product-card-clip)" }}>
             <div className="absolute left-6 top-5 z-10 flex items-center gap-2 font-sans text-[9px] font-bold uppercase tracking-[0.2em] text-white sm:left-8 sm:top-7">
               <span className="h-1.5 w-1.5 rounded-full bg-[#f26522]" />
               Hydronex / {categoryName}
             </div>
             <div className="absolute right-6 top-5 z-10 font-mono text-[10px] font-semibold text-white/65 sm:right-8 sm:top-7">{product.slug.split("-").pop()?.toUpperCase()}</div>
 
-            <div className="absolute inset-0 z-[1] flex items-center justify-center px-9 py-14 sm:px-16 sm:py-20">
+            <div className="absolute inset-0 z-[2] flex items-center justify-center px-9 py-14 sm:px-16 sm:py-20">
               {product.image ? (
                 <Image
                   src={product.image}
@@ -281,8 +283,7 @@ function EditorialBspHero({
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 58vw"
-                  className="object-contain p-10 sm:p-16"
-                  style={{ filter: "invert(1) sepia(0.14) saturate(0.7) hue-rotate(165deg) drop-shadow(0 26px 20px rgba(7,20,38,0.28))" }}
+                  className={`object-contain p-10 sm:p-16${isTechnicalDiagram ? " technical-diagram-image" : ""}`}
                 />
               ) : null}
             </div>
@@ -345,6 +346,8 @@ export function BSPProductDetail({
   editorialHero = false,
 }: BSPProductDetailProps) {
   const { displayed, phase } = useTypewriter("REQUEST QUOTE")
+  const isTechnicalDiagram = /^(British BSP Fittings|NPT Hydraulic Fittings|American NPSM Fittings|JIC Hydraulic Fittings|JIS Fittings|ORFS Hydraulic Fittings|Banjo Fittings|Socketless Fittings|Reusable Hose Fittings|Ferrules)$/.test(categoryName)
+    || Boolean(product.image && (/\/images\/hydraulic-fittings\//.test(product.image) || /(?:diagram|drawing|schematic)/i.test(product.image)))
 
   // Table helpers — same logic as the server page
   const pt = product.partTable
@@ -464,7 +467,7 @@ export function BSPProductDetail({
       </nav>
 
       {/* ── Product Header ───────────────────────────────────────────── */}
-      {editorialHero ? <EditorialBspHero product={product} categoryName={categoryName} /> : <section className="relative overflow-hidden">
+      {editorialHero ? <EditorialBspHero product={product} categoryName={categoryName} isTechnicalDiagram={isTechnicalDiagram} /> : <section className="relative overflow-hidden">
         {/* Factory background image */}
         <div
           className="absolute inset-0 pointer-events-none"
@@ -524,8 +527,7 @@ export function BSPProductDetail({
                       fill
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-contain p-8"
-                      style={{ filter: "invert(1) opacity(0.88)" }}
+                      className={`object-contain p-8${isTechnicalDiagram ? " technical-diagram-image" : ""}`}
                     />
                   </div>
                 )}

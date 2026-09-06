@@ -40,6 +40,124 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+/* Keep category and range names within their hero window on narrow screens. */
+h1.whitespace-nowrap {
+  max-inline-size: calc(100% - 1rem);
+  margin-inline: auto;
+  padding-inline: 0.25rem;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+@media (min-width: 640px) {
+  h1.whitespace-nowrap {
+    max-inline-size: 100%;
+  }
+}
+
+/* Every curved-video hero uses the same bounded title container, keeping the
+   title safely inside the white strip at every screen size. */
+p[class~="absolute"][class~="left-8"][class~="top-3"] {
+  display: block;
+  inline-size: 9rem;
+  max-inline-size: 9rem;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  text-align: center;
+  white-space: normal !important;
+  overflow-wrap: normal !important;
+  line-height: 1.35 !important;
+  text-wrap: balance !important;
+}
+
+div:has(> p[class~="absolute"][class~="left-8"][class~="top-3"]) > div[class~="relative"][class~="z-10"][class~="grid"] {
+  padding-top: 4.75rem !important;
+}
+
+/* Hero information strips need enough vertical room for full descriptions and
+   multi-line specification values. Preserve the same curve/background ratio. */
+div:has(> p[class~="absolute"][class~="left-8"][class~="top-3"]) {
+  height: 20rem !important;
+}
+
+div:has(> p[class~="absolute"][class~="left-8"][class~="top-3"]) > div[class~="absolute"][class~="inset-x-0"][class~="bottom-0"] {
+  height: 72% !important;
+}
+
+@media (max-width: 1023px) {
+  p[class~="absolute"][class~="left-8"][class~="top-3"] {
+    inline-size: 4.75rem;
+    max-inline-size: 4.75rem;
+  }
+
+  /* The overview card is deliberately layered over the video on compact
+     layouts. Reserve room for it above the expanded information strip so the
+     strip never covers its copy, actions, or statistics. */
+  div[class~="relative"][class~="h-full"][class~="flex-1"][class~="overflow-hidden"]:has(> div[class~="z-20"]):has(> div > p[class~="absolute"][class~="left-8"][class~="top-3"]) {
+    min-height: 46rem !important;
+  }
+
+  /* Pumps, motors and quick-couplings use a compact plain statistics bar
+     rather than the curved strip. Give their floating feature card its own
+     vertical space before that bar begins. */
+  div[class~="relative"][class~="h-full"][class~="flex-1"][class~="overflow-hidden"]:has(> div[class~="z-20"]):has(> div[class~="bg-white/95"]) {
+    min-height: 36rem !important;
+  }
+}
+
+/* Phones need more breathing room than a three-column desktop statistic row.
+   Long feature values use two balanced columns, with the final value receiving
+   its own full-width row. This keeps every word, unit and label visible. */
+@media (max-width: 639px) {
+  div:has(> p[class~="absolute"][class~="left-8"][class~="top-3"]) {
+    height: 26rem !important;
+  }
+
+  div:has(> p[class~="absolute"][class~="left-8"][class~="top-3"]) > div[class~="relative"][class~="z-10"][class~="grid"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.5rem 0.4rem !important;
+    padding-top: 5rem !important;
+  }
+
+  div:has(> p[class~="absolute"][class~="left-8"][class~="top-3"]) > div[class~="relative"][class~="z-10"][class~="grid"] > p {
+    grid-column: 1 / -1 !important;
+    max-inline-size: none;
+  }
+
+  div:has(> p[class~="absolute"][class~="left-8"][class~="top-3"]) > div[class~="relative"][class~="z-10"][class~="grid"] > div {
+    min-inline-size: 0;
+    padding-inline: 0.45rem !important;
+  }
+
+  div:has(> p[class~="absolute"][class~="left-8"][class~="top-3"]) > div[class~="relative"][class~="z-10"][class~="grid"] > div:last-child {
+    grid-column: 1 / -1;
+  }
+
+  div:has(> p[class~="absolute"][class~="left-8"][class~="top-3"]) > div[class~="relative"][class~="z-10"][class~="grid"] > div > p:first-child {
+    overflow-wrap: anywhere;
+    word-break: normal;
+    font-size: clamp(1.15rem, 6vw, 1.5rem) !important;
+    line-height: 1.12 !important;
+    white-space: normal !important;
+  }
+
+  div[class~="relative"][class~="h-full"][class~="flex-1"][class~="overflow-hidden"]:has(> div[class~="z-20"]):has(> div > p[class~="absolute"][class~="left-8"][class~="top-3"]) {
+    min-height: 56rem !important;
+  }
+
+  div[class~="relative"][class~="h-full"][class~="flex-1"][class~="overflow-hidden"]:has(> div[class~="z-20"]):has(> div[class~="bg-white/95"]) {
+    min-height: 31rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  div:has(> p[class~="absolute"][class~="left-8"][class~="top-3"]) {
+    height: 15rem !important;
+  }
+}
+
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -129,6 +247,13 @@
 @layer utilities {
   .font-heading {
     font-family: var(--font-heading, 'Barlow', sans-serif);
+  }
+
+  /* Technical line drawings are transparent black source artwork. This class
+     is deliberately assigned only to diagram images, preserving product-photo
+     colours while making engineering labels and dimensions legible on dark UI. */
+  .technical-diagram-image {
+    filter: brightness(0) invert(1);
   }
 }
 

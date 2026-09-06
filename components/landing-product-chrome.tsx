@@ -178,8 +178,8 @@ export function LandingProductNavbar() {
   }
 
   return (
-    <header ref={menuRef} className={`relative z-40 mx-auto w-full ${isReferenceLanding ? "max-w-none bg-transparent px-3 pt-3 sm:px-5" : "max-w-[1560px] bg-transparent px-2 pt-3 sm:px-3 sm:pt-5"}`} style={{ fontFamily: "Arial, Helvetica, system-ui, sans-serif" }}>
-      <nav className={`flex items-center justify-between gap-3 px-3 py-2 backdrop-blur-xl sm:px-4 sm:py-2.5 ${isReferenceLanding ? "rounded-[1.35rem] border border-white/70 bg-white/55 shadow-[0_12px_42px_rgba(13,36,59,0.12)] backdrop-blur-2xl" : "rounded-full border border-black/[0.07] bg-white/95 shadow-[0_12px_45px_rgba(20,20,20,0.1)]"}`}>
+    <header ref={menuRef} className={`relative z-40 mx-auto w-full ${isReferenceLanding ? "max-w-none bg-transparent px-0 pt-0 lg:px-5 lg:pt-3" : "max-w-[1560px] bg-transparent px-0 pt-0 lg:px-3 lg:pt-5"}`} style={{ fontFamily: "Arial, Helvetica, system-ui, sans-serif" }}>
+      <nav className={`flex items-center justify-between gap-3 px-3 py-2 backdrop-blur-xl sm:px-4 sm:py-2.5 ${isReferenceLanding ? "rounded-none border-y border-white/70 bg-white/55 shadow-[0_12px_42px_rgba(13,36,59,0.12)] backdrop-blur-2xl lg:rounded-[1.35rem] lg:border" : "rounded-none border-y border-black/[0.07] bg-white/95 shadow-[0_12px_45px_rgba(20,20,20,0.1)] lg:rounded-full lg:border"}`}>
         <Link href="/" aria-label="Hydronex home" className="flex min-w-0 items-center" onClick={closeAll}>
           <LandingBrandLogo compact />
         </Link>

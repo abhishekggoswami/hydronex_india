@@ -48,8 +48,7 @@ export function BSPProductHeroImage({ image, name, slug }: BSPProductHeroImagePr
             fill
             priority
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-contain p-8"
-            style={{ filter: "invert(1) opacity(0.88)" }}
+            className="technical-diagram-image object-contain p-8"
           />
         </div>
       )}
