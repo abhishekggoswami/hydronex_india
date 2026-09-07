@@ -1,0 +1,18 @@
+2026-09-07 05:02:23.643: [INFO] CurrentProfilePath: C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\.qa-screenshots\edge-1440\Default
+2026-09-07 05:02:23.643: [INFO] Profiles total count: 1
+2026-09-07 05:02:23.643: [INFO] Profile: name=Profile 1 path=C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\.qa-screenshots\edge-1440\Default lastActive=2026-09-07T05:02:23.591Z
+2026-09-07 05:02:23.643: [INFO] LastUsedProfileDir: C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\.qa-screenshots\edge-1440\Default
+2026-09-07 05:02:23.643: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\.qa-screenshots\edge-1440\Default lastActive=2026-09-07T05:02:23.591Z
+2026-09-07 05:02:23.643: [INFO] OnDoneLoading sync enabled: 0
+2026-09-07 05:02:23.643: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-07 05:02:23.643: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-07 05:02:23.643: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-07 05:02:23.648: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-09-07 05:02:25.305: [INFO] VisibilityChanged: 0
+2026-09-07 05:02:32.772: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-09-07 05:02:32.776: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-09-07 05:02:32.787: [INFO] Primary account changed.
+2026-09-07 05:02:32.787: [INFO] OnPrimaryAccountChanged PrimaryAccountChangeEvent::Type::kSet
+2026-09-07 05:02:32.796: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-09-07 05:02:32.802: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-09-07 05:08:57.668: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1

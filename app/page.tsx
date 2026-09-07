@@ -8,7 +8,7 @@ import { LandingBrandLogo, LandingProductNavbar } from "@/components/landing-pro
 import { BSPCtaSection } from "@/components/bsp-cta-section"
 import { BSPProductCard } from "@/components/bsp-product-card"
 import Topography from "@/components/topography"
-import StrokeText from "@/components/StrokeText"
+import { HomeHero } from "@/components/home-hero"
 
 function RollingCta({
   href,
@@ -76,12 +76,6 @@ function TypewriterHeading({ text, light = false }: { text: string; light?: bool
   )
 }
 
-const homeHeroVideos = [
-  "/videos/home-hero-1.mp4",
-  "/videos/home-hero-2.mp4",
-  "/videos/home-hero-3.mp4",
-]
-
 const applications = [
   { title: "Mining & drilling", detail: "Abrasion-resistant hose and fitting solutions for dependable fluid transfer in demanding extraction environments.", video: "/videos/applications/mining-drilling.mp4" },
   { title: "Pressure washing", detail: "High-pressure assemblies built to support precise, durable cleaning performance on intensive wash-down work.", video: "/videos/applications/pressure-washer.mp4" },
@@ -93,25 +87,6 @@ const applications = [
   { title: "Material handling", detail: "Purpose-built hose and fittings that help safely move abrasive, bulk and process materials through industrial systems.", video: "/videos/applications/material-handling.mp4" },
   { title: "Agriculture", detail: "Dependable hydraulic and fluid-transfer connections that support equipment performance across agricultural operations.", video: "/videos/applications/agriculture.mp4" },
 ]
-
-function HeroVideoPlaylist() {
-  const [activeVideo, setActiveVideo] = useState(0)
-
-  return (
-    <video
-      key={homeHeroVideos[activeVideo]}
-      autoPlay
-      muted
-      playsInline
-      preload="auto"
-      onEnded={() => setActiveVideo((index) => (index + 1) % homeHeroVideos.length)}
-      className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-      aria-hidden="true"
-    >
-      <source src={homeHeroVideos[activeVideo]} type="video/mp4" />
-    </video>
-  )
-}
 
 function SectionBackdrop({ dark = false, interactive = false, opacity }: { dark?: boolean; interactive?: boolean; opacity?: number }) {
   return (
@@ -350,61 +325,9 @@ export default function Home() {
           <SectionBackdrop interactive opacity={0.1} />
         </div>
 
-      <section className="relative flex min-h-[100svh] flex-col overflow-hidden bg-transparent pb-2 sm:pb-3">
+      <section className="relative overflow-hidden bg-transparent">
         <LandingProductNavbar />
-
-        <div className="relative z-10 mx-auto flex w-full max-w-none min-h-0 flex-1 flex-col px-2 pt-12 sm:px-3 sm:pt-16 lg:px-4">
-          <div className="mx-auto w-full max-w-[1700px] px-2 sm:px-4" aria-label="Built to move power">
-            <StrokeText
-              text="BUILT TO MOVE POWER"
-              strokeColor="#f26522"
-              fillColor="#143126"
-              strokeWidth={1.4}
-              drawDuration={1.6}
-              fillDelay={0.2}
-              stagger={0.05}
-              ease="power2.out"
-              trigger="mount"
-              fillMode="wipe"
-              fontSize={112}
-              fontWeight={800}
-              letterSpacing={-7}
-              className="font-heading"
-              style={{ fontFamily: "var(--font-heading)", lineHeight: 0.9 }}
-            />
-          </div>
-
-          <div className="relative mt-8 flex min-h-[430px] flex-1 sm:mt-10">
-            <div className="relative h-full min-h-[430px] flex-1 overflow-hidden rounded-[1.75rem] bg-[#7da9a9] sm:min-h-[540px] sm:rounded-[2.25rem] lg:min-h-[max(620px,calc(100svh-300px))]">
-              <HeroVideoPlaylist />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0b2722]/55 via-transparent to-[#0b2722]/10" />
-              <div className="absolute inset-x-0 bottom-0 z-10 h-[220px] sm:h-[184px] lg:h-[170px]">
-                <div className="absolute inset-x-0 bottom-0 h-[162px] bg-[#f7f8f6] sm:h-[136px] lg:h-[122px]" aria-hidden="true" />
-                <svg className="absolute inset-0 hidden h-full w-full sm:block" viewBox="0 0 1440 170" preserveAspectRatio="none" aria-hidden="true">
-                  <path fill="white" stroke="none" d="M0 160V12Q0 0 12 0H155C164 0 172 4 179 11L209 38C215 44 222 48 231 48H1430Q1440 48 1440 58V160Q1440 170 1430 170H10Q0 170 0 160Z" />
-                </svg>
-                <svg className="absolute inset-0 h-full w-full sm:hidden" viewBox="0 0 1000 220" preserveAspectRatio="none" aria-hidden="true">
-                  <path fill="white" stroke="none" d="M0 202V18Q0 0 30 0H270C288 0 301 8 315 22L342 43C350 51 360 58 375 58H970Q1000 58 1000 76V202Q1000 220 970 220H30Q0 220 0 202Z" />
-                </svg>
-
-                <p className="absolute left-8 top-3 z-10 text-[10px] font-bold uppercase tracking-[0.13em] text-[#5f756c] sm:left-10 sm:top-3">Hydronex solutions</p>
-                <div className="relative z-10 grid h-full grid-cols-3 items-end gap-x-3 gap-y-4 px-6 pb-6 pt-[66px] sm:px-10 sm:pb-5 sm:pt-[63px] lg:grid-cols-[1.45fr_repeat(3,minmax(0,1fr))] lg:items-center lg:gap-0 lg:px-12 lg:pb-4 lg:pt-[52px]">
-                  <p className="col-span-3 max-w-[350px] text-xl font-semibold leading-[1.04] tracking-[-0.04em] text-[#17372c] sm:text-2xl lg:col-span-1">Dependable fluid-power products for every connection.</p>
-                  {[
-                    ["50+", "product categories"],
-                    ["24/7", "technical support"],
-                    ["ISO", "quality focused"],
-                  ].map(([value, label]) => (
-                    <div key={value} className="border-l border-[#17372c]/10 px-2 text-center first:border-l-0 sm:px-5">
-                      <p className="font-heading text-2xl font-extrabold tracking-[-0.05em] text-[#17372c] sm:text-4xl">{value}</p>
-                      <p className="mt-1 text-[9px] font-semibold leading-tight text-[#61786e] sm:text-[11px]">{label}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <HomeHero />
       </section>
 
       <section id="company" className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden bg-transparent px-5 py-20 sm:px-9 sm:py-28 lg:px-14 lg:py-36">

@@ -183,7 +183,7 @@ export function LandingProductNavbar() {
         <Link href="/" aria-label="Hydronex home" className="flex min-w-0 items-center" onClick={closeAll}>
           <LandingBrandLogo compact />
         </Link>
-        <div className="hidden items-center gap-6 text-[13px] font-semibold md:flex">
+        <div className="hidden items-center gap-6 text-[13px] font-semibold min-[1180px]:flex">
           <Link href="/" className={`transition-colors hover:text-[#f26522] ${pathname === "/" ? "text-[#f26522]" : ""}`}>Home</Link>
           <button type="button" onClick={() => setOpen((current) => !current)} className={`transition-colors hover:text-[#f26522] ${pathname?.startsWith("/products") ? "text-[#f26522]" : ""}`} aria-expanded={open}>
             Products
@@ -192,12 +192,12 @@ export function LandingProductNavbar() {
           <Link href="/about" className="transition-colors hover:text-[#f26522]">Company</Link>
           <Link href="/contact" className="transition-colors hover:text-[#f26522]">Contact</Link>
         </div>
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-3 min-[1180px]:flex">
           <span className="hidden items-center gap-2 border-r border-black/10 pr-4 text-[11px] font-semibold lg:flex"><span className="h-2 w-2 rounded-full bg-[#f26522]" /> Ready to support your next project</span>
           <span className="hidden items-center gap-1.5 text-[11px] text-black/55 xl:flex"><Clock size={13} /> IST</span>
           <QuoteButton label={isReferenceLanding ? "Get in touch" : "Request a quote"} lime={isReferenceLanding} />
         </div>
-        <button type="button" className="flex h-9 w-9 items-center justify-center rounded-full bg-[#171717] text-white md:hidden" aria-label={mobileOpen ? "Close menu" : "Open menu"} aria-expanded={mobileOpen} onClick={() => setMobileOpen((current) => !current)}>
+        <button type="button" className="flex h-9 w-9 items-center justify-center rounded-full bg-[#171717] text-white min-[1180px]:hidden" aria-label={mobileOpen ? "Close menu" : "Open menu"} aria-expanded={mobileOpen} onClick={() => setMobileOpen((current) => !current)}>
           {mobileOpen ? <X size={18} /> : <Menu size={18} />}
         </button>
       </nav>
@@ -258,7 +258,7 @@ export function LandingProductNavbar() {
       )}
 
       {mobileOpen && (
-        <div className="absolute left-3 right-3 top-[calc(100%+0.7rem)] rounded-[1.5rem] bg-white p-5 shadow-2xl md:hidden">
+        <div className="absolute left-3 right-3 top-[calc(100%+0.7rem)] rounded-[1.5rem] bg-white p-5 shadow-2xl min-[1180px]:hidden">
           <div className="mb-3 flex items-center justify-between"><span className="text-[10px] font-bold uppercase tracking-[0.16em] text-black/45">Navigation</span><button type="button" onClick={closeAll} aria-label="Close menu" className="rounded-full bg-black p-1.5 text-white"><X size={14} /></button></div>
           <MobileProductTree close={closeAll} />
           <div className="mt-3 grid grid-cols-4 gap-2 border-t border-black/10 pt-4 text-xs font-bold"><Link href="/" onClick={closeAll}>Home</Link><Link href="/#industries" onClick={closeAll}>Industries</Link><Link href="/about" onClick={closeAll}>Company</Link><Link href="/contact" onClick={closeAll}>Contact</Link></div>

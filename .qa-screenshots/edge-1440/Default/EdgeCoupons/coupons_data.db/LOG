@@ -1,0 +1,5 @@
+2026/09/07-10:32:28.601 172c Creating DB C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\.qa-screenshots\edge-1440\Default\EdgeCoupons/coupons_data.db since it was missing.
+2026/09/07-10:32:28.657 172c Reusing MANIFEST C:\Users\hi\Desktop\npt-hydraulic-fittings-page (1)\.qa-screenshots\edge-1440\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2026/09/07-10:32:58.936 206c Level-0 table #5: started
+2026/09/07-10:32:58.953 206c Level-0 table #5: 683273 bytes OK
+2026/09/07-10:32:58.962 206c Delete type=0 #3
