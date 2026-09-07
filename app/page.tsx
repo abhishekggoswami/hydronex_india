@@ -325,7 +325,7 @@ export default function Home() {
           <SectionBackdrop interactive opacity={0.1} />
         </div>
 
-      <section className="relative overflow-hidden bg-transparent">
+      <section className="relative flex min-h-[100svh] flex-col overflow-hidden bg-transparent pb-2 sm:pb-3">
         <LandingProductNavbar />
         <HomeHero />
       </section>

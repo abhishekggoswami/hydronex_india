@@ -44,109 +44,54 @@
    keeps the tab in the first fold without letting a flex child consume spare
    viewport height. The panel is normal-flow CSS; only the small tab shoulder
    uses custom geometry. */
-.home-hero {
-  position: relative;
-  z-index: 10;
-  padding: clamp(14px, 2.4vh, 28px) clamp(8px, 1.6vw, 24px) 12px;
-}
-
-.home-hero-main {
-  width: min(100%, 1700px);
-  margin-inline: auto;
-  display: grid;
-  gap: clamp(14px, 2.8vh, 30px);
-}
-
-.home-hero-heading {
-  margin: 0 clamp(4px, 1vw, 18px);
-  color: #143126;
-  font-family: var(--font-heading), Arial, Helvetica, sans-serif;
-  font-size: clamp(2.35rem, 7.5vw, 7rem);
-  font-weight: 800;
-  line-height: .82;
-  letter-spacing: -.08em;
-  text-transform: uppercase;
-  text-wrap: balance;
-  -webkit-text-stroke: clamp(.75px, .085vw, 1.45px) #f26522;
-  paint-order: stroke fill;
-}
-
-.home-hero-media {
-  position: relative;
-  min-height: 0;
-  height: clamp(205px, 31svh, 410px);
-  overflow: hidden;
-  border-radius: clamp(22px, 3vw, 36px);
-  background: #315a57;
-}
-
-.home-hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 56% 48%; }
+.home-hero { position: relative; z-index: 10; width: 100%; padding: 3rem .5rem .75rem; }
+.home-hero-main { width: min(100%, 1700px); margin-inline: auto; }
+.home-hero-heading { padding-inline: .5rem; }
+.home-hero-visual-card { position: relative; margin-top: 2rem; overflow: hidden; border-radius: 1.75rem; background: #fff; container-type: inline-size; }
+.home-hero-media { position: relative; height: clamp(205px, 31svh, 410px); overflow: hidden; background: #315a57; }
+.home-hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .home-hero-media-shade { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to top, rgba(11,39,34,.55), transparent 53%, rgba(11,39,34,.1)); }
-
-.home-hero-info { position: relative; margin-top: calc(-1 * clamp(14px, 2vh, 20px)); z-index: 2; }
-.home-hero-tab {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  width: clamp(164px, 21vw, 244px);
-  height: clamp(43px, 5vh, 54px);
-  padding-inline: clamp(17px, 2vw, 26px);
-  border-radius: clamp(13px, 1.7vw, 20px) clamp(13px, 1.7vw, 20px) 0 0;
-  background: #fff;
-  color: #5f756c;
-}
-.home-hero-tab span { font-size: clamp(9px, .7vw, 11px); font-weight: 800; letter-spacing: .13em; line-height: 1.2; text-transform: uppercase; }
-.home-hero-tab::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: calc(100% - 1px);
-  bottom: -1px;
-  width: clamp(38px, 4.6vw, 72px);
-  height: clamp(17px, 2.3vw, 30px);
-  background: #fff;
-  clip-path: polygon(0 0, 100% 100%, 0 100%);
-}
-.home-hero-panel {
-  position: relative;
-  z-index: 0;
-  display: grid;
-  gap: clamp(15px, 2vw, 26px);
-  margin-top: -1px;
-  padding: clamp(18px, 3vw, 30px);
-  border-radius: 0 clamp(18px, 2vw, 26px) clamp(18px, 2vw, 26px) clamp(18px, 2vw, 26px);
-  background: #fff;
-  color: #17372c;
-  container-type: inline-size;
-}
-.home-hero-description { max-width: 22rem; margin: 0; font-size: clamp(1.1rem, 2.3vw, 1.7rem); font-weight: 700; line-height: 1.04; letter-spacing: -.045em; }
+.home-hero-info { position: relative; background: #fff; color: #17372c; }
+.home-hero-tab { position: absolute; z-index: 1; bottom: calc(100% - 2px); left: 0; width: clamp(160px, 17vw, 220px); height: clamp(46px, 4vw, 58px); color: #5f756c; }
+.home-hero-tab svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.home-hero-tab span { position: relative; z-index: 1; display: block; width: 68%; padding: 12px 0 0 clamp(16px, 1.5vw, 23px); font-size: clamp(8px, .65vw, 10px); font-weight: 800; letter-spacing: .14em; line-height: 1.2; text-transform: uppercase; }
+.home-hero-panel { display: grid; grid-template-columns: 1fr; gap: 18px; padding: 23px clamp(18px, 3vw, 30px) 20px; background: #fff; }
+.home-hero-description { max-width: 23rem; margin: 0; font-size: clamp(1.1rem, 2.1vw, 1.55rem); font-weight: 700; line-height: 1.04; letter-spacing: -.045em; }
 .home-hero-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .home-hero-stat { min-width: 0; padding-inline: clamp(5px, 1.3vw, 16px); text-align: center; border-left: 1px solid rgb(23 55 44 / .12); }
 .home-hero-stat:first-child { border-left: 0; }
-.home-hero-stat p { margin: 0; font-family: var(--font-heading), Arial, sans-serif; font-size: clamp(1.45rem, 4.4vw, 3.25rem); font-weight: 800; line-height: .9; letter-spacing: -.065em; }
-.home-hero-stat span { display: block; margin-top: 5px; color: #61786e; font-size: clamp(8px, 1.55vw, 11px); font-weight: 700; line-height: 1.18; }
-.home-hero-liked { justify-self: end; display: inline-flex; align-items: center; gap: 10px; border-radius: 999px; padding: 7px 8px 7px 17px; background: #f26522; color: #fff; font-size: 11px; font-weight: 800; letter-spacing: .02em; text-transform: uppercase; transition: background-color .2s ease; }
-.home-hero-liked:hover { background: #dc591d; }
-.home-hero-liked-icon { display: grid; width: 28px; height: 28px; place-items: center; border-radius: 999px; background: #fff; color: #f26522; }
+.home-hero-stat p { margin: 0; font-family: var(--font-heading), Arial, sans-serif; font-size: clamp(1.45rem, 4.4vw, 3.1rem); font-weight: 800; line-height: .9; letter-spacing: -.065em; }
+.home-hero-stat span { display: block; margin-top: 5px; color: #61786e; font-size: clamp(8px, 1.25vw, 10px); font-weight: 700; line-height: 1.18; }
 
-@container (min-width: 760px) {
-  .home-hero-panel { grid-template-columns: minmax(240px, 1.55fr) repeat(3, minmax(90px, 1fr)) auto; align-items: center; gap: 0; }
+@media (max-width: 639px) {
+  .home-hero { padding-top: .75rem; padding-bottom: .35rem; }
+  .home-hero-heading { margin-top: -1.75rem; margin-bottom: -1.625rem; }
+  .home-hero-visual-card { margin-top: .75rem; }
+  .home-hero-media { height: clamp(235px, 35svh, 300px); }
+}
+
+@container (min-width: 620px) {
+  .home-hero-panel { grid-template-columns: minmax(190px, 1.45fr) repeat(3, minmax(78px, .8fr)); align-items: center; gap: 0; padding-block: 25px; }
   .home-hero-stats { display: contents; }
-  .home-hero-stat { padding-block: 6px; }
-  .home-hero-liked { margin-left: clamp(16px, 2vw, 30px); }
+  .home-hero-stat { padding-block: 5px; }
+}
+
+@container (min-width: 800px) {
+  .home-hero-panel { grid-template-columns: minmax(260px, 1.5fr) repeat(3, minmax(105px, .8fr)); padding-block: 25px; }
 }
 
 @media (min-width: 640px) {
-  .home-hero { padding-inline: clamp(12px, 2vw, 28px); }
+  .home-hero { padding: 4rem .75rem .75rem; }
+  .home-hero-visual-card { margin-top: 2.5rem; border-radius: 2.25rem; }
   .home-hero-media { height: clamp(320px, 38svh, 470px); }
-  .home-hero-video { object-position: 53% 50%; }
+}
+
+@media (min-width: 1024px) {
+  .home-hero { padding-inline: 1rem; }
 }
 
 @media (min-width: 1180px) {
-  .home-hero { padding-top: clamp(18px, 3vh, 34px); }
   .home-hero-media { height: clamp(345px, 43svh, 520px); }
-  .home-hero-video { object-position: 50% 50%; }
 }
 
 /* Keep category and range names within their hero window on narrow screens. */
