@@ -99,12 +99,15 @@ export default function Topography({
     const container = containerRef.current
     if (!container) return
 
+    const isStatic = speed === 0 && mouseStrength === 0
     const renderer = new Renderer({
       webgl: 2,
       alpha: true,
       premultipliedAlpha: true,
       antialias: false,
-      dpr: Math.min(window.devicePixelRatio || 1, 2),
+      // Static decorative maps do not benefit visibly from a retina-sized
+      // drawing buffer, but they do consume substantial GPU memory.
+      dpr: isStatic ? 1 : Math.min(window.devicePixelRatio || 1, 1.5),
     })
     const gl = renderer.gl
     gl.clearColor(0, 0, 0, 0)
@@ -136,8 +139,6 @@ export default function Topography({
       },
     })
     const mesh = new Mesh(gl, { geometry: new Triangle(gl), program })
-    const isStatic = speed === 0 && mouseStrength === 0
-
     const resize = () => {
       const rect = container.getBoundingClientRect()
       renderer.setSize(Math.max(1, Math.floor(rect.width)), Math.max(1, Math.floor(rect.height)))

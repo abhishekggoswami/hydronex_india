@@ -48,7 +48,7 @@
 .home-hero-main { width: min(100%, 1700px); margin-inline: auto; }
 .home-hero-heading { padding-inline: .5rem; }
 .home-hero-visual-card { position: relative; margin-top: 2rem; overflow: hidden; border-radius: 1.75rem; background: #fff; container-type: inline-size; }
-.home-hero-media { position: relative; height: clamp(205px, 31svh, 410px); overflow: hidden; background: #315a57; }
+.home-hero-media { position: relative; height: clamp(270px, calc(100svh - 24rem), 420px); overflow: hidden; background: #315a57; }
 .home-hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .home-hero-media-shade { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to top, rgba(11,39,34,.55), transparent 53%, rgba(11,39,34,.1)); }
 .home-hero-info { position: relative; background: #fff; color: #17372c; }
@@ -67,7 +67,7 @@
   .home-hero { padding-top: .75rem; padding-bottom: .35rem; }
   .home-hero-heading { margin-top: -1.75rem; margin-bottom: -1.625rem; }
   .home-hero-visual-card { margin-top: .75rem; }
-  .home-hero-media { height: clamp(235px, 35svh, 300px); }
+  .home-hero-media { height: clamp(270px, calc(100svh - 24rem), 420px); }
 }
 
 @container (min-width: 620px) {
@@ -83,7 +83,7 @@
 @media (min-width: 640px) {
   .home-hero { padding: 4rem .75rem .75rem; }
   .home-hero-visual-card { margin-top: 2.5rem; border-radius: 2.25rem; }
-  .home-hero-media { height: clamp(320px, 38svh, 470px); }
+  .home-hero-media { height: clamp(320px, calc(100svh - 26rem), 650px); }
 }
 
 @media (min-width: 1024px) {
@@ -91,7 +91,7 @@
 }
 
 @media (min-width: 1180px) {
-  .home-hero-media { height: clamp(345px, 43svh, 520px); }
+  .home-hero-media { height: clamp(280px, calc(100svh - 27.75rem), 680px); }
 }
 
 /* Keep category and range names within their hero window on narrow screens. */
