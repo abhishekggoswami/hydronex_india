@@ -1,24 +1,36 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import StrokeText from "@/components/StrokeText"
 
 const homeHeroVideos = [
-  "/videos/home-hero-1.mp4",
-  "/videos/home-hero-2.mp4",
-  "/videos/home-hero-3.mp4",
+  "/videos/home-hero-1-optimized.mp4",
+  "/videos/home-hero-2-optimized.mp4",
+  "/videos/home-hero-3-optimized.mp4",
 ]
 
 function HeroVideo() {
   const [activeVideo, setActiveVideo] = useState(0)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting || document.hidden) video.pause()
+      else video.play().catch(() => {})
+    }, { threshold: 0.05 })
+    observer.observe(video)
+    return () => observer.disconnect()
+  }, [activeVideo])
 
   return (
     <video
+      ref={videoRef}
       key={homeHeroVideos[activeVideo]}
       autoPlay
       muted
       playsInline
-      preload="auto"
+      preload="metadata"
       onEnded={() => setActiveVideo((index) => (index + 1) % homeHeroVideos.length)}
       className="home-hero-video"
       aria-hidden="true"

@@ -107,7 +107,7 @@ export default function Topography({
       antialias: false,
       // Static decorative maps do not benefit visibly from a retina-sized
       // drawing buffer, but they do consume substantial GPU memory.
-      dpr: isStatic ? 1 : Math.min(window.devicePixelRatio || 1, 1.5),
+      dpr: 1, // Avoid full-screen retina shader rendering on every frame.
     })
     const gl = renderer.gl
     gl.clearColor(0, 0, 0, 0)
@@ -168,7 +168,14 @@ export default function Topography({
 
     const startedAt = performance.now()
     let frame = 0
+    let inView = false
+    let lastFrame = 0
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
     const render = (now: number) => {
+      if (!inView || document.hidden) { frame = 0; return }
+      frame = requestAnimationFrame(render)
+      if (now - lastFrame < 33) return // Cap shader animation to ~30fps.
+      lastFrame = now
       const uniforms = program.uniforms
       uniforms.iTime.value = (now - startedAt) * 0.001
       currentMouse[0] += (targetMouse[0] - currentMouse[0]) * 0.06
@@ -178,12 +185,26 @@ export default function Topography({
       uniforms.uMouse.value[1] = currentMouse[1]
       uniforms.uMouseActive.value = active
       renderer.render({ scene: mesh })
-      frame = requestAnimationFrame(render)
     }
-    if (!isStatic) frame = requestAnimationFrame(render)
+    const observer = new IntersectionObserver(([entry]) => {
+      inView = entry.isIntersecting
+      if (inView && !document.hidden && !frame) frame = requestAnimationFrame(render)
+    }, { rootMargin: "100px" })
+    const onVisibility = () => {
+      if (document.hidden) { cancelAnimationFrame(frame); frame = 0 }
+      else if (inView && !frame && !reducedMotion) frame = requestAnimationFrame(render)
+    }
+    if (!isStatic && !reducedMotion) {
+      observer.observe(container)
+      document.addEventListener("visibilitychange", onVisibility)
+    } else if (!isStatic) {
+      renderer.render({ scene: mesh })
+    }
 
     return () => {
       cancelAnimationFrame(frame)
+      observer.disconnect()
+      document.removeEventListener("visibilitychange", onVisibility)
       resizeObserver.disconnect()
       if (!isStatic) window.removeEventListener("pointermove", onPointerMove)
       canvas.remove()

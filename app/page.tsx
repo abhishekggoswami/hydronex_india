@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { useEffect, useState, type ReactNode } from "react"
+import { useEffect, useRef, useState, type ReactNode } from "react"
 import { motion } from "framer-motion"
 import { ArrowRight, Mail, MapPin, Minus, Pause, Phone, Play, Plus } from "lucide-react"
 import { LandingBrandLogo, LandingProductNavbar } from "@/components/landing-product-chrome"
@@ -77,15 +77,15 @@ function TypewriterHeading({ text, light = false }: { text: string; light?: bool
 }
 
 const applications = [
-  { title: "Mining & drilling", detail: "Abrasion-resistant hose and fitting solutions for dependable fluid transfer in demanding extraction environments.", video: "/videos/applications/mining-drilling.mp4" },
-  { title: "Pressure washing", detail: "High-pressure assemblies built to support precise, durable cleaning performance on intensive wash-down work.", video: "/videos/applications/pressure-washer.mp4" },
-  { title: "Transportation", detail: "Reliable hose routing and secure connections designed to keep mobile equipment and transport systems moving.", video: "/videos/applications/transportation.mp4" },
-  { title: "Water blasting", detail: "Robust high-pressure hose solutions for controlled, efficient water-blasting applications and surface preparation.", video: "/videos/applications/water-blast.mp4" },
-  { title: "Construction", detail: "Pressure-ready hydraulic components that support tough site conditions, machinery uptime and day-to-day productivity.", video: "/videos/applications/construction.mp4" },
-  { title: "Dock operations", detail: "Durable fluid-transfer assemblies for dockside equipment, loading operations and exposed industrial environments.", video: "/videos/applications/dock.mp4" },
-  { title: "Layflat systems", detail: "Flexible layflat hose solutions engineered for fast deployment and efficient high-volume water movement.", video: "/videos/applications/layflat.mp4" },
-  { title: "Material handling", detail: "Purpose-built hose and fittings that help safely move abrasive, bulk and process materials through industrial systems.", video: "/videos/applications/material-handling.mp4" },
-  { title: "Agriculture", detail: "Dependable hydraulic and fluid-transfer connections that support equipment performance across agricultural operations.", video: "/videos/applications/agriculture.mp4" },
+  { title: "Mining & drilling", detail: "Abrasion-resistant hose and fitting solutions for dependable fluid transfer in demanding extraction environments.", video: "/videos/applications/mining-drilling-optimized.mp4" },
+  { title: "Pressure washing", detail: "High-pressure assemblies built to support precise, durable cleaning performance on intensive wash-down work.", video: "/videos/applications/pressure-washer-optimized.mp4" },
+  { title: "Transportation", detail: "Reliable hose routing and secure connections designed to keep mobile equipment and transport systems moving.", video: "/videos/applications/transportation-optimized.mp4" },
+  { title: "Water blasting", detail: "Robust high-pressure hose solutions for controlled, efficient water-blasting applications and surface preparation.", video: "/videos/applications/water-blast-optimized.mp4" },
+  { title: "Construction", detail: "Pressure-ready hydraulic components that support tough site conditions, machinery uptime and day-to-day productivity.", video: "/videos/applications/construction-optimized.mp4" },
+  { title: "Dock operations", detail: "Durable fluid-transfer assemblies for dockside equipment, loading operations and exposed industrial environments.", video: "/videos/applications/dock-optimized.mp4" },
+  { title: "Layflat systems", detail: "Flexible layflat hose solutions engineered for fast deployment and efficient high-volume water movement.", video: "/videos/applications/layflat-optimized.mp4" },
+  { title: "Material handling", detail: "Purpose-built hose and fittings that help safely move abrasive, bulk and process materials through industrial systems.", video: "/videos/applications/material-handling-optimized.mp4" },
+  { title: "Agriculture", detail: "Dependable hydraulic and fluid-transfer connections that support equipment performance across agricultural operations.", video: "/videos/applications/agriculture-optimized.mp4" },
 ]
 
 function SectionBackdrop({ dark = false, interactive = false, opacity }: { dark?: boolean; interactive?: boolean; opacity?: number }) {
@@ -110,17 +110,26 @@ function SectionBackdrop({ dark = false, interactive = false, opacity }: { dark?
 function ApplicationsCarousel() {
   const [activeApplication, setActiveApplication] = useState(0)
   const [isAutoplaying, setIsAutoplaying] = useState(true)
+  const carouselRef = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+  useEffect(() => {
+    const el = carouselRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting), { rootMargin: "200px" })
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
   const goToApplication = (direction: number) => {
     setActiveApplication((current) => (current + direction + applications.length) % applications.length)
   }
 
   useEffect(() => {
-    if (!isAutoplaying) return
+    if (!isAutoplaying || !isVisible) return
     const timer = window.setInterval(() => {
       setActiveApplication((current) => (current + 1) % applications.length)
     }, 5000)
     return () => window.clearInterval(timer)
-  }, [isAutoplaying])
+  }, [isAutoplaying, isVisible])
   const getSlideOffset = (index: number) => {
     const distance = index - activeApplication
     if (distance > applications.length / 2) return distance - applications.length
@@ -129,7 +138,7 @@ function ApplicationsCarousel() {
   }
 
   return (
-    <div className="relative">
+    <div ref={carouselRef} className="relative">
       <div className="relative h-[500px] overflow-visible sm:h-[560px]">
         <div className="absolute inset-y-0 left-1/2 w-[92%] max-w-[1120px] -translate-x-1/2 sm:w-[78%]">
           {applications.map((application, index) => {
@@ -152,9 +161,11 @@ function ApplicationsCarousel() {
                 className={`absolute inset-0 overflow-hidden rounded-[1.75rem] bg-[#0b1f37] shadow-[0_24px_55px_rgba(6,22,42,0.2)] transition-shadow duration-300 ${visible ? "pointer-events-auto" : "pointer-events-none"} ${isActive ? "" : "cursor-pointer"}`}
                 onClick={() => !isActive && setActiveApplication(index)}
               >
-                <video key={`${application.video}-${isActive}-${visible}`} autoPlay={visible} muted loop playsInline preload={visible ? "auto" : "none"} className="absolute inset-0 h-full w-full object-cover" aria-label={`${application.title} application video`}>
-                  <source src={application.video} type="video/mp4" />
-                </video>
+                {isActive && isVisible && (
+                  <video key={application.video} autoPlay muted loop playsInline preload="metadata" className="absolute inset-0 h-full w-full object-cover" aria-label={`${application.title} application video`}>
+                    <source src={application.video} type="video/mp4" />
+                  </video>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#071426]/90 via-[#071426]/54 to-[#071426]/20" />
                 <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-[#071426]/90 via-transparent to-transparent" />
                 <div className="relative flex min-h-[500px] max-w-2xl flex-col justify-end p-7 text-white sm:min-h-[560px] sm:p-10">
@@ -228,26 +239,16 @@ function ProductCard({
   )
 }
 
+// Homepage content should be immediately visible, without scroll-triggered movement.
 function ScrollReveal({
   children,
   className = "",
-  delay = 0,
 }: {
   children: ReactNode
   className?: string
   delay?: number
 }) {
-  return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0, y: 32 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.18 }}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
-    >
-      {children}
-    </motion.div>
-  )
+  return <div className={className}>{children}</div>
 }
 
 const frequentlyAsked = [
